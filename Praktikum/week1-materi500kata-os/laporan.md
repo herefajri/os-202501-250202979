@@ -1,4 +1,4 @@
-# Laporan Ringkasan Praktikum Week 2
+# Laporan Ringkasan Praktikum Week 1
 *Nama:* Muhammad Fajri Abdullah  
 *NIM:* 250202979
 *Kelas:* 1IKRB  
