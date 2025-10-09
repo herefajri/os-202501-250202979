@@ -1,0 +1,25 @@
+Welcome to Cloud Shell! Type "help" to get started, or type "gemini" to try prompting with Gemini CLI.
+To set your Cloud Platform project in this session use `gcloud config set project [PROJECT_ID]`.
+You can view your projects by running `gcloud projects list`.
+herefajri@cloudshell:~$ uname -a
+Linux cs-32863767896-default 6.6.105+ #1 SMP PREEMPT_DYNAMIC Sat Sep 27 08:48:45 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+herefajri@cloudshell:~$ whoiam
+-bash: whoiam: command not found
+herefajri@cloudshell:~$ whiami
+-bash: whiami: command not found
+herefajri@cloudshell:~$ whoami
+herefajri
+herefajri@cloudshell:~$ lsmod | head
+Module                  Size  Used by
+ip6table_nat           12288  1
+xt_set                 20480  0
+ip_set                 53248  1 xt_set
+netlink_diag           12288  0
+iptable_nat            12288  1
+xt_nat                 12288  6
+xt_mark                12288  1
+veth                   36864  0
+nft_limit              16384  1
+
+
+
