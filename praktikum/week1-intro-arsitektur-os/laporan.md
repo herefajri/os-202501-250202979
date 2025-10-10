@@ -28,6 +28,7 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 
 ## Langkah Praktikum
 1. Langkah-langkah yang dilakukan.
+> Langkah awal
 - Login akun gitHub (Jikalau belum punya bisa mendaftarkan segera)
 - Download Git dan VSCode lalu konfigurasi Git
 - Masuk link yang telah disediakan Penanggungjawab lalu fork dengan menambahkan NIM dibagian OS-202501-NIM
@@ -36,11 +37,11 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 - Pengerjaan diagram di draw.io
 - buka VSCode, lakukan commit dan push ke GitHub anda
 - Buat file baru dengan nama laporan.md isi seusai Markdown yang telah ditentukan dan push 
-atau
+> atau
 - Jika folder sudah dibuat, buat folder khusus lagi untuk week-1
 - Namakan file (diusahakan sesuai konteks pembelajaran)
 - Anda bisa mengcommit dan push secara manual dari GitHub nya langsung dengan memilih  add file lalu pilih file yang ingin anda push
-untuk Linux
+> untuk Linux
 - (https://shell.cloud.google.com/) Buka link tersebut untuk menjalankan perintah Linux yang telah di paparkan dalam penugasan
 - Salin code Linux yang telah disiapkan oleh penanggungjawab dan jalankan
 - Dokumentasikan setiap eksekusi code dengan screenshoots dan menyalin hasil input (output) dan menyimpannya dalam bentuk .txt
