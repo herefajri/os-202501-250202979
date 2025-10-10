@@ -194,12 +194,21 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+Quiz
+Jawab pertanyaan berikut di bagian Quiz laporan:
+
+1. Apa fungsi utama system call dalam sistem operasi?
+**Jawaban:** Fungsi utama System Call dalam system operasi adalah untuk menyaring tindakan yang mana bisa berbahaya bagi sistem operasi komputer. System Call ini memprioritaskan proteksi ketat layaknya anda ingin memverifikasi akun dengan akses yang terkontrol (seperti anda harus memberi izin, harus verifikasi dan semacamnya)
+
+2. Sebutkan 4 kategori system call yang umum digunakan.
+**Jawaban:**
+- Kontrol Proses/Process Control: Fungsinya untuk mengelola pelaksanaan program seperti membuat proses baru seperti halnya fork atau exec
+- Manajemen Berkas/File Management: Fungsinya untuk menjalankan operasi terhadap berkas dan direktori seperti membuka/open dan menutup/close
+- Manajemen Perangkat/Device Management: Fungsinya untuk mengirim dan mengontrol hardware seperti meminta perangkat/request device 
+- Pemeliharaan Informasi/Information Maintenance: Fungsinya untuk mengatur informasi sistem seperti mendapatkan waktu, tanggal, ID proses, atau jika dipersingkat intinya tentang sistem yang akan diambil.
+
+3. Mengapa system call tidak bisa dipanggil langsung oleh user program?
+**Jawaban:** Dikarenakan adanya System Call itu difungsikan untuk mencegah akses masuk dengan standar ketat atau analoginya seperti penjagaan militer, yang mana anda harus mengizinkan dulu dengan verifikasi kelas atas layaknya anda menghubungkan akun ke komputer lain, maka verifikasinya biasanya 3 tahap, tahap pemberian akses dengan mengetik username dan password, tahap mengkonfirmasi bahwa anda bukan robot dan tahap akhir yaitu pemberian kode verifikasi sebagai kunci akhir untuk masuk ke sistem. Layaknya sistem penjagaan militer namun di tempatkan pada kondisi mengkaitkan akun, ya sama dengan system call yang mana system call akan memberi peringatan dulu dengan memverifikasi alamat dari sistem yang masuk itu
 
 ---
 
