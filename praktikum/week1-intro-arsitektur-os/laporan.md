@@ -42,9 +42,8 @@ dmesg | head
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-
-![Screenshot hasil](screenshots
-/)
+![Screenshot hasil](screenshots/example.png)
+![Screenshot hasil](screenshots/DIAGRAMARSITEKTUROS.png).
 
 
 ---
