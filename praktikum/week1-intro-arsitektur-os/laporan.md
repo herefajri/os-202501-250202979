@@ -49,11 +49,16 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 - Anda bisa melakukan commit dan push ke file terkait
 
 2. Perintah yang dijalankan.
-
+- [uname -a] untuk menampilkan informasi lengkap tentang OS dan kernel seperti versi kernel,dsb.
+- [whoami] untuk menampilan nama User yang berstatus aktif
+- [lsmod | head] untuk menampilkan bagian program kernel yang sedang digunakan/dijalankan/dimuat
+- [dmesg | head] untuk menampilkan pesan boting dan log kernel/pesan dari kernel (disclaimer: Disini saya menggunakan tambahan perintah/code "sudo" dikarenakan akses yang terbatas dan pengguaan input perintah tersenut untuk mengizinkan akses sementara).
    
-6. File dan kode yang dibuat.  
-7. Commit message yang digunakan.
-
+3. File dan kode yang dibuat.
+- Diagram dibuat dengan draw.io
+- Code dijalankan di Shell Cloud Google
+8. Commit message yang digunakan.
+Commit message yang digunakan Update laporan.md
 ---
 
 ## Kode / Perintah
