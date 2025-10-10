@@ -37,7 +37,7 @@ uname -a
 lsmod | head
 dmesg | head
 ```
-'''
+```bash
 Welcome to Cloud Shell! Type "help" to get started, or type "gemini" to try prompting with Gemini CLI.
 To set your Cloud Platform project in this session use `gcloud config set project [PROJECT_ID]`.
 You can view your projects by running `gcloud projects list`.
@@ -70,7 +70,7 @@ herefajri@cloudshell:~$ sudo dmesg | head
 [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000bd221fff] usable
 [    0.000000] BIOS-e820: [mem 0x00000000bd222000-0x00000000bd223fff] ACPI data
 herefajri@cloudshell:~$ 
-'''
+```
 
 
 ---
