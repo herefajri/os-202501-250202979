@@ -119,9 +119,9 @@ Jawab pertanyaan berikut di bagian Quiz pada laporan:
 ## Refleksi Diri
 Sesi refleksi terkait aktivitas praktikum dan yang berhubungan dengan pembelajaran dan penugasan Week-1 :
 - Apa bagian yang paling menantang minggu ini?
-Penggunaan pertama kalinya VSCode dan Git Bash untuk mengkaitkan folder dari komputer (File Manager) ke sistem GitHub  
+  Penggunaan pertama kalinya VSCode dan Git Bash untuk mengkaitkan folder dari komputer (File Manager) ke sistem GitHub  
 - Bagaimana cara Anda mengatasinya?  
-Dengan menginput letak permasalahan dengan bantuan AI (ChatGPT dan Gemini) serta bantuan dari teman-teman dalam bentuk penjelasan untuk memastikan aktivitas praktikum berjalan dan menghasilkan output yang sesuai standar penugasan
+  Dengan menginput letak permasalahan dengan bantuan AI (ChatGPT dan Gemini) serta bantuan dari teman-teman dalam bentuk penjelasan untuk memastikan aktivitas praktikum berjalan dan menghasilkan output yang sesuai standar penugasan
 ---
 
 **Credit:**  
