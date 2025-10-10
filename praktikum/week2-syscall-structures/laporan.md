@@ -1,13 +1,12 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu ke-2
 Topik: Struktur System Call dan Fungsi Kernel
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
-
+- **Nama**  : Muhammad Fajri Abdullah 
+- **NIM**   : 250202979
+- **Kelas** : 1IKRB
 ---
 
 ## Tujuan
