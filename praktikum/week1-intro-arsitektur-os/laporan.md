@@ -44,7 +44,7 @@ dmesg | head
 Sertakan screenshot hasil percobaan atau diagram:
 
 ![Screenshot hasil](screenshots
-/DIAGRAM ARSITEKTUR OS.png)
+/)
 
 
 ---
