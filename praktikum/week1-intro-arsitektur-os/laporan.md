@@ -43,7 +43,7 @@ dmesg | head
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/example.png)
-![Screenshot hasil](screenshots/DIAGRAMARSITEKTUROS.png).
+![Screenshot hasil](screenshots/Screenshot_dmesg=keseluruhan_shell.cloud.google.com.png).
 
 
 ---
