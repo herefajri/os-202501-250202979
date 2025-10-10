@@ -10,9 +10,13 @@ Topik: Struktur System Call dan Fungsi Kernel
 ---
 
 ## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+Tujuan praktikum minggu ini.  
+> Diharapkan mahasiswa mampu:
+- Menjelaskan konsep dan fungsi system call dalam sistem operasi.
+Mengidentifikasi jenis-jenis system call dan fungsinya.
+Mengamati alur perpindahan mode user ke kernel saat system call terjadi.
+Menggunakan perintah Linux untuk menampilkan dan menganalisis system call.
+
 
 ---
 
