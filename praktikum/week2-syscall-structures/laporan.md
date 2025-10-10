@@ -30,12 +30,13 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 ---
 
 ## Kode / Perintah
-Tuliskan potongan kode atau perintah utama:
+Hasil input potongan kode atau perintah utama:
 ```bash
 strace ls
 strace -e trace=open,read,write,close cat /etc/passwd
 dmesg | tail -n 10
 ```
+```bash
 Welcome to Cloud Shell! Type "help" to get started, or type "gemini" to try prompting with Gemini CLI.
 To set your Cloud Platform project in this session use `gcloud config set project [PROJECT_ID]`.
 You can view your projects by running `gcloud projects list`.
@@ -170,7 +171,8 @@ herefajri@cloudshell:~$ sudo dmesg | tail -n 10
 [ 4885.403388] LoadPin: kernel-module pinning-excluded obj="/lib/modules/6.6.105+/kernel/net/netfilter/ipset/ip_set.ko" pid=3509 cmdline="/sbin/modprobe -q -- ipt_set"
 [ 4885.425745] LoadPin: kernel-module pinning-excluded obj="/lib/modules/6.6.105+/kernel/net/netfilter/xt_set.ko" pid=3509 cmdline="/sbin/modprobe -q -- ipt_set"
 [ 4885.460154] LoadPin: kernel-module pinning-excluded obj="/lib/modules/6.6.105+/kernel/net/ipv6/netfilter/ip6table_nat.ko" pid=3515 cmdline="/sbin/modprobe -q -- ip6table_nat"
-herefajri@cloudshell:~$ 
+herefajri@cloudshell:~$
+```
 ---
 
 ## Hasil Eksekusi
