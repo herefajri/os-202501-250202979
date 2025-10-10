@@ -11,10 +11,12 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
-
+Tujuan praktikum minggu ini.  
+Diharapkan mahasiswa mampu:
+1. Menjelaskan peran sistem operasi dalam arsitektur komputer.
+2. Mengidentifikasi komponen utama OS (kernel, system call, device driver, file system).
+3. Membandingkan model arsitektur OS (monolithic, layered, microkernel).
+4. Menggambarkan diagram sederhana arsitektur OS menggunakan alat bantu digital (draw.io / mermaid).
 ---
 
 ## Dasar Teori
@@ -31,7 +33,7 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 ---
 
 ## Kode / Perintah
-Tuliskan potongan kode atau perintah utama:
+Hasil dari input bedasrakan potongan kode atau perintah utama:
 ```bash
 uname -a
 lsmod | head
@@ -115,10 +117,11 @@ Jawab pertanyaan berikut di bagian Quiz pada laporan:
 ---
 
 ## Refleksi Diri
-Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
+Sesi refleksi terkait aktivitas praktikum dan yang berhubungan dengan pembelajaran dan penugasan Week-1 :
+- Apa bagian yang paling menantang minggu ini?
+Penggunaan pertama kalinya VSCode dan Git Bash untuk mengkaitkan folder dari komputer (File Manager) ke sistem GitHub  
 - Bagaimana cara Anda mengatasinya?  
-
+Dengan menginput letak permasalahan dengan bantuan AI serta bantuan dari teman-teman dalam bentuk penjelasan untuk memastikan aktivitas praktikum berjalan sesuai standar
 ---
 
 **Credit:**  
