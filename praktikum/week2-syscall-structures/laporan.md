@@ -1,7 +1,6 @@
 
 # Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
-
+Topik: Struktur System Call dan Fungsi Kernel
 ---
 
 ## Identitas
