@@ -58,7 +58,7 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 - Diagram dibuat dengan draw.io
 - Code dijalankan di Shell Cloud Google
 8. Commit message yang digunakan.
-Commit message yang digunakan Update laporan.md
+Commit message yang digunakan "Update laporan.md"
 ---
 
 ## Kode / Perintah
