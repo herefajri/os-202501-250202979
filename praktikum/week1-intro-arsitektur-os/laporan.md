@@ -150,9 +150,8 @@ Sesi refleksi terkait aktivitas praktikum dan yang berhubungan dengan pembelajar
 - Apa bagian yang paling menantang minggu ini?
   Penggunaan pertama kalinya VSCode, GitHub, dan Git Bash untuk mengkaitkan folder dari komputer (File Manager) ke sistem GitHub  
 - Bagaimana cara Anda mengatasinya?  
-  Dengan menginput letak permasalahan dengan bantuan AI (ChatGPT dan Gemini) serta bantuan dari teman-teman dalam bentuk penjelasan untuk memastikan aktivitas praktikum berjalan dan menghasilkan output yang sesuai standar penugasan
+  Dengan menginput letak permasalahan dengan bantuan AI (ChatGPT dan Gemini) dengan via chat atau dokumentasi situasi agar AI bisa memahamilebih lanjut terkait  kendala yang dialami user serta bantuan dari teman-teman dalam bentuk penjelasan untuk memastikan aktivitas praktikum berjalan dan menghasilkan output yang sesuai standar penugasan
 ---
 
 **Credit:**  
 1. ESA121 – PENGANTAR APLIKASI KOMPUTER, OPERATING SYSTEM, Posted bynanda, January 29, 2020 (https://bahan-ajar.esaunggul.ac.id/esa121/2020/01/29/operating-system/)
-2. 
