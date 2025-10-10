@@ -27,10 +27,31 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 - Model Arsitektur OS itu punya 3 main model, yaitu; Monolithic dimana semua unsur unsur OS digabung dalam satu kotak besar atau bisa disebut kernel tunggal, Layered dengan OS dibangun berlapis dengan hardware sebagai lapisan bawah dan User Interface, dan yang terakhir adalah Microkernel dengan mengoperasikan fungsi inti di kernel dan sisanya berada di User Interface dan menentukan akan dijalankan di ruang mana (mau di User Zone atau di Kernel Zone)
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.  
-2. Perintah yang dijalankan.  
-3. File dan kode yang dibuat.  
-4. Commit message yang digunakan.
+1. Langkah-langkah yang dilakukan.
+- Login akun gitHub (Jikalau belum punya bisa mendaftarkan segera)
+- Download Git dan VSCode lalu konfigurasi Git
+- Masuk link yang telah disediakan Penanggungjawab lalu fork dengan menambahkan NIM dibagian OS-202501-NIM
+- Clone repository
+- Buat folder Praktikum/week1-introarsitektur-os/screenshoots
+- Pengerjaan diagram di draw.io
+- buka VSCode, lakukan commit dan push ke GitHub anda
+- Buat file baru dengan nama laporan.md isi seusai Markdown yang telah ditentukan dan push 
+atau
+- Jika folder sudah dibuat, buat folder khusus lagi untuk week-1
+- Namakan file (diusahakan sesuai konteks pembelajaran)
+- Anda bisa mengcommit dan push secara manual dari GitHub nya langsung dengan memilih  add file lalu pilih file yang ingin anda push
+untuk Linux
+- (https://shell.cloud.google.com/) Buka link tersebut untuk menjalankan perintah Linux yang telah di paparkan dalam penugasan
+- Salin code Linux yang telah disiapkan oleh penanggungjawab dan jalankan
+- Dokumentasikan setiap eksekusi code dengan screenshoots dan menyalin hasil input (output) dan menyimpannya dalam bentuk .txt
+- Screenshoots yang tidak berstatus .png diubah pada link (https://jpg2png.com/) untuk mengubah status .jpeg/.jpg menjadi .png
+- Anda bisa melakukan commit dan push ke file terkait
+
+2. Perintah yang dijalankan.
+
+   
+6. File dan kode yang dibuat.  
+7. Commit message yang digunakan.
 
 ---
 
