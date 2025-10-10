@@ -121,7 +121,7 @@ Sesi refleksi terkait aktivitas praktikum dan yang berhubungan dengan pembelajar
 - Apa bagian yang paling menantang minggu ini?
 Penggunaan pertama kalinya VSCode dan Git Bash untuk mengkaitkan folder dari komputer (File Manager) ke sistem GitHub  
 - Bagaimana cara Anda mengatasinya?  
-Dengan menginput letak permasalahan dengan bantuan AI serta bantuan dari teman-teman dalam bentuk penjelasan untuk memastikan aktivitas praktikum berjalan sesuai standar
+Dengan menginput letak permasalahan dengan bantuan AI (ChatGPT dan Gemini) serta bantuan dari teman-teman dalam bentuk penjelasan untuk memastikan aktivitas praktikum berjalan sesuai standar
 ---
 
 **Credit:**  
