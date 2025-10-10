@@ -177,7 +177,7 @@ herefajri@cloudshell:~$
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+![Screenshot hasil](screenshots/strace%20ls.png)
 
 ---
 
