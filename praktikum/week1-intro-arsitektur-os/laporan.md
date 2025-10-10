@@ -43,7 +43,8 @@ dmesg | head
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
 
-![Screenshot hasil](screenshots/DIAGRAM ARSITEKTUR OS.png)
+![Screenshot hasil](screenshots
+/DIAGRAM ARSITEKTUR OS.png)
 
 
 ---
