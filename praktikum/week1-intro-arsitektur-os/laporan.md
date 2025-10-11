@@ -123,9 +123,17 @@ Sertakan screenshot hasil percobaan atau diagram:
 - [dmesg | head] untuk menampilkan pesan boting dan log kernel/pesan dari kernel (disclaimer: Disini saya menggunakan tambahan perintah/code "sudo" dikarenakan akses yang terbatas dan pengguaan input perintah tersenut untuk mengizinkan akses sementara).
 
 **- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).**  
-- [uname -a]
-  1.
-  2. 
+[uname -a]
+Perintah [uname -a] ini adalah permintaan dari program User ke Kernel dan harus mendapatkan izin di zona System Call untuk mendapatkan persetujuan dan dapat melihat detail tentang lingkungan dan juga tentang kernel itu sendiri. Dan hubungannya dengan Arsitektur OS adalah yaitu adanya hubungan di lingkup User dan Kernel Inti, dimana di User Zone [uname -a] mengeksekusi perintah dengan label Manajemen Proses.
+
+[whoami]
+Pengelolaan laporan identitas User ke kernel yang mana dikarenakan saya memakai shell.cloud.google jadi menggunakan identitas akun google saya sebagai laporan verifikasi ke System Call yang diteruskan ke Kernel dan menghasilkan output menampilkan nama pengguna aktif. Dan hubungannya dengan Arsitektur OS, sama seperti [uname -a] yaitu dimana Kernel inti mengelola perintah dengan nama Manajemen Proses
+
+[lsmod | head]
+Ini sama seperti sebelumnya, memberi perintah dan ya sama System Call akan memverifikasi terlebih dahulu lalu meneruskan ke Kernel. Namun perintah ini adalah perintah untuk menanyakan tentang komponen (Modul Kernel) yang sedang digunakan saat ini. Disini hubungan dengan Arsitektur OS adalah dibagian Manajemen Perangkat dimana Modul yang dipakai dan menjadi tanggung jawab Kernel Inti, modul ini akan ditampilkan oleh perintah [lsmod] sebelumnya 
+
+[dmesg | head]
+System Call tetap sama, menyaring tindakan dan perintah, serta verifikasi. Namun untuk kernel disini akan memberikan pandangan tentang inisial-inisial detail tentang Hardware seperti jenis CPU, deteksi perangkat dan konfigurasi kernel. Penggunaan [sudo] menjadi acuan bahwa mekanisme keamanan dan kontrol akses pada kernel aktif. Dan disini hubungannya dengan Arsitektur OS adalah masih tetap dibagian Kernel Inti dimana di bagian tanggungjawab kernel yaitu keamanan yang mana menegakkan izin, seperti yang telah di buat dalam percobaan, dmesg perlu [sudo] untuk bisa mendapatkan izin ke Kernel
 
 **- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?**
 
