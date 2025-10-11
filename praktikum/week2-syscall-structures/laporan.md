@@ -52,10 +52,13 @@ atau Anda bisa melakukannya dengan mudah dengan menekan tombol add file di folde
    ```
  ```bash
    dmesg | tail -n 10
-   ```.
+   ```
+
+Jika `dmesg | tail -n 10` tak bisa dijalankan, Anda bisa menamnahkan kata `sudo` diawal input dmesg.
 
 3. File dan kode yang dibuat.
-
+Diagram dibuat dengan draw.io dengan standar .png.
+Code dijalankan di Shell Cloud Google dengan standar .png untuk gambar dan .txt untuk code. Bagian hasilnya bisa dilihat pada bagian "## Hasil Eksekusi" dbagian bawah.
 
 4. Commit message yang digunakan.
 Commit message yang digunakan "Update laporan.md".
