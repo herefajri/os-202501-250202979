@@ -136,7 +136,9 @@ Ini sama seperti sebelumnya, memberi perintah dan ya sama System Call akan memve
 System Call tetap sama, menyaring tindakan dan perintah, serta verifikasi. Namun untuk kernel disini akan memberikan pandangan tentang inisial-inisial detail tentang Hardware seperti jenis CPU, deteksi perangkat dan konfigurasi kernel. Penggunaan [sudo] menjadi acuan bahwa mekanisme keamanan dan kontrol akses pada kernel aktif. Dan disini hubungannya dengan Arsitektur OS adalah masih tetap dibagian Kernel Inti dimana di bagian tanggungjawab kernel yaitu keamanan yang mana menegakkan izin, seperti yang telah di buat dalam percobaan, dmesg perlu [sudo] untuk bisa mendapatkan izin ke Kernel
 
 **- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?**
-
+Yang terjadi adalah:
+- Jika di Linux, semua perintah akan berjalan lancar dari [uname] sampai [dmesg]
+- Sedangkan jika di Windows menggunakan hal-hal seperti di CMD maka akan didapat kegagalan kecuali pada bagian [whoami]
 ---
 
 ## Kesimpulan
