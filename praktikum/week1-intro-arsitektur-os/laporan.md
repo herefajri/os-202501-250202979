@@ -49,10 +49,14 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 - Anda bisa melakukan commit dan push ke file terkait
 
 2. Perintah yang dijalankan.
-> uname -a 
+> uname -a
+
 > whoami
+
 > lsmod | head
+
 > dmesg | head
+
 > sudo dmesg | head (Penggunaan input [dmesg | head] mengalami kegagalan dan harus ditambahkan [sudo]) 
 
 3. File dan kode yang dibuat.
