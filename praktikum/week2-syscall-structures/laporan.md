@@ -37,10 +37,10 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
      ```praktikum/week2-syscall-structure/screenshots/syscall-diagram.png```.
    6. Anda bisa melakukan commit dan push dengan:
  ```bash
- git add .
-git commit -m "Minggu 2 - Struktur System Call dan Kernel Interaction"
-git push origin main
-    ```
+   git add .
+   git commit -m "Minggu 2 - Struktur System Call dan Kernel Interaction"
+   git push origin main
+   ```
 atau Anda bisa melakukannya dengan mudah dengan menekan tombol add file di folder Anda.
 
 2. Perintah yang dijalankan.
