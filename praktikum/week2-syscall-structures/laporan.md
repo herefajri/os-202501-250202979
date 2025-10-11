@@ -264,9 +264,9 @@ Jawab pertanyaan berikut di bagian Quiz laporan:
 
 2. Sebutkan 4 kategori system call yang umum digunakan.
 **Jawaban:**
-- Kontrol Proses/Process Control: Fungsinya untuk mengelola pelaksanaan program seperti membuat proses baru seperti halnya fork atau exec
-- Manajemen Berkas/File Management: Fungsinya untuk menjalankan operasi terhadap berkas dan direktori seperti membuka/open dan menutup/close
-- Manajemen Perangkat/Device Management: Fungsinya untuk mengirim dan mengontrol hardware seperti meminta perangkat/request device 
+- Kontrol Proses/Process Control: Fungsinya untuk mengelola pelaksanaan program seperti membuat proses baru seperti halnya fork atau exec.
+- Manajemen Berkas/File Management: Fungsinya untuk menjalankan operasi terhadap berkas dan direktori seperti membuka/open dan menutup/close.
+- Manajemen Perangkat/Device Management: Fungsinya untuk mengirim dan mengontrol hardware seperti meminta perangkat/request device.
 - Pemeliharaan Informasi/Information Maintenance: Fungsinya untuk mengatur informasi sistem seperti mendapatkan waktu, tanggal, ID proses, atau jika dipersingkat intinya tentang sistem yang akan diambil.
 
 3. Mengapa system call tidak bisa dipanggil langsung oleh user program?
