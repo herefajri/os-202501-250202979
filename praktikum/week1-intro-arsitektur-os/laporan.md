@@ -22,42 +22,42 @@ Diharapkan mahasiswa mampu:
 ## Dasar Teori
 Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 - OS adalah suatu sistem yang menghubungkan User dengan Hardware (analoginya seperti perantara atau jika digambarkan seperti tukang pos);
-  "Sistem operasi ( operating system ; OS) adalah seperangkat program yang mengelola sumber daya perangkat keras komputer dan menyediakan layanan umum untuk aplikasiperangkat lunak. Sistem operasi adalah jenis yang paling penting dari perangkat lunak sistem  dalam sistem komputer." ESA121 – PENGANTAR APLIKASI KOMPUTER, OPERATING SYSTEM, Posted bynanda, January 29, 2020
-- DI OS ada beberapa sistem, software, dan program, seperti; Kernel sebagai inti OS, System Call sebagai penjaga gerbang antara User Zone dan Kernel Zone, Device Driver yang menjembatani antara OS dan Hardware Input ( Hardware Input telah dibahas di mata kuliah Emerging Technologies & Digital Transformation), dan File System yang mana umum kita temui untuk menyimpan file
-- Model Arsitektur OS itu punya 3 main model, yaitu; Monolithic dimana semua unsur unsur OS digabung dalam satu kotak besar atau bisa disebut kernel tunggal, Layered dengan OS dibangun berlapis dengan hardware sebagai lapisan paling bawah dan User Interface lapisan paling atas, dan yang terakhir adalah Microkernel dengan mengoperasikan fungsi inti di kernel dan sisanya berada di User Interface dan menentukan akan dijalankan di ruang mana (mau di User Zone atau di Kernel Zone)
+  "Sistem operasi ( operating system ; OS) adalah seperangkat program yang mengelola sumber daya perangkat keras komputer dan menyediakan layanan umum untuk aplikasiperangkat lunak. Sistem operasi adalah jenis yang paling penting dari perangkat lunak sistem  dalam sistem komputer." ESA121 – PENGANTAR APLIKASI KOMPUTER, OPERATING SYSTEM, Posted bynanda, January 29, 2020.
+- DI OS ada beberapa sistem, software, dan program, seperti; Kernel sebagai inti OS, System Call sebagai penjaga gerbang antara User Zone dan Kernel Zone, Device Driver yang menjembatani antara OS dan Hardware Input ( Hardware Input telah dibahas di mata kuliah Emerging Technologies & Digital Transformation), dan File System yang mana umum kita temui untuk menyimpan file.
+- Model Arsitektur OS itu punya 3 main model, yaitu; Monolithic dimana semua unsur unsur OS digabung dalam satu kotak besar atau bisa disebut kernel tunggal, Layered dengan OS dibangun berlapis dengan hardware sebagai lapisan paling bawah dan User Interface lapisan paling atas, dan yang terakhir adalah Microkernel dengan mengoperasikan fungsi inti di kernel dan sisanya berada di User Interface dan menentukan akan dijalankan di ruang mana (mau di User Zone atau di Kernel Zone).
 
 ## Langkah Praktikum
 1. Langkah-langkah yang dilakukan.
-> Langkah awal
-- Login akun gitHub (Jikalau belum punya bisa mendaftarkan segera)
-- Download Git dan VSCode lalu konfigurasi Git
-- Masuk link yang telah disediakan Penanggungjawab lalu fork dengan menambahkan NIM dibagian OS-202501-NIM
-- Clone repository
-- Buat folder Praktikum/week1-introarsitektur-os/screenshoots
-- Pengerjaan diagram di draw.io
-- buka VSCode, lakukan commit dan push ke GitHub anda
-- Buat file baru dengan nama laporan.md isi seusai Markdown yang telah ditentukan dan push 
+> Langkah awal.
+- Login akun gitHub (Jikalau belum punya bisa mendaftarkan segera).
+- Download Git dan VSCode lalu konfigurasi Git.
+- Masuk link yang telah disediakan Penanggungjawab lalu fork dengan menambahkan NIM dibagian OS-202501-NIM.
+- Clone repository.
+- Buat folder Praktikum/week1-introarsitektur-os/screenshoots.
+- Pengerjaan diagram di draw.io.
+- buka VSCode, lakukan commit dan push ke GitHub anda.
+- Buat file baru dengan nama laporan.md isi seusai Markdown yang telah ditentukan dan push.
 > atau
-- Jika folder sudah dibuat, buat folder khusus lagi untuk week-1
-- Namakan file (diusahakan sesuai konteks pembelajaran)
-- Anda bisa mengcommit dan push secara manual dari GitHub nya langsung dengan memilih  add file lalu pilih file yang ingin anda push
+- Jika folder sudah dibuat, buat folder khusus lagi untuk week-1.
+- Namakan file (diusahakan sesuai konteks pembelajaran).
+- Anda bisa mengcommit dan push secara manual dari GitHub nya langsung dengan memilih  add file lalu pilih file yang ingin anda push.
 > untuk Linux
-- (https://shell.cloud.google.com/) Buka link tersebut untuk menjalankan perintah Linux yang telah di paparkan dalam penugasan
-- Salin code Linux yang telah disiapkan oleh penanggungjawab dan jalankan
-- Dokumentasikan setiap eksekusi code dengan screenshoots dan menyalin hasil input (output) dan menyimpannya dalam bentuk .txt
-- Screenshoots yang tidak berstatus .png diubah pada link (https://jpg2png.com/) untuk mengubah status .jpeg/.jpg menjadi .png
-- Anda bisa melakukan commit dan push ke file terkait
+- (https://shell.cloud.google.com/) Buka link tersebut untuk menjalankan perintah Linux yang telah di paparkan dalam penugasan.
+- Salin code Linux yang telah disiapkan oleh penanggungjawab dan jalankan.
+- Dokumentasikan setiap eksekusi code dengan screenshoots dan menyalin hasil input (output) dan menyimpannya dalam bentuk .txt.
+- Screenshoots yang tidak berstatus .png diubah pada link (https://jpg2png.com/) untuk mengubah status .jpeg/.jpg menjadi .png.
+- Anda bisa melakukan commit dan push ke file terkait.
 
 2. Perintah yang dijalankan.
-> uname -a
-
-> whoami
-
-> lsmod | head
-
-> dmesg | head
-
-> sudo dmesg | head (Penggunaan input [dmesg | head] mengalami kegagalan dan harus ditambahkan [sudo]) 
+   
+ ```bash
+   uname -a
+   whoami
+   lsmod | head
+   dmesg | head
+ sudo dmesg | head
+   ```
+(Penggunaan input [dmesg | head] mengalami kegagalan dan harus ditambahkan [sudo]) 
 
 3. File dan kode yang dibuat.
 - Diagram dibuat dengan draw.io dengan standar .png
