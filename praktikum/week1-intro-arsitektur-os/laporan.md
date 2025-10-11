@@ -122,8 +122,9 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
-
+2–3 poin kesimpulan dari praktikum ini.
+- Adanya kegiatan praktikum ini, para mahasiswa dituntut agar mempelajari sistem OS, baik dari segi OS dasar hingga Model Arsitektur OS, serta memahami fungsinya dan bisa mengaplikasikan dalam rangkaian ringkasan laporan ±500  kata menggunakan bahasa sendiri untuk membuktikan pemahaman dia tentang OS 
+- Dengan ini, mahasiswa juga diharuskan emiliki sistem problem solving-nya sendiri dalam mengatasi permasalahan dan dituntut untuk kreatif
 ---
 
 ## Quiz
