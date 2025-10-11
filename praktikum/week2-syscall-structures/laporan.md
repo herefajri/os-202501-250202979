@@ -52,13 +52,13 @@ atau Anda bisa melakukannya dengan mudah dengan menekan tombol add file di folde
    ```
  ```bash
    dmesg | tail -n 10
-   ```
+   ```.
 
 3. File dan kode yang dibuat.
 
 
 4. Commit message yang digunakan.
-Commit message yang digunakan "Update laporan.md"
+Commit message yang digunakan "Update laporan.md".
 
 ---
 
@@ -231,7 +231,7 @@ Quiz
 Jawab pertanyaan berikut di bagian Quiz laporan:
 
 1. Apa fungsi utama system call dalam sistem operasi?
-**Jawaban:** Fungsi utama System Call dalam system operasi adalah untuk menyaring tindakan yang mana bisa berbahaya bagi sistem operasi komputer. System Call ini memprioritaskan proteksi ketat layaknya anda ingin memverifikasi akun dengan akses yang terkontrol (seperti anda harus memberi izin, harus verifikasi dan semacamnya)
+**Jawaban:** Fungsi utama System Call dalam system operasi adalah untuk menyaring tindakan yang mana bisa berbahaya bagi sistem operasi komputer. System Call ini memprioritaskan proteksi ketat layaknya anda ingin memverifikasi akun dengan akses yang terkontrol (seperti anda harus memberi izin, harus verifikasi dan semacamnya).
 
 2. Sebutkan 4 kategori system call yang umum digunakan.
 **Jawaban:**
@@ -241,7 +241,7 @@ Jawab pertanyaan berikut di bagian Quiz laporan:
 - Pemeliharaan Informasi/Information Maintenance: Fungsinya untuk mengatur informasi sistem seperti mendapatkan waktu, tanggal, ID proses, atau jika dipersingkat intinya tentang sistem yang akan diambil.
 
 3. Mengapa system call tidak bisa dipanggil langsung oleh user program?
-**Jawaban:** Dikarenakan adanya System Call itu difungsikan untuk mencegah akses masuk dengan standar ketat atau analoginya seperti penjagaan militer, yang mana anda harus mengizinkan dulu dengan verifikasi kelas atas layaknya anda menghubungkan akun ke komputer lain, maka verifikasinya biasanya 3 tahap, tahap pemberian akses dengan mengetik username dan password, tahap mengkonfirmasi bahwa anda bukan robot dan tahap akhir yaitu pemberian kode verifikasi sebagai kunci akhir untuk masuk ke sistem. Layaknya sistem penjagaan militer namun versi dunia komputer dengan di tempatkan pada kondisi mengkaitkan akun, yang sama halnya dengan cara kerja system call yang mana system call akan memberi peringatan dulu dengan memverifikasi alamat dari sistem yang masuk 
+**Jawaban:** Dikarenakan adanya System Call itu difungsikan untuk mencegah akses masuk dengan standar ketat atau analoginya seperti penjagaan militer, yang mana anda harus mengizinkan dulu dengan verifikasi kelas atas layaknya anda menghubungkan akun ke komputer lain, maka verifikasinya biasanya 3 tahap, tahap pemberian akses dengan mengetik username dan password, tahap mengkonfirmasi bahwa anda bukan robot dan tahap akhir yaitu pemberian kode verifikasi sebagai kunci akhir untuk masuk ke sistem. Layaknya sistem penjagaan militer namun versi dunia komputer dengan di tempatkan pada kondisi mengkaitkan akun, yang sama halnya dengan cara kerja system call yang mana system call akan memberi peringatan dulu dengan memverifikasi alamat dari sistem yang masuk.
 
 ---
 
