@@ -246,8 +246,8 @@ dmesg untuk menampilkan buffer pesan Kernel dengan isi informasi booting, driver
 - Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
 **Jawaban:**
 Adanya perbedaan dari hasil input `strace`dimana:
-- Linux akan memunculkan rangkaian kata seperti `read(3,...)`
-- Sedangkan, untuk Windows akan jadi seperti `ReadFile(Handle,Buffer, Size,...)`
+   - Linux akan memunculkan rangkaian kata seperti `read(3,...)`
+   - Sedangkan, untuk Windows akan jadi seperti `ReadFile(Handle,Buffer, Size,...)`
 ---
 
 ## Kesimpulan
