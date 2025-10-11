@@ -214,7 +214,7 @@ herefajri@cloudshell:~$
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/strace%20ls.png)
-![Screenshot hasil](screenshots/Diagram_Struktur_System_Call_dan_Fungsi_Kernel.png)
+![Screenshot hasil](screenshots/DiagramStrukturSystemCalldanFungsiKernel.png)
 
 ---
 
