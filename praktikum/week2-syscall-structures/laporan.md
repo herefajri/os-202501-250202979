@@ -39,8 +39,9 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
  ```bash
  git add .
 git commit -m "Minggu 2 - Struktur System Call dan Kernel Interaction"
-git push origin main```
-,atau Anda bisa melakukannya dengan mudah dengan menekan tombol add file di folder Anda.
+git push origin main
+    ```
+atau Anda bisa melakukannya dengan mudah dengan menekan tombol add file di folder Anda.
 
 2. Perintah yang dijalankan.
  ```bash
