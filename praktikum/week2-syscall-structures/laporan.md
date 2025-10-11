@@ -27,35 +27,23 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 
 ## Langkah Praktikum
 1. Langkah-langkah yang dilakukan.
-   1.  Gunakan Linux (Ubuntu/WSL) dan pastikan perintah `strace` dan `man` sudah terinstal, serta konfigurasikan ke Git (
-   2. Jalankan perintah yang tersedia atau anda bisa melihatnya di bagian "2. Perintah yang dijalankan". Catat 5–10 system call pertama yang muncul dan jelaskan fungsinya.
-Simpan hasil analisis ke `results/syscall_ls.txt` .
-   3. **Eksperimen 2 – Menelusuri System Call File I/O**
-   Jalankan:
-   ```bash
-   strace -e trace=open,read,write,close cat /etc/passwd
-   ```
-   > Analisis bagaimana file dibuka, dibaca, dan ditutup oleh kernel.
-   4. **Eksperimen 3 – Mode User vs Kernel**
-   Jalankan:
-   ```bash
-   dmesg | tail -n 10
-   ```
-   > Amati log kernel yang muncul. Apa bedanya output ini dengan output dari program biasa?
-   5. **Diagram Alur System Call**
-   - Buat diagram yang menggambarkan alur eksekusi system call dari program user hingga kernel dan kembali lagi ke user mode.
-   - Gunakan draw.io / mermaid.
-   - Simpan di:
+   1.  Gunakan Linux (Ubuntu/WSL) dan pastikan perintah `strace` dan `man` sudah terinstal, serta konfigurasikan ke Git.
+   2. Untuik menganalisis System Call, jalankan perintah `strace ls`. Catat 5–10 system call pertama yang muncul dan jelaskan fungsinya. Simpan hasil analisis ke `results/syscall_ls.txt`.
+   3. Untuk menelusuri System Call File I/O, jalankan perintah 
+   `strace -e trace=open,read,write,close cat /etc/passwd`, dan analisis bagaimana file dibuka, dibaca, dan ditutup oleh kernel.
+   4. Untuk mengamati Mode Operasi CPU (Mode User vs Kernel), jalankan perintah `dmesg | tail -n 10`, dan amati log kernel yang muncul.
+   5. Mekanisme pembuatan Diagram Alur System Call yaitu dengan membuat diagram yang menggambarkan "alur eksekusi system call dari program user hingga kernel dan kembali lagi ke user mode". Anda bisa  menggunakan link  ```bash draw.io``` atau ```bash
+   mermaid``` . Simpan sesuai prosedur pengerjaan dengan penempatan di:
      ```
      praktikum/week2-syscall-structure/screenshots/syscall-diagram.png
-     ```
-   6. **Commit & Push**
-   ```bash
-   git add .
-   git commit -m "Minggu 2 - Struktur System Call dan Kernel Interaction"
-   git push origin main
-   ```
-  
+     ```.
+   6. Anda bisa melakukan commit dan push dengan:
+ ```bash
+ git add .
+git commit -m "Minggu 2 - Struktur System Call dan Kernel Interaction"
+git push origin main
+``` , atau Anda bisa melakukannya dengan mudah dengan menekan tombol add file di folder Anda.
+
 2. Perintah yang dijalankan.
  ```bash
    strace ls
