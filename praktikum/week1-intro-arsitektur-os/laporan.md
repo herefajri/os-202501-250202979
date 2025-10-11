@@ -57,14 +57,14 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
    dmesg | head
  sudo dmesg | head
    ```
-(Penggunaan input [dmesg | head] mengalami kegagalan dan harus ditambahkan [sudo]) 
+(Penggunaan input [dmesg | head] mengalami kegagalan dan harus ditambahkan [sudo]).
 
 3. File dan kode yang dibuat.
-- Diagram dibuat dengan draw.io dengan standar .png
+- Diagram dibuat dengan draw.io dengan standar .png.
 - Code dijalankan di Shell Cloud Google dengan standar .png untuk gambar dan .txt untuk code.
-Bagian hasilnya bisa dilihat pada bagian "## Hasil Eksekusi" dbagian bawah
+Bagian hasilnya bisa dilihat pada bagian "## Hasil Eksekusi" dbagian bawah.
 4. Commit message yang digunakan.
-Commit message yang digunakan "Update laporan.md"
+Commit message yang digunakan "Update laporan.md".
 ---
 
 ## Kode / Perintah
@@ -123,8 +123,8 @@ Sertakan screenshot hasil percobaan atau diagram:
 ## Analisis
 **- Jelaskan makna hasil percobaan.**
 - [uname -a] untuk menampilkan informasi lengkap tentang OS dan kernel seperti versi kernel,dsb.
-- [whoami] untuk menampilan nama User yang berstatus aktif
-- [lsmod | head] untuk menampilkan bagian program kernel yang sedang digunakan/dijalankan/dimuat
+- [whoami] untuk menampilan nama User yang berstatus aktif.
+- [lsmod | head] untuk menampilkan bagian program kernel yang sedang digunakan/dijalankan/dimuat.
 - [dmesg | head] untuk menampilkan pesan boting dan log kernel/pesan dari kernel (disclaimer: Disini saya menggunakan tambahan perintah/code "sudo" dikarenakan akses yang terbatas dan pengguaan input perintah tersenut untuk mengizinkan akses sementara).
 
 **- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).**  
@@ -132,24 +132,24 @@ Sertakan screenshot hasil percobaan atau diagram:
 Perintah [uname -a] ini adalah permintaan dari program User ke Kernel dan harus mendapatkan izin di zona System Call untuk mendapatkan persetujuan dan dapat melihat detail tentang lingkungan dan juga tentang kernel itu sendiri. Dan hubungannya dengan Arsitektur OS adalah yaitu adanya hubungan di lingkup User dan Kernel Inti, dimana di User Zone [uname -a] mengeksekusi perintah dengan label Manajemen Proses.
 
 [whoami]
-Pengelolaan laporan identitas User ke kernel yang mana dikarenakan saya memakai shell.cloud.google jadi menggunakan identitas akun google saya sebagai laporan verifikasi ke System Call yang diteruskan ke Kernel dan menghasilkan output menampilkan nama pengguna aktif. Dan hubungannya dengan Arsitektur OS, sama seperti [uname -a] yaitu dimana Kernel inti mengelola perintah dengan nama Manajemen Proses
+Pengelolaan laporan identitas User ke kernel yang mana dikarenakan saya memakai shell.cloud.google jadi menggunakan identitas akun google saya sebagai laporan verifikasi ke System Call yang diteruskan ke Kernel dan menghasilkan output menampilkan nama pengguna aktif. Dan hubungannya dengan Arsitektur OS, sama seperti [uname -a] yaitu dimana Kernel inti mengelola perintah dengan nama Manajemen Proses.
 
 [lsmod | head]
-Ini sama seperti sebelumnya, memberi perintah dan ya sama System Call akan memverifikasi terlebih dahulu lalu meneruskan ke Kernel. Namun perintah ini adalah perintah untuk menanyakan tentang komponen (Modul Kernel) yang sedang digunakan saat ini. Disini hubungan dengan Arsitektur OS adalah dibagian Manajemen Perangkat dimana Modul yang dipakai dan menjadi tanggung jawab Kernel Inti, modul ini akan ditampilkan oleh perintah [lsmod] sebelumnya 
+Ini sama seperti sebelumnya, memberi perintah dan ya sama System Call akan memverifikasi terlebih dahulu lalu meneruskan ke Kernel. Namun perintah ini adalah perintah untuk menanyakan tentang komponen (Modul Kernel) yang sedang digunakan saat ini. Disini hubungan dengan Arsitektur OS adalah dibagian Manajemen Perangkat dimana Modul yang dipakai dan menjadi tanggung jawab Kernel Inti, modul ini akan ditampilkan oleh perintah [lsmod] sebelumnya.
 
 [dmesg | head]
-System Call tetap sama, menyaring tindakan dan perintah, serta verifikasi. Namun untuk kernel disini akan memberikan pandangan tentang inisial-inisial detail tentang Hardware seperti jenis CPU, deteksi perangkat dan konfigurasi kernel. Penggunaan [sudo] menjadi acuan bahwa mekanisme keamanan dan kontrol akses pada kernel aktif. Dan disini hubungannya dengan Arsitektur OS adalah masih tetap dibagian Kernel Inti dimana di bagian tanggungjawab kernel yaitu keamanan yang mana menegakkan izin, seperti yang telah di buat dalam percobaan, dmesg perlu [sudo] untuk bisa mendapatkan izin ke Kernel
+System Call tetap sama, menyaring tindakan dan perintah, serta verifikasi. Namun untuk kernel disini akan memberikan pandangan tentang inisial-inisial detail tentang Hardware seperti jenis CPU, deteksi perangkat dan konfigurasi kernel. Penggunaan [sudo] menjadi acuan bahwa mekanisme keamanan dan kontrol akses pada kernel aktif. Dan disini hubungannya dengan Arsitektur OS adalah masih tetap dibagian Kernel Inti dimana di bagian tanggungjawab kernel yaitu keamanan yang mana menegakkan izin, seperti yang telah di buat dalam percobaan, dmesg perlu [sudo] untuk bisa mendapatkan izin ke Kernel.
 
 **- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?**
 Yang terjadi adalah:
-- Jika di Linux, semua perintah akan berjalan lancar dari [uname] sampai [dmesg]
-- Sedangkan jika di Windows menggunakan hal-hal seperti di CMD maka akan didapat kegagalan kecuali pada bagian [whoami]
+- Jika di Linux, semua perintah akan berjalan lancar dari [uname] sampai [dmesg].
+- Sedangkan jika di Windows menggunakan hal-hal seperti di CMD maka akan didapat kegagalan kecuali pada bagian [whoami].
 ---
 
 ## Kesimpulan
 2–3 poin kesimpulan dari praktikum ini.
-- Adanya kegiatan praktikum ini, para mahasiswa dituntut agar mempelajari sistem OS, baik dari segi OS dasar hingga Model Arsitektur OS, serta memahami fungsinya dan bisa menjelaskan dengan bahasa sendiri untuk membuktikan pemahaman dia tentang OS 
-- Dengan ini, mahasiswa juga diharuskan emiliki sistem problem solving-nya sendiri dalam mengatasi permasalahan dan dituntut untuk kreatif
+- Adanya kegiatan praktikum ini, para mahasiswa dituntut agar mempelajari sistem OS, baik dari segi OS dasar hingga Model Arsitektur OS, serta memahami fungsinya dan bisa menjelaskan dengan bahasa sendiri untuk membuktikan pemahaman dia tentang OS.
+- Dengan ini, mahasiswa juga diharuskan emiliki sistem problem solving-nya sendiri dalam mengatasi permasalahan dan dituntut untuk kreatif.
 ---
 
 ## Quiz
@@ -158,9 +158,9 @@ Jawab pertanyaan berikut di bagian Quiz pada laporan:
 
 1. Sebutkan tiga fungsi utama sistem operasi.
 **Jawaban:**
-- OS bertugas sebagai manajer utama sistem yang mana mengemban tanggung jawab untuk mengirim atau mengirim kembali semua sumber-sumber yang tersedia di sistem
-- OS menyediakan ruang atau jembatan agar user bisa berinteraksi dengan hardware
-- OS mengelola jalannya suatu proses semua program dengan memastikan semuanya berjalan secara efisien dan tak saling menghalangi serta memanajemen keamanan sistem
+- OS bertugas sebagai manajer utama sistem yang mana mengemban tanggung jawab untuk mengirim atau mengirim kembali semua sumber-sumber yang tersedia di sistem.
+- OS menyediakan ruang atau jembatan agar user bisa berinteraksi dengan hardware.
+- OS mengelola jalannya suatu proses semua program dengan memastikan semuanya berjalan secara efisien dan tak saling menghalangi serta memanajemen keamanan sistem.
 
 2. Jelaskan perbedaan antara kernel mode dan user mode.
 **Jawaban:**
@@ -178,11 +178,11 @@ Jawab pertanyaan berikut di bagian Quiz pada laporan:
 Sesi refleksi terkait aktivitas praktikum dan yang berhubungan dengan pembelajaran dan penugasan Week-1 :
 - Apa bagian yang paling menantang minggu ini?
 **Jawaban:**
-  Penggunaan pertama kalinya VSCode, GitHub, dan Git Bash untuk mengkaitkan folder dari komputer (File Manager) ke sistem GitHub  
+  Penggunaan pertama kalinya VSCode, GitHub, dan Git Bash untuk mengkaitkan folder dari komputer (File Manager) ke sistem GitHub.  
 - Bagaimana cara Anda mengatasinya?
 **Jawaban:**
-  Dengan menginput letak permasalahan dengan bantuan AI (ChatGPT dan Gemini) dengan via chat atau dokumentasi situasi agar AI bisa memahamilebih lanjut terkait  kendala yang dialami user serta bantuan dari teman-teman dalam bentuk penjelasan untuk memastikan aktivitas praktikum berjalan dan menghasilkan output yang sesuai standar penugasan
+  Dengan menginput letak permasalahan dengan bantuan AI (ChatGPT dan Gemini) dengan via chat atau dokumentasi situasi agar AI bisa memahamilebih lanjut terkait  kendala yang dialami user serta bantuan dari teman-teman dalam bentuk penjelasan untuk memastikan aktivitas praktikum berjalan dan menghasilkan output yang sesuai standar penugasan.
 ---
 
 **Credit:**  
-1. ESA121 – PENGANTAR APLIKASI KOMPUTER, OPERATING SYSTEM, Posted bynanda, January 29, 2020 (https://bahan-ajar.esaunggul.ac.id/esa121/2020/01/29/operating-system/)
+1. ESA121 – PENGANTAR APLIKASI KOMPUTER, OPERATING SYSTEM, Posted bynanda, January 29, 2020 (https://bahan-ajar.esaunggul.ac.id/esa121/2020/01/29/operating-system/).
