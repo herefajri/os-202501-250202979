@@ -34,15 +34,12 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
    4. Untuk mengamati Mode Operasi CPU (Mode User vs Kernel), jalankan perintah `dmesg | tail -n 10`, dan amati log kernel yang muncul.
    5. Mekanisme pembuatan Diagram Alur System Call yaitu dengan membuat diagram yang menggambarkan "alur eksekusi system call dari program user hingga kernel dan kembali lagi ke user mode". Anda bisa  menggunakan link  ```bash draw.io``` atau ```bash
    mermaid``` . Simpan sesuai prosedur pengerjaan dengan penempatan di:
-     ```
-     praktikum/week2-syscall-structure/screenshots/syscall-diagram.png
-     ```.
+     ```praktikum/week2-syscall-structure/screenshots/syscall-diagram.png```.
    6. Anda bisa melakukan commit dan push dengan:
  ```bash
  git add .
 git commit -m "Minggu 2 - Struktur System Call dan Kernel Interaction"
-git push origin main
-``` , atau Anda bisa melakukannya dengan mudah dengan menekan tombol add file di folder Anda.
+git push origin main```, atau Anda bisa melakukannya dengan mudah dengan menekan tombol add file di folder Anda.
 
 2. Perintah yang dijalankan.
  ```bash
