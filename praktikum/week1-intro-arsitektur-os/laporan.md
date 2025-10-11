@@ -24,7 +24,7 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 - OS adalah suatu sistem yang menghubungkan User dengan Hardware (analoginya seperti perantara atau jika digambarkan seperti tukang pos);
   "Sistem operasi ( operating system ; OS) adalah seperangkat program yang mengelola sumber daya perangkat keras komputer dan menyediakan layanan umum untuk aplikasiperangkat lunak. Sistem operasi adalah jenis yang paling penting dari perangkat lunak sistem  dalam sistem komputer." ESA121 – PENGANTAR APLIKASI KOMPUTER, OPERATING SYSTEM, Posted bynanda, January 29, 2020
 - DI OS ada beberapa sistem, software, dan program, seperti; Kernel sebagai inti OS, System Call sebagai penjaga gerbang antara User Zone dan Kernel Zone, Device Driver yang menjembatani antara OS dan Hardware Input ( Hardware Input telah dibahas di mata kuliah Emerging Technologies & Digital Transformation), dan File System yang mana umum kita temui untuk menyimpan file
-- Model Arsitektur OS itu punya 3 main model, yaitu; Monolithic dimana semua unsur unsur OS digabung dalam satu kotak besar atau bisa disebut kernel tunggal, Layered dengan OS dibangun berlapis dengan hardware sebagai lapisan bawah dan User Interface, dan yang terakhir adalah Microkernel dengan mengoperasikan fungsi inti di kernel dan sisanya berada di User Interface dan menentukan akan dijalankan di ruang mana (mau di User Zone atau di Kernel Zone)
+- Model Arsitektur OS itu punya 3 main model, yaitu; Monolithic dimana semua unsur unsur OS digabung dalam satu kotak besar atau bisa disebut kernel tunggal, Layered dengan OS dibangun berlapis dengan hardware sebagai lapisan paling bawah dan User Interface lapisan paling atas, dan yang terakhir adalah Microkernel dengan mengoperasikan fungsi inti di kernel dan sisanya berada di User Interface dan menentukan akan dijalankan di ruang mana (mau di User Zone atau di Kernel Zone)
 
 ## Langkah Praktikum
 1. Langkah-langkah yang dilakukan.
@@ -131,15 +131,18 @@ Quiz
 Jawab pertanyaan berikut di bagian Quiz pada laporan:
 
 1. Sebutkan tiga fungsi utama sistem operasi.
+**Jawaban:**
 - OS bertugas sebagai manajer utama sistem yang mana mengemban tanggung jawab untuk mengirim atau mengirim kembali semua sumber-sumber yang tersedia di sistem
 - OS menyediakan ruang atau jembatan agar user bisa berinteraksi dengan hardware
 - OS mengelola jalannya suatu proses semua program dengan memastikan semuanya berjalan secara efisien dan tak saling menghalangi serta memanajemen keamanan sistem
 
 2. Jelaskan perbedaan antara kernel mode dan user mode.
+**Jawaban:**
 - User Mode memiliki eksekusi tindakan yang terbatas dikarenakan adanya batas yang jelas antara ruang User dan Kernel yang dipisahkan oleh beberapa sistem keamanan, salah satunya system call yang diawasi oleh Kernel. Andaikata ada situasi buruk terjadi seperti contohnya hal-hal yang ada keterkaitannya dengan aplikasi ilegal maka operasi akan berhenti karena adanya sistem keamanan tersebut, dan hanya menyebabkan suatu aplikasi berhenti. Sedangkan,
 - Kernel Mode itu memiliki akses ke segala bidang bahkan yang paling dalam sekalipun dikarenakan yang beroperasi adalah Kernel atau Inti dari Kernel Mode itu. Tapi jikalau ada suatu tindakan yang berbahaya atau adanya kegagalan maka kerusakannya bisa sangat berbahaya bahkan bisa merusak kinerja sistem komputer.
 
 3. Sebutkan contoh OS dengan arsitektur monolithic dan microkernel.
+**Jawaban:**
 - Arsitektur Monolithic atau Layanan OS inti yang dijalankan di ruang Kernel Mode seperti Linux.
 - Arsitektur Microkernel atau  Layanan OS dasar di Kernel Mode bahkan beberapa ada di User Mode, contohnya seperti Mach, QNX, MINIX.
 
