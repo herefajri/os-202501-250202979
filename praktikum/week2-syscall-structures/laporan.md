@@ -27,17 +27,9 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 
 ## Langkah Praktikum
 1. Langkah-langkah yang dilakukan.
-   1. **Setup Environment**
-   - Gunakan Linux (Ubuntu/WSL).
-   - Pastikan perintah `strace` dan `man` sudah terinstal.
-   - Konfigurasikan Git (jika belum dilakukan di minggu sebelumnya).
-   2. **Eksperimen 1 – Analisis System Call**
-   Jalankan perintah berikut:
-   ```bash
-   strace ls
-   ```
-   > Catat 5–10 system call pertama yang muncul dan jelaskan fungsinya.  
-   Simpan hasil analisis ke `results/syscall_ls.txt`.
+   1.  Gunakan Linux (Ubuntu/WSL) dan pastikan perintah `strace` dan `man` sudah terinstal, serta konfigurasikan ke Git (
+   2. Jalankan perintah yang tersedia atau anda bisa melihatnya di bagian "2. Perintah yang dijalankan". Catat 5–10 system call pertama yang muncul dan jelaskan fungsinya.
+Simpan hasil analisis ke `results/syscall_ls.txt` .
    3. **Eksperimen 2 – Menelusuri System Call File I/O**
    Jalankan:
    ```bash
