@@ -49,11 +49,12 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 - Anda bisa melakukan commit dan push ke file terkait
 
 2. Perintah yang dijalankan.
-- [uname -a] untuk menampilkan informasi lengkap tentang OS dan kernel seperti versi kernel,dsb.
-- [whoami] untuk menampilan nama User yang berstatus aktif
-- [lsmod | head] untuk menampilkan bagian program kernel yang sedang digunakan/dijalankan/dimuat
-- [dmesg | head] untuk menampilkan pesan boting dan log kernel/pesan dari kernel (disclaimer: Disini saya menggunakan tambahan perintah/code "sudo" dikarenakan akses yang terbatas dan pengguaan input perintah tersenut untuk mengizinkan akses sementara).
-   
+> uname -a 
+> whoami
+> lsmod | head
+> dmesg | head
+> sudo dmesg | head (Penggunaan input [dmesg | head] mengalami kegagalan dan harus ditambahkan [sudo]) 
+
 3. File dan kode yang dibuat.
 - Diagram dibuat dengan draw.io
 - Code dijalankan di Shell Cloud Google
@@ -115,9 +116,18 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+**- Jelaskan makna hasil percobaan.**
+- [uname -a] untuk menampilkan informasi lengkap tentang OS dan kernel seperti versi kernel,dsb.
+- [whoami] untuk menampilan nama User yang berstatus aktif
+- [lsmod | head] untuk menampilkan bagian program kernel yang sedang digunakan/dijalankan/dimuat
+- [dmesg | head] untuk menampilkan pesan boting dan log kernel/pesan dari kernel (disclaimer: Disini saya menggunakan tambahan perintah/code "sudo" dikarenakan akses yang terbatas dan pengguaan input perintah tersenut untuk mengizinkan akses sementara).
+
+**- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).**  
+- [uname -a]
+  1.
+  2. 
+
+**- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?**
 
 ---
 
