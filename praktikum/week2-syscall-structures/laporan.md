@@ -64,9 +64,22 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
    git push origin main
    ```
   
-2. Perintah yang dijalankan.  
-3. File dan kode yang dibuat.  
+2. Perintah yang dijalankan.
+ ```bash
+   strace ls
+   ```
+ ```bash
+   strace -e trace=open,read,write,close cat /etc/passwd
+   ```
+ ```bash
+   dmesg | tail -n 10
+   ```
+
+3. File dan kode yang dibuat.
+
+
 4. Commit message yang digunakan.
+Commit message yang digunakan "Update laporan.md"
 
 ---
 
