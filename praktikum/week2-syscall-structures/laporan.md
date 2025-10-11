@@ -219,10 +219,35 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+- Jelaskan makna hasil percobaan.
+**Jawaban:**
+ ```bash
+   strace ls
+   ```
+Untuk menampilkan setiap yang dipanggil dengan perintah ls (list directory contents) dengan fungsi membuka membuka sistem seperti Glibc dan berkas konfigurasi.
 
+ ```bash
+   strace -e trace=open,read,write,close cat /etc/passwd
+   ```
+Perintah dimana membatasi output `strace` hanya pada System Call I/O dasar yaitu `open`, `read`, `write`, dan `close` yang dipanggil oleh perintah `cat` saat menampilkan isi berkas `/etc/passwd`.
+
+ ```bash
+   dmesg | tail -n 10
+   ```
+dmesg untuk menampilkan buffer pesan Kernel dengan isi informasi booting, driver hardware dan pesan diagnosik dari Kernel, dan `| tail -n 10` untuk membatasi output hanya pada 10 baris terakhir.
+
+
+- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).
+**Jawaban:**
+   1. Menujukkan bahwa semua layanan, perintah, dan sebagainya, harus melewati System Call yang dikelola Kernel.
+   2. Adanya pemanggilan read oleh strace cat, disini menunjukkan bahwa Kernel melaksanakan tugas dan mengembalikannya ke program dan perintah dmesg memanggil Kernel untuk menampilkan pesan internal tentang inisialisasi driver ataupun hardware.
+   3. Adanya input strace karena adanya perbedaan yang mana tak bisa ditembus dengan bebas dan percobaan ini memvalidasi arsitektur Dual-Mode Operation (Mode User dengan Mode Kernel).
+      
+- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+**Jawaban:**
+Adanya perbedaan dari hasil input `strace`dimana:
+- Linux akan memunculkan rangkaian kata seperti `read(3,...)`
+- Sedangkan, untuk Windows akan jadi seperti `ReadFile(Handle,Buffer, Size,...)`
 ---
 
 ## Kesimpulan
