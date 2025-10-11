@@ -59,7 +59,7 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 - Diagram dibuat dengan draw.io dengan standar .png
 - Code dijalankan di Shell Cloud Google dengan standar .png untuk gambar dan .txt untuk code.
 Bagian hasilnya bisa dilihat pada bagian "## Hasil Eksekusi" dbagian bawah
-8. Commit message yang digunakan.
+4. Commit message yang digunakan.
 Commit message yang digunakan "Update laporan.md"
 ---
 
