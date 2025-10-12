@@ -254,7 +254,8 @@ Tulis analisis 400–500 kata tentang:
   - Bagaimana OS memastikan transisi user–kernel berjalan aman?
   - Sebutkan contoh system call yang sering digunakan di Linux.
   **Jawaban:**
-Tentang Pentingnya System Call dalam Keamanan OS
+    
+Mengapa System Call itu Penting?
 
 Jadi System Call merupakan suatu mekanisme yang mana berfungsi sebagai antarmuka (API) atau dengan kata lain memungkinkan program di user space untuk berinteraksi dengan kernel sistem operasi yang beroperasi di Kernel Mode. Dikarenakan Kernel mempunyai akses penuh ke banyak sumber daya perangkat dan data penting, disini System Call adalah Penjaga Gerbang atau memegang peran sebagai penjaga demi keamanan dan stabilitas OS agar aplikasi tak bisa dengan sembarangan mengakses bagian dalam OS, dan memastikan hanya permintaan tertentu atau khusus dengan memastikan hal-hal seperti kebenaran alamat memori, izin, dan hal-hal lainnya sebelum menjalankan operasi dan mengeksekusi ke tingkat kernel. 
 
@@ -262,13 +263,13 @@ Transisi user-kernel yang Aman
 
 Untuk memastikan keamanan, transisi dari user mode ke kernel harus dipastikan oleh OS  terkait apakah statusnya aman atau tidak. Tapi transisi ini mungkin dilakukan melalui mekanisme yang disebut dengan Trap atau Interrupt;
 1. Aplikasi Memulai Panggilan 
-Ketika aplikasi ingin menjalankan operasi yang memerlukan hal khusus seperti halnya `read` atau `write`, operasi itu tak langsung menuju ke zona kode kernel, namun aplikasi menempatkan permintaan atau argumen untuk System Call yang diinginkan dengan lokasi yang ditentukan dan menjalankan instruksi khusus yang dikenal sebagai Trap/ Software Interrupt 
+Ketika aplikasi ingin menjalankan operasi yang memerlukan hal khusus seperti halnya `read` atau `write`, operasi itu tak langsung menuju ke zona kode kernel, namun aplikasi menempatkan permintaan atau argumen untuk System Call yang diinginkan dengan lokasi yang ditentukan dan menjalankan instruksi khusus yang dikenal sebagai Trap/ Software Interrupt. 
 2. Perubahan Mode CPU
-Instruksi/ permintaan tadi memicu adanya Interrupt yang mana secara otomatis mengubah status CPU dari User Mode menjadi Kernel Mode
-3. Kernel Mulai Mengambil Kontrol 
-Dalam tahap ini, instruksi/permintaan masuk ke Kernel Mode, CPU masuk ke lokasi memori yang telah ditetapkan sebelumnya dalam tabel vektor Interrupt. Lokasi ini mengarah ke System Call Handler kernel yang mana akan membaca register CPU untuk mengindentifikasi System Call yang diminta dan memverifikasi parameter yang dilaporkan
+Instruksi/ permintaan tadi memicu adanya Interrupt yang mana secara otomatis mengubah status CPU dari User Mode menjadi Kernel Mode.
+3. Kernel Mulai Mengambil Kontrol
+Dalam tahap ini, instruksi/permintaan masuk ke Kernel Mode, CPU masuk ke lokasi memori yang telah ditetapkan sebelumnya dalam tabel vektor Interrupt. Lokasi ini mengarah ke System Call Handler kernel yang mana akan membaca register CPU untuk mengindentifikasi System Call yang diminta dan memverifikasi parameter yang dilaporkan.
 4. Eksekusi dan Pengembalian 
-Setelah validasi dan eksekusi oprasi selesai, kernel memulihkan konteks dari CPU dan mengubah status kembali ke User Mode kembali sebelum mengembalikan kontrol ke aplikasi yang mengajukan permintaan sebelumnya
+Setelah validasi dan eksekusi oprasi selesai, kernel memulihkan konteks dari CPU dan mengubah status kembali ke User Mode kembali sebelum mengembalikan kontrol ke aplikasi yang mengajukan permintaan sebelumnya.
 
 Di dalam sistem operasi, khususnya Linux, terdapat banyak system call yang umum digunakan sehari-hari. Beberapa yang paling umum antara lain seperti:
 - `read()` untuk membaca dan `write()` untuk menulis data, dari/ke file atau perangkat.
