@@ -261,8 +261,7 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-Quiz
-Jawab pertanyaan berikut di bagian Quiz laporan:
+Quiz:
 
 1. Apa fungsi utama system call dalam sistem operasi?
 **Jawaban:** Fungsi utama System Call dalam system operasi adalah untuk menyaring tindakan yang mana bisa berbahaya bagi sistem operasi komputer. System Call ini memprioritaskan proteksi ketat layaknya anda ingin memverifikasi akun dengan akses yang terkontrol (seperti anda harus memberi izin, harus verifikasi dan semacamnya).
@@ -280,10 +279,11 @@ Jawab pertanyaan berikut di bagian Quiz laporan:
 ---
 
 ## Refleksi Diri
-Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
+Refleksi diri secara singkat:
+- Apa bagian yang paling menantang minggu ini?
+  **Jawaban:** Kesulitan dalam memahami materi dan maksud dari apa yang telah disampaikan dan yang ditugaskan.
 - Bagaimana cara Anda mengatasinya?  
-
+  **Jawaban:** Membaca, menganalogi, dan mempelajari ulang dan bertanya pada teman.
 ---
 
 **Credit:**  
