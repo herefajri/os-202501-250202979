@@ -21,8 +21,13 @@ Tujuan praktikum minggu ini.
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
-
+- Jembatan komunikasi aman antara User Space yang memiliki keterbatasan gerak dan Kernel Space yang memiliki akses ke semua bidang sekaligus pusat kendali, dipegang oleh System Call, dimana bagian daripada User Space, ketika mereka ingin menjalankan sebuah operasi dengan Kernel harus di periksa oleh System Call. 
+- Kernel sebagai pusat kendali memiliki fungsi utama yaitu; manajemen proses, manajemen memori, manajemen perangkat I/O, dan manajemen berkas atau File Ststem. 
+- System Call sendiri memiliki beberapa Struktur seperti;
+  1. **Permintaan**, untuk memanggil fungsi yang telah disediakan oleh Standard Library (Jembatan awal ke System Call)
+  2. **Penyiapan Parameter**, untuk mempersiapkan laporan permintaan yang jelas dan terstruktur untuk dikirim ke Kernel
+  3. **Transisi Mode (Trap/Interrupt)**, bagian yang sama dengan System Call namun mekanisme nya ke CPU untuk mengubah hak akses dari User ke Kernel
+  4. **Pengembalian Kontrol**, agar setelah kernel selesai menerima, menjalankan tugas, dan memberikan output, anda bisa kembali ke mode pengguna dan bisa input lagi
 ---
 
 ## Langkah Praktikum
