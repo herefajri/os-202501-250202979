@@ -279,15 +279,18 @@ Disini sistem operasi dibagi menjadi beberapa lapisan atau layer yang berurutan.
 
 Contoh sistem operasi yang menggunakan Layered Architecture adalah THE System yang dibuat oleh Dijkstra adalah contoh klasik, juga konsep berlapis ini diaplikasikan dalam sistem modern seperti Windows NT dan macOS yang menggunakan kernel hibrida.
 
-Model mana yang paling relevan untuk sistem modern?
+#Model mana yang paling relevan untuk sistem modern?
+
 Model kernel yang paling relevan untuk sistem operasi modern adalah hybrid kernel, yang mana menggabungkan antara kelebihan Monolithic kernel dan Microkernel. Model ini mengoptimalkan performa dengan komponen penting berjalan di kernel seperti Monolithic, sekaligus menjaga stabilitas dan keamanan dengan menjalankan layanan lain di ruang pengguna seperti Microkernel.
+
 •	Tidak ada jenis arsitektur yang sepenuhnya terbaik untuk semua kebutuhan. Masing-masing punya tempat dan peran berdasarkan tujuan sistemnya.
 •	Karena performanya bagus dan dukungan ekosistemnya luas maka monolithic kernel masih menjadi favorit di komputer desktop dan server, contohnya Linux.
 •	Microkernel cocok untuk perangkat yang memerlukan keamanan dan keandalan tinggi, misalnya mobil, pesawat, dan perangkat IoT yang berjalan terus dalam kondisi kritis.
 •	Meskipun jarang dipakai sebagai model utama sendirian, Layered architecture lebih sebagai prinsip penting untuk membangun sistem yang modular dan terstruktur.
 •	Banyak sistem modern akhirnya menggunakan model hybrid kernel, yang mencoba menggabungkan kecepatan dan efisiensi Monolithic kernel dengan stabilitas dan keamanan Microkernel. Contohnya adalah Windows NT dan XNU kernel di macOS milik Apple. Dengan cara ini, sistem operasi dapat berjalan dengan baik, aman, dan fleksibel di berbagai perangkat
 
-Analisis
+#Analisis
+
 Arsitektur monolithic cocok untuk sistem general atau umum dengan kebutuhan kinerja tinggi, microkernel unggul untuk sistem kritis yang mana membutuhkan keamanan, keandalan, dan konsistensi, sedangkan layered architecture tetap penting sebagai konsep desain modular yang fleksible dan mudah dikelola atau diatur. Perkembangan sistem operasi modern menunjukkan kecenderungan menuju model hybrid/hibrida yang menggabungkan antara efisiensi, fleksibilitas, dan keamanan secara seimbang. 
 
 
