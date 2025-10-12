@@ -276,7 +276,7 @@ Di dalam sistem operasi, khususnya Linux, terdapat banyak system call yang umum 
 - `fork()` untuk membuat proses baru.
 - `execve()` untuk menjalankan program baru dalam proses yang sedang berjalan.
 - `wait()` untuk menunggu proses anak (sekedar informasi, ada yang namanya Parent Process/ Proses Induk dan Child Process/Proses Anak) selesai.
-- `exit()1 untuk keluar dari proses.
+- `exit()` untuk keluar dari proses.
 - `mmap()` untuk memetakan file atau perangkat ke memori virtual.
 - `ioctl()` untuk melakukan operasi khusus pada perangkat.
 - `kill()` untuk mengirim sinyal ke proses lain.
