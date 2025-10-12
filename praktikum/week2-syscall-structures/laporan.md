@@ -260,22 +260,22 @@ Ada 3 jenis arsitektur OS yang memiliki cara kerja dan tujuan penggunaan yang be
 
 1.	Monolithic Kernel
 Monolithic kernel adalah struktur di mana semua layanan penting sistem operasi berjalan bersama-sama dalam ruang lingkup yang sama yang disebut ruang kernel. Dalam Monolithic Kernel ini ada banyak bagian penting seperti pengelolaan proses, pengaturan memori, sistem file, dan driver perangkat keras. Semua komponen ini bekerja erat dan saling berhubungan langsung tanpa batas pemisah yang jelas.
-- **Kelebihan Monolithic Kernel :** Karena bagian-bagian bisa langsung saling mengakses tanpa harus lewat pesan atau protokol tertentu maka kerja sistem jadi cepat,performa lebih tinggi disebabkan karena proses komunikasi lebih singkat dan efisien.
-- **Kekurangan Monolithic Kernel:** Seluruh sistem terganggu, bahkan crash jika satu bagian mengalami masalah dan juga pemeliharaan dan pengembangan rumit karena banyak fungsi dijalankan sekaligus di kernel.
+- **Kelebihan :** Karena bagian-bagian bisa langsung saling mengakses tanpa harus lewat pesan atau protokol tertentu maka kerja sistem jadi cepat,performa lebih tinggi disebabkan karena proses komunikasi lebih singkat dan efisien.
+- **Kekurangan :** Seluruh sistem terganggu, bahkan crash jika satu bagian mengalami masalah dan juga pemeliharaan dan pengembangan rumit karena banyak fungsi dijalankan sekaligus di kernel.
 
 Contoh sistem operasi yang menggunakan struktur Monolithic seperti Linux, FreeBSD, dan OpenBSD. Kernel Linux misalnya, memang besar tapi bisa fleksibel dikarenakan driver bisa ditambah atau dilepas kapan saja melalui modul yang bisa dimuat.
 
 2.	Microkernel
 Kernel ini ringan dan lebih minimalis daripada monolithic kernel. Microkernel memuat hanya fitur paling dasar di dalam kernel, seperti pengelolaan memori, penjadwalan proses, dan komunikasi antar proses (IPC). Fungsi sistem operasi lain seperti pengelolaan file, driver perangkat dijalankan di luar kernel, biasanya di ruang pengguna. 
-- **Kelebihan Microkernel:** Lebih aman dan stabil, kernel tetap aman dan sistem tidak langsung terganggu jika satu layanan berjalan di ruang pengguna rusak juga memudahkan isolasi kesalahan dan menjaga agar masalah tidak menyebar ke bagian lain.
-- **Kekurangan Microkernel:** kinerjanya bisa lebih lambat dibanding Monolithic kernel, karena komunikasi antar komponen lewat mekanisme pesan dan pengembangan jadi lebih kompleks karena harus memastikan semua komunikasi antar layanan berjalan lancar tanpa hambatan.
+- **Kelebihan :** Lebih aman dan stabil, kernel tetap aman dan sistem tidak langsung terganggu jika satu layanan berjalan di ruang pengguna rusak juga memudahkan isolasi kesalahan dan menjaga agar masalah tidak menyebar ke bagian lain.
+- **Kekurangan :** kinerjanya bisa lebih lambat dibanding Monolithic kernel, karena komunikasi antar komponen lewat mekanisme pesan dan pengembangan jadi lebih kompleks karena harus memastikan semua komunikasi antar layanan berjalan lancar tanpa hambatan.
 
 Contoh sistem operasin yang menggunakan Microkernel adalah QNX yang populer di sistem otomotif dan industri, MINIX 3 yang digunakan sebagai sistem pendidikan dan penelitian, serta keluarga L4 yang sering dipakai di sistem tertanam dan perangkat Internet of Things (IoT).
 
 3.	Layered Architecture
 Disini sistem operasi dibagi menjadi beberapa lapisan atau layer yang berurutan. Setiap lapisan hanya berinteraksi dengan lapisan di bawahnya sehingga ada struktur yang jelas dan rapi. Ini memudahkan pengelolaan sistem karena tiap lapisan punya tugas dan fungsi tertentu.
-- **Kelebihan Layered Architecture:** Karena menggunakan modularitas struktur lapisan maka sistem jadi lebih mudah dikelola, dikembangkan dan lebih mudah menemukan letak kesalahannya karena sistem terorganisir secara berlapis.
-- **Kekurangan Layered Architecture:** Proses komunikasi antar lapisan bisa membuat performa menurun karena terlalu banyak lapisan dan agar fungsi tiap lapisan tidak tumpang tindih dan bisa berjalan optimal maka memerlukan desain yang cermat.
+- **Kelebihan :** Karena menggunakan modularitas struktur lapisan maka sistem jadi lebih mudah dikelola, dikembangkan dan lebih mudah menemukan letak kesalahannya karena sistem terorganisir secara berlapis.
+- **Kekurangan :** Proses komunikasi antar lapisan bisa membuat performa menurun karena terlalu banyak lapisan dan agar fungsi tiap lapisan tidak tumpang tindih dan bisa berjalan optimal maka memerlukan desain yang cermat.
 
 Contoh sistem operasi yang menggunakan Layered Architecture adalah THE System yang dibuat oleh Dijkstra adalah contoh klasik, juga konsep berlapis ini diaplikasikan dalam sistem modern seperti Windows NT dan macOS yang menggunakan kernel hibrida.
 
