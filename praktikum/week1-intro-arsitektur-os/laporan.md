@@ -22,7 +22,7 @@ Diharapkan mahasiswa mampu:
 ## Dasar Teori
 Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 - OS adalah suatu sistem yang menghubungkan User dengan Hardware (analoginya seperti perantara atau jika digambarkan seperti tukang pos);
-  "Sistem operasi ( operating system ; OS) adalah seperangkat program yang mengelola sumber daya perangkat keras komputer dan menyediakan layanan umum untuk aplikasiperangkat lunak. Sistem operasi adalah jenis yang paling penting dari perangkat lunak sistem  dalam sistem komputer." ESA121 – PENGANTAR APLIKASI KOMPUTER, OPERATING SYSTEM, Posted bynanda, January 29, 2020.
+  "Sistem operasi ( operating system ; OS) adalah seperangkat program yang mengelola sumber daya perangkat keras komputer dan menyediakan layanan umum untuk aplikasiperangkat lunak. Sistem operasi adalah jenis yang paling penting dari perangkat lunak sistem  dalam sistem komputer." ESA121 – PENGANTAR APLIKASI KOMPUTER, OPERATING SYSTEM, Posted bynanda, January 29, 2020. (https://bahan-ajar.esaunggul.ac.id/esa121/2020/01/29/operating-system/).
 - DI OS ada beberapa sistem, software, dan program, seperti; Kernel sebagai inti OS, System Call sebagai penjaga gerbang antara User Zone dan Kernel Zone, Device Driver yang menjembatani antara OS dan Hardware Input ( Hardware Input telah dibahas di mata kuliah Emerging Technologies & Digital Transformation), dan File System yang mana umum kita temui untuk menyimpan file.
 - Model Arsitektur OS itu punya 3 main model, yaitu; Monolithic dimana semua unsur unsur OS digabung dalam satu kotak besar atau bisa disebut kernel tunggal, Layered dengan OS dibangun berlapis dengan hardware sebagai lapisan paling bawah dan User Interface lapisan paling atas, dan yang terakhir adalah Microkernel dengan mengoperasikan fungsi inti di kernel dan sisanya berada di User Interface dan menentukan akan dijalankan di ruang mana (mau di User Zone atau di Kernel Zone).
 
@@ -185,4 +185,6 @@ Sesi refleksi terkait aktivitas praktikum dan yang berhubungan dengan pembelajar
 ---
 
 **Credit:**  
-1. ESA121 – PENGANTAR APLIKASI KOMPUTER, OPERATING SYSTEM, Posted bynanda, January 29, 2020 (https://bahan-ajar.esaunggul.ac.id/esa121/2020/01/29/operating-system/).
+_Template laporan praktikum Sistem Operasi (SO-202501) – Universitas Putra Bangsa_
+
+ 
