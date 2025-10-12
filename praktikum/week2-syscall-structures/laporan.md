@@ -256,8 +256,8 @@ Adanya perbedaan dari hasil input `strace`dimana:
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
-
+- System Call dan Transisi Mode adalah penghubung, perantara, dan penjaga keamanan dan stabilitas antara User Space dan Kernel Space
+- Dalam praktikum menunjukkan bahwa perintah ls dan cat harus melewati System call dan begitu juga dmesg yang harus dipakaikan sudo jika anda menggunakan shell.cloud.google untuk prantikum ini
 ---
 
 ## Quiz
