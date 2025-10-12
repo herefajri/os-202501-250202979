@@ -231,8 +231,8 @@ Sertakan screenshot hasil percobaan atau diagram:
 | No. | Perintah                                      | Tujuan Perintah                                                              | Hasil                                                                                 | Makna dan Analisis                                                                                   |
 |-----|-----------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | 1   | `strace ls`                                   | Untuk menampilkan setiap yang dipanggil dengan perintah ls (list directory contents)                       | Terlihat system call seperti `execve`,`openat`, `read`, `write`, dll.     | Dengan ini membuktikan bahwa perintah yang sifatnya sederhana seperti `ls` bergantung pada banyak system call untuk bekerja dan memperoleh izin ke kernel.   |
-| 2   | `strace -e trace=open,read,write,close cat /etc/passwd` | Melacak hanya system call I/O dasar saat membaca file `/etc/passwd`             | Terlihat urutan: `open(...)`, `read(...)`, `write(...)`,dsb.                        | Menunjukkan alur kerja kernel disaat membuka, membaca, menampilkan, dan menutup file.                   |
-| 3   | `dmesg \| tail -n 10`   atau `sudo dmesg \| tail -n 10`  (disini saya menambahkan `sudo` untuk mengizinkan akses ke kernel untuk sementara )                 | Melihat 10 baris terakhir dari buffer pesan kernel                               | Output berisi log booting, inisialisasi driver, dan pesan sistem terkini                      | Memberikan wawasan tentang aktivitas kernel yang tidak terlihat oleh program biasa.                   |
+| 2   | `strace -e trace=open,read,write,close cat /etc/passwd` | Perintah dimana membatasi output strace hanya pada System Call I/O dasar yaitu `open`, `read`, `write`, dan `close` yang dipanggil oleh perintah `cat `saat menampilkan isi berkas `/etc/passwd`.             | Terlihat urutan: `open(...)`, `read(...)`, `write(...)`,dsb.                        | Menunjukkan alur kerja kernel disaat membuka, membaca, menampilkan, dan menutup file.                   |
+| 3   | `dmesg \| tail -n 10`   atau `sudo dmesg \| tail -n 10`  (disini saya menambahkan `sudo` untuk mengizinkan akses ke kernel untuk sementara )                 | untuk menampilkan buffer pesan Kernel dengan isi informasi booting, driver hardware dan pesan diagnosik dari Kernel, dan `\| tail -n 10` untuk membatasi output hanya pada 10 baris terakhir.                           | Output berisi informasi log booting, inisialisasi driver, dan pesan diagnostik sistem terkini                      | Memberikan wawasan tentang aktivitas kernel yang tidak terlihat oleh program biasa.                   |
 
 
 
@@ -247,6 +247,8 @@ Sertakan screenshot hasil percobaan atau diagram:
 Adanya perbedaan dari hasil input `strace`dimana:
    - Linux akan memunculkan rangkaian kata seperti `read(3,...)`
    - Sedangkan, untuk Windows akan jadi seperti `ReadFile(Handle,Buffer, Size,...)`
+ 
+
 ---
 
 ## Kesimpulan
