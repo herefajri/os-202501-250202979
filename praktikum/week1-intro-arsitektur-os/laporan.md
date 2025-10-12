@@ -188,8 +188,8 @@ Model kernel yang paling relevan untuk sistem operasi modern adalah hybrid kerne
 •	Banyak sistem modern akhirnya menggunakan model hybrid kernel, yang mencoba menggabungkan kecepatan dan efisiensi Monolithic kernel dengan stabilitas dan keamanan Microkernel. Contohnya adalah Windows NT dan XNU kernel di macOS milik Apple. Dengan cara ini, sistem operasi dapat berjalan dengan baik, aman, dan fleksibel di berbagai perangkat
 
 #Analisis
-
 Arsitektur monolithic cocok untuk sistem general atau umum dengan kebutuhan kinerja tinggi, microkernel unggul untuk sistem kritis yang mana membutuhkan keamanan, keandalan, dan konsistensi, sedangkan layered architecture tetap penting sebagai konsep desain modular yang fleksible dan mudah dikelola atau diatur. Perkembangan sistem operasi modern menunjukkan kecenderungan menuju model hybrid/hibrida yang menggabungkan antara efisiensi, fleksibilitas, dan keamanan secara seimbang. 
+
 ---
 
 ## Kesimpulan
