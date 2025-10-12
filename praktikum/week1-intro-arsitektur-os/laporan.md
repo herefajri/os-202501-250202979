@@ -147,11 +147,10 @@ Yang terjadi adalah:
 
 
 ## Analisis 2
-Tulis analisis 400–500 kata tentang:
-  - Mengapa system call penting untuk keamanan OS?
-  - Bagaimana OS memastikan transisi user–kernel berjalan aman?
-  - Sebutkan contoh system call yang sering digunakan di Linux.
-  
+Tuliskan ringkasan (±500 kata) mencakup:
+  - Perbedaan monolithic kernel, microkernel, dan layered architecture.
+  - Contoh OS yang menerapkan tiap model.
+  - Analisis: model mana yang paling relevan untuk sistem modern.
   **Jawaban:**
 
 Ada 3 jenis arsitektur OS yang memiliki cara kerja dan tujuan penggunaan yang berbeda; Monolithic Kernel, Microkernel, dan Layered Architecture. Masing-masing mempunyai kelebihan dan kekurangan masing-masing yang mempengaruhi bagaimana mereka digunakan dalam perangkat modern. 
