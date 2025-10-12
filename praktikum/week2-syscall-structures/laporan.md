@@ -226,20 +226,14 @@ Sertakan screenshot hasil percobaan atau diagram:
 ## Analisis
 - Jelaskan makna hasil percobaan.
 **Jawaban:**
- ```bash
-   strace ls
-   ```
-Untuk menampilkan setiap yang dipanggil dengan perintah ls (list directory contents) dengan fungsi membuka membuka sistem seperti Glibc dan berkas konfigurasi.
+ ### 📊 Tabel Observasi Eksperimen System Call
 
- ```bash
-   strace -e trace=open,read,write,close cat /etc/passwd
-   ```
-Perintah dimana membatasi output `strace` hanya pada System Call I/O dasar yaitu `open`, `read`, `write`, dan `close` yang dipanggil oleh perintah `cat` saat menampilkan isi berkas `/etc/passwd`.
+| No. | Perintah                                      | Tujuan Perintah                                                              | Hasil                                                                                 | Makna dan Analisis                                                                                   |
+|-----|-----------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| 1   | `strace ls`                                   | Melacak semua system call yang dipanggil oleh perintah `ls`                      | Terlihat system call seperti `execve`, `openat`, `read`, `write`, `close`, `fstat`, dll.     | Menunjukkan bahwa perintah sederhana seperti `ls` bergantung pada banyak system call untuk bekerja.   |
+| 2   | `strace -e trace=open,read,write,close cat /etc/passwd` | Melacak hanya system call I/O dasar saat membaca file `/etc/passwd`             | Terlihat urutan: `open(...)`, `read(...)`, `write(...)`, `close(...)`                         | Menunjukkan alur kerja kernel saat membuka, membaca, menampilkan, dan menutup file.                   |
+| 3   | `dmesg | tail -n 10`                          | Melihat 10 baris terakhir dari buffer pesan kernel                               | Output berisi log booting, inisialisasi driver, dan pesan sistem terkini                      | Memberikan wawasan tentang aktivitas kernel yang tidak terlihat oleh program biasa.                   |
 
- ```bash
-   dmesg | tail -n 10
-   ```
-dmesg untuk menampilkan buffer pesan Kernel dengan isi informasi booting, driver hardware dan pesan diagnosik dari Kernel, dan `| tail -n 10` untuk membatasi output hanya pada 10 baris terakhir.
 
 
 - Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).
