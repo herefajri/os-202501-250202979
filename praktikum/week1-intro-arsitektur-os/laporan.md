@@ -144,12 +144,7 @@ System Call tetap sama, menyaring tindakan dan perintah, serta verifikasi. Namun
 Yang terjadi adalah:
 - Jika di Linux, semua perintah akan berjalan lancar dari [uname] sampai [dmesg].
 - Sedangkan jika di Windows menggunakan hal-hal seperti di CMD maka akan didapat kegagalan kecuali pada bagian [whoami].
----
 
-## Kesimpulan
-2–3 poin kesimpulan dari praktikum ini.
-- Adanya kegiatan praktikum ini, para mahasiswa dituntut agar mempelajari sistem OS, baik dari segi OS dasar hingga Model Arsitektur OS, serta memahami fungsinya dan bisa menjelaskan dengan bahasa sendiri untuk membuktikan pemahaman dia tentang OS.
-- Dengan ini, mahasiswa juga diharuskan emiliki sistem problem solving-nya sendiri dalam mengatasi permasalahan dan dituntut untuk kreatif.
 
 ## Analisis 2
 Tulis analisis 400–500 kata tentang:
@@ -195,7 +190,12 @@ Model kernel yang paling relevan untuk sistem operasi modern adalah hybrid kerne
 #Analisis
 
 Arsitektur monolithic cocok untuk sistem general atau umum dengan kebutuhan kinerja tinggi, microkernel unggul untuk sistem kritis yang mana membutuhkan keamanan, keandalan, dan konsistensi, sedangkan layered architecture tetap penting sebagai konsep desain modular yang fleksible dan mudah dikelola atau diatur. Perkembangan sistem operasi modern menunjukkan kecenderungan menuju model hybrid/hibrida yang menggabungkan antara efisiensi, fleksibilitas, dan keamanan secara seimbang. 
+---
 
+## Kesimpulan
+2–3 poin kesimpulan dari praktikum ini.
+- Adanya kegiatan praktikum ini, para mahasiswa dituntut agar mempelajari sistem OS, baik dari segi OS dasar hingga Model Arsitektur OS, serta memahami fungsinya dan bisa menjelaskan dengan bahasa sendiri untuk membuktikan pemahaman dia tentang OS.
+- Dengan ini, mahasiswa juga diharuskan emiliki sistem problem solving-nya sendiri dalam mengatasi permasalahan dan dituntut untuk kreatif.
 ---
 
 ## Quiz
