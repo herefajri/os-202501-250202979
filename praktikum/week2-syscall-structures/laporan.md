@@ -227,9 +227,9 @@ Screenshot hasil percobaan atau diagram:
 - Jelaskan makna hasil percobaan.
 **Jawaban:**
 
-  1. `strace ls` untuk menampilkan setiap yang dipanggil dengan perintah ls (list directory contents) yang terlihat system call seperti `execve`,`openat`, `read`, `write`, dll (bisa dilihat pada "Hasil Eksekusi" diatas
+  1. `strace ls` untuk menampilkan setiap yang dipanggil dengan perintah ls (list directory contents) yang terlihat system call seperti `execve`,`openat`, `read`, `write`, dll (bisa dilihat pada "Hasil Eksekusi" diatas).
   2. `strace -e trace=open,read,write,close cat /etc/passwd` input dimana membatasi output strace hanya pada System Call I/O dasar yaitu `open`, `read`, `write`, dan `close` yang dipanggil oleh perintah `cat `saat menampilkan isi berkas `/etc/passwd` (bisa dilihat pada "Hasil Eksekusi" diatas).
-  3. `dmesg \| tail -n 10`   atau `sudo dmesg \| tail -n 10`  (disini saya menambahkan `sudo` untuk mengizinkan akses ke kernel untuk sementara ) untuk menampilkan buffer pesan Kernel dengan isi informasi booting, driver hardware dan pesan diagnosik dari Kernel, dan `\| tail -n 10` untuk membatasi output hanya pada 10 baris terakhir.              
+  3. `dmesg | tail -n 10`   atau `sudo dmesg | tail -n 10`  (disini saya menambahkan `sudo` untuk mengizinkan akses ke kernel untuk sementara dikarenakan saya menggunakan `shell.cloud.google`) untuk menampilkan buffer pesan Kernel dengan isi informasi booting, driver hardware dan pesan diagnosik dari Kernel, dan `| tail -n 10` untuk membatasi output hanya pada 10 baris terakhir.              
 
 - Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).
 **Jawaban:**
