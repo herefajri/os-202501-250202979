@@ -226,15 +226,10 @@ Screenshot hasil percobaan atau diagram:
 ## Analisis 1
 - Jelaskan makna hasil percobaan.
 **Jawaban:**
- ### 📊 Tabel Observasi Eksperimen System Call
 
-| No. | Perintah                                      | Tujuan Perintah                                                              | Hasil                                                                                 | Makna dan Analisis yang Didasarkan pada Percobaan dan Hasil                                                                              |
-|-----|-----------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| 1   | `strace ls`                                   | Untuk menampilkan setiap yang dipanggil dengan perintah ls (list directory contents)                       | Terlihat system call seperti `execve`,`openat`, `read`, `write`, dll (bisa dilihat pada "Hasil Eksekusi" diatas).     | Dengan ini membuktikan bahwa perintah yang sifatnya sederhana seperti `ls` bergantung pada banyak system call untuk bekerja dan memperoleh izin ke kernel.   |
-| 2   | `strace -e trace=open,read,write,close cat /etc/passwd` | Perintah dimana membatasi output strace hanya pada System Call I/O dasar yaitu `open`, `read`, `write`, dan `close` yang dipanggil oleh perintah `cat `saat menampilkan isi berkas `/etc/passwd` (bisa dilihat pada "Hasil Eksekusi" diatas).             | Terlihat urutan: `open(...)`, `read(...)`, `write(...)`,dsb.                        | Menunjukkan alur kerja kernel disaat membuka, membaca, menampilkan, dan menutup file.                   |
-| 3   | `dmesg \| tail -n 10`   atau `sudo dmesg \| tail -n 10`  (disini saya menambahkan `sudo` untuk mengizinkan akses ke kernel untuk sementara )                 | untuk menampilkan buffer pesan Kernel dengan isi informasi booting, driver hardware dan pesan diagnosik dari Kernel, dan `\| tail -n 10` untuk membatasi output hanya pada 10 baris terakhir.                           | Output berisi informasi log booting, inisialisasi driver, dan pesan diagnostik sistem terkini                      | Memberikan wawasan tentang aktivitas kernel yang tidak terlihat oleh program pada umumnya, kecuali seperti percobaan saya dimana informasi yang sama bisa diakses jika diberi izin, seperti penggunaan `sudo` pada `shell.cloud.google` dengan input `dmesg`, dan bisa dilihat pada bagian "Hasil Eksekusi" diatas.                   |
-
-
+  1. `strace ls` untuk menampilkan setiap yang dipanggil dengan perintah ls (list directory contents) yang terlihat system call seperti `execve`,`openat`, `read`, `write`, dll (bisa dilihat pada "Hasil Eksekusi" diatas
+  2. `strace -e trace=open,read,write,close cat /etc/passwd` input dimana membatasi output strace hanya pada System Call I/O dasar yaitu `open`, `read`, `write`, dan `close` yang dipanggil oleh perintah `cat `saat menampilkan isi berkas `/etc/passwd` (bisa dilihat pada "Hasil Eksekusi" diatas).
+  3. `dmesg \| tail -n 10`   atau `sudo dmesg \| tail -n 10`  (disini saya menambahkan `sudo` untuk mengizinkan akses ke kernel untuk sementara ) untuk menampilkan buffer pesan Kernel dengan isi informasi booting, driver hardware dan pesan diagnosik dari Kernel, dan `\| tail -n 10` untuk membatasi output hanya pada 10 baris terakhir.              
 
 - Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).
 **Jawaban:**
@@ -248,7 +243,14 @@ Adanya perbedaan dari hasil input `strace`dimana:
    - Linux akan memunculkan rangkaian kata seperti `read(3,...)`
    - Sedangkan, untuk Windows akan jadi seperti `ReadFile(Handle,Buffer, Size,...)`
  
-## Analisis 2
+## Analisis 2 (Tugas & Quiz di docs Week-2)
+Dokumentasikan hasil eksperimen strace dan dmesg dalam bentuk tabel observasi.
+| No. | Perintah                                      | Tujuan Perintah                                                              | Hasil                                                                                 | Makna dan Analisis yang Didasarkan pada Percobaan dan Hasil                                                                              |
+|-----|-----------------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| 1   | `strace ls`                                   | Untuk menampilkan setiap yang dipanggil dengan perintah ls (list directory contents)                       | Terlihat system call seperti `execve`,`openat`, `read`, `write`, dll (bisa dilihat pada "Hasil Eksekusi" diatas).     | Dengan ini membuktikan bahwa perintah yang sifatnya sederhana seperti `ls` bergantung pada banyak system call untuk bekerja dan memperoleh izin ke kernel.   |
+| 2   | `strace -e trace=open,read,write,close cat /etc/passwd` | Perintah dimana membatasi output strace hanya pada System Call I/O dasar yaitu `open`, `read`, `write`, dan `close` yang dipanggil oleh perintah `cat `saat menampilkan isi berkas `/etc/passwd` (bisa dilihat pada "Hasil Eksekusi" diatas).             | Terlihat urutan: `open(...)`, `read(...)`, `write(...)`,dsb.                        | Menunjukkan alur kerja kernel disaat membuka, membaca, menampilkan, dan menutup file.                   |
+| 3   | `dmesg \| tail -n 10`   atau `sudo dmesg \| tail -n 10`  (disini saya menambahkan `sudo` untuk mengizinkan akses ke kernel untuk sementara )                 | untuk menampilkan buffer pesan Kernel dengan isi informasi booting, driver hardware dan pesan diagnosik dari Kernel, dan `\| tail -n 10` untuk membatasi output hanya pada 10 baris terakhir.                           | Output berisi informasi log booting, inisialisasi driver, dan pesan diagnostik sistem terkini                      | Memberikan wawasan tentang aktivitas kernel yang tidak terlihat oleh program pada umumnya, kecuali seperti percobaan saya dimana informasi yang sama bisa diakses jika diberi izin, seperti penggunaan `sudo` pada `shell.cloud.google` dengan input `dmesg`, dan bisa dilihat pada bagian "Hasil Eksekusi" diatas.                   |
+
 Tulis analisis 400–500 kata tentang:
   - Mengapa system call penting untuk keamanan OS?
   - Bagaimana OS memastikan transisi user–kernel berjalan aman?
