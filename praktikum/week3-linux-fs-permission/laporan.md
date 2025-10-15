@@ -61,7 +61,15 @@ total 4
 herefajri@cloudshell:~$ cd /tmp
 herefajri@cloudshell:/tmp$
 ```
-
+```bash
+herefajri@cloudshell:/tmp$ ls -a
+.                     cloudcode-tempguPmuY                                            node-compile-cache  tmp.OqDkBJFEVa                                        vscode-skaffold-events-logs
+..                    code-oss-vm-session-state.json                                  tmp                 tmp.RKaLrptHWp
+cloudcode-temp0cZEhu  gemini-ide-server-40473.json                                    tmp.CBditOvVKN      tmux-1000
+cloudcode-temp4LPnlR  gemini-ide-server-481.json                                      tmp.mtKrxx4rb9      vscode-git-7a51ddf9a8.sock
+cloudcode-tempfLWQgl  minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.mWrjcuheDd      vscode-ipc-137304b5-54df-496d-a9b7-7909a49cdea0.sock
+herefajri@cloudshell:/tmp$ 
+```
 
 **2. Eksperimen 2 – Membaca File**
 ```bash
@@ -90,16 +98,6 @@ dan
 sudo chown root percobaan.txt
 ls -l percobaan.txt
 ```
-```bash
-herefajri@cloudshell:/tmp$ ls -a
-.                     cloudcode-tempguPmuY                                            node-compile-cache  tmp.OqDkBJFEVa                                        vscode-skaffold-events-logs
-..                    code-oss-vm-session-state.json                                  tmp                 tmp.RKaLrptHWp
-cloudcode-temp0cZEhu  gemini-ide-server-40473.json                                    tmp.CBditOvVKN      tmux-1000
-cloudcode-temp4LPnlR  gemini-ide-server-481.json                                      tmp.mtKrxx4rb9      vscode-git-7a51ddf9a8.sock
-cloudcode-tempfLWQgl  minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.mWrjcuheDd      vscode-ipc-137304b5-54df-496d-a9b7-7909a49cdea0.sock
-herefajri@cloudshell:/tmp$ 
-```
-
 
 ---
 
