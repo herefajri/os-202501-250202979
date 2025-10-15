@@ -208,8 +208,15 @@ close(2)                                = 0
 +++ exited with 0 +++
 herefajri@cloudshell:~$
 ```
+Analisis bagaimana file dibuka, dibaca, dan ditutup oleh kernel.
+| No. |   Metode   |     Penjelasan     |
+|-----|------------|--------------------|
+| 1. | Dibuka | input `cat /etc/passwd` otomatis masuk dan Kernel membuka file tersebut lebih dulu dan diberikan File Descriptor dengan angka `3` sebagai identitas file yang dibuka, dan pastinya dibuka karena telah melewati System Call dengan akases file yang sah dan diizinkan meneruskan ke kernel.|
+| 2. | Dibaca | `read(3, ..., 131072)` dengan artian bahwa Kernel menggunakan System Call untuk membaca isi file dan `/etc/passwd` sebagai output hasil pembacaan dan output lainnya berupa daftar akun pengguna dalam sistem.|
+| 3. | Ditutup | adanya `close(3)` menandakan bahwa Kernel menutup file dengan System Call untuk mengembalikan sumberdaya sistem dan adanya `close(1)` dan `close(2)` adalah identitas bahwa saluran output dan error telah ditutup.|
 
-3. dmesg | tail -n 10
+
+3. dmesg | tail -n 10 - Eksperimen 3 Mode User vs Kernel
 ```bash
 herefajri@cloudshell:~$ dmesg | tail -n 10
 dmesg: read kernel buffer failed: Operation not permitted
@@ -226,8 +233,9 @@ herefajri@cloudshell:~$ sudo dmesg | tail -n 10
 [ 4885.460154] LoadPin: kernel-module pinning-excluded obj="/lib/modules/6.6.105+/kernel/net/ipv6/netfilter/ip6table_nat.ko" pid=3515 cmdline="/sbin/modprobe -q -- ip6table_nat"
 herefajri@cloudshell:~$
 ```
-
-
+Amati log kernel yang muncul. Apa bedanya output ini dengan output dari program biasa?
+- dmesg : menampilkan pesan dari kernel yang bersumber dari buffer kernel, dengan log kernel berisi informasi hardware, aktivitas modul kernel, pesan diagnostik dan keamanan, dan status filesystem.
+- program biasa : menampilkan hasil eksekusi program yang berjalan di User Space, dan hanya berisi seperti data yang diminta pengguna atau hasil perintah langsung
 
 ---
 
