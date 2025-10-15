@@ -160,6 +160,9 @@ exit_group(0)                           = ?
 +++ exited with 0 +++
 herefajri@cloudshell:~$
 ```
+[Lihat hasil analisis syscall_ls.txt](code/result_syscall_ls_(strace%20ls).txt)
+
+
 
 2. strace -e trace=open,read,write,close cat /etc/passwd
 ```bash
