@@ -1,20 +1,28 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu 2
+Topik:  Manajemen File dan Permission di Linux
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Muhammad Fajri Abdullah 
+- **NIM**   : 250202979
+- **Kelas** : 1IKRB
 
 ---
 
 ## Tujuan
 Tuliskan tujuan praktikum minggu ini.  
 Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+> Tujuan utama dari praktikum ini adalah agar mahasiswa mampu mengoperasikan perintah Linux dasar dengan benar, memahami sistem izin (permission), dan mendokumentasikan hasilnya dalam format laporan Git. Setelah menyelesaikan tugas ini,diharapkan para mahasiswa mampu:
+
+- Menggunakan perintah ls, pwd, cd, cat untuk navigasi file dan direktori.
+- Menggunakan chmod dan chown untuk manajemen hak akses file.
+- Menjelaskan hasil output dari perintah Linux dasar.
+- Menyusun laporan praktikum dengan struktur yang benar.
+- Mengunggah dokumentasi hasil ke Git Repository tepat waktu.
+
+
 
 ---
 
