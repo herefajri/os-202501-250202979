@@ -41,18 +41,34 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 
 ## Kode / Perintah
 Tuliskan potongan kode atau perintah utama:
-1. Eksperimen 1
+**1. Eksperimen 1 – Navigasi Sistem File**
 ```bash
 pwd
 ls -l
 cd /tmp
 ls -a
 ```
-2. Eksperimen 2
+```bash
+herefajri@cloudshell:~$ pwd
+/home/herefajri
+```
+```bash
+herefajri@cloudshell:~$ ls -l
+total 4
+-rwxr-xr-x 1 herefajri herefajri 913 Oct 15 09:31 README-cloudshell.txt
+```
+```bash
+herefajri@cloudshell:~$ cd /tmp
+herefajri@cloudshell:/tmp$
+```
+
+
+**2. Eksperimen 2**
 ```bash
 cat /etc/passwd | head -n 5
 ```
-3. Eksperimen 3
+
+**3. Eksperimen 3**
 ```bash
 echo "Hello <NAME><NIM>" > percobaan.txt
 ls -l percobaan.txt
@@ -64,6 +80,16 @@ dan
 sudo chown root percobaan.txt
 ls -l percobaan.txt
 ```
+```bash
+herefajri@cloudshell:/tmp$ ls -a
+.                     cloudcode-tempguPmuY                                            node-compile-cache  tmp.OqDkBJFEVa                                        vscode-skaffold-events-logs
+..                    code-oss-vm-session-state.json                                  tmp                 tmp.RKaLrptHWp
+cloudcode-temp0cZEhu  gemini-ide-server-40473.json                                    tmp.CBditOvVKN      tmux-1000
+cloudcode-temp4LPnlR  gemini-ide-server-481.json                                      tmp.mtKrxx4rb9      vscode-git-7a51ddf9a8.sock
+cloudcode-tempfLWQgl  minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.mWrjcuheDd      vscode-ipc-137304b5-54df-496d-a9b7-7909a49cdea0.sock
+herefajri@cloudshell:/tmp$ 
+```
+
 
 ---
 
@@ -77,6 +103,21 @@ Sertakan screenshot hasil percobaan atau diagram:
 - Jelaskan makna hasil percobaan.  
 - Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
 - Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+
+## Analisis Hasil
+Tugas
+1. Dokumentasikan hasil seluruh perintah pada tabel observasi di laporan.md.
+
+
+2. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
+
+
+3. Analisis peran chmod dan chown dalam keamanan sistem Linux.
+
+
+4. Upload hasil dan laporan ke repositori Git sebelum deadline.
+
+
 
 ---
 
