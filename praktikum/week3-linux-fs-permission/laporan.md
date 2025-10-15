@@ -41,10 +41,28 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 
 ## Kode / Perintah
 Tuliskan potongan kode atau perintah utama:
+1. Eksperimen 1
 ```bash
-uname -a
-lsmod | head
-dmesg | head
+pwd
+ls -l
+cd /tmp
+ls -a
+```
+2. Eksperimen 2
+```bash
+cat /etc/passwd | head -n 5
+```
+3. Eksperimen 3
+```bash
+echo "Hello <NAME><NIM>" > percobaan.txt
+ls -l percobaan.txt
+chmod 600 percobaan.txt
+ls -l percobaan.txt
+```
+dan
+```bash
+sudo chown root percobaan.txt
+ls -l percobaan.txt
 ```
 
 ---
@@ -68,12 +86,14 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+1. Tuliskan jawaban di bagian Quiz pada laporan:
+  **Jawaban:**  
+2. Apa fungsi dari perintah chmod?
+  **Jawaban:**  
+3. Apa arti dari kode permission rwxr-xr--?
+  **Jawaban:**  
+4. Jelaskan perbedaan antara chown dan chmod.
+  **Jawaban:**  
 
 ---
 
