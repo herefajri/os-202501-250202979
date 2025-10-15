@@ -77,10 +77,9 @@ strace ls
 strace -e trace=open,read,write,close cat /etc/passwd
 dmesg | tail -n 10
 ```
+
+1. strace ls
 ```bash
-Welcome to Cloud Shell! Type "help" to get started, or type "gemini" to try prompting with Gemini CLI.
-To set your Cloud Platform project in this session use `gcloud config set project [PROJECT_ID]`.
-You can view your projects by running `gcloud projects list`.
 herefajri@cloudshell:~$ strace ls
 execve("/usr/bin/ls", ["ls"], 0x7fffabd610d0 /* 62 vars */) = 0
 brk(NULL)                               = 0x5cc91f048000
@@ -159,6 +158,11 @@ close(1)                                = 0
 close(2)                                = 0
 exit_group(0)                           = ?
 +++ exited with 0 +++
+herefajri@cloudshell:~$
+```
+
+2. strace -e trace=open,read,write,close cat /etc/passwd
+```bash
 herefajri@cloudshell:~$ strace -e trace=open,read,write,close cat /etc/passwd
 close(3)                                = 0
 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0"..., 832) = 832
@@ -199,6 +203,11 @@ close(3)                                = 0
 close(1)                                = 0
 close(2)                                = 0
 +++ exited with 0 +++
+herefajri@cloudshell:~$
+```
+
+3. dmesg | tail -n 10
+```bash
 herefajri@cloudshell:~$ dmesg | tail -n 10
 dmesg: read kernel buffer failed: Operation not permitted
 herefajri@cloudshell:~$ sudo dmesg | tail -n 10
@@ -214,6 +223,9 @@ herefajri@cloudshell:~$ sudo dmesg | tail -n 10
 [ 4885.460154] LoadPin: kernel-module pinning-excluded obj="/lib/modules/6.6.105+/kernel/net/ipv6/netfilter/ip6table_nat.ko" pid=3515 cmdline="/sbin/modprobe -q -- ip6table_nat"
 herefajri@cloudshell:~$
 ```
+
+
+
 ---
 
 ## Hasil Eksekusi
