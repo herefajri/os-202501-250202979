@@ -1,5 +1,5 @@
 
-# Laporan Praktikum Minggu 2
+# Laporan Praktikum Minggu ke 3
 Topik:  Manajemen File dan Permission di Linux
 
 ---
@@ -44,7 +44,7 @@ Tuliskan potongan kode atau perintah utama:
 **1. Eksperimen 1 – Navigasi Sistem File**
 ```bash
 pwd
-ls -l
+ls -1
 cd /tmp
 ls -a
 ```
@@ -63,9 +63,18 @@ herefajri@cloudshell:/tmp$
 ```
 
 
-**2. Eksperimen 2**
+**2. Eksperimen 2 – Membaca File**
 ```bash
 cat /etc/passwd | head -n 5
+```
+```bash
+herefajri@cloudshell:/tmp$ cat /etc/passwd | head -n 5
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+herefajri@cloudshell:/tmp$
 ```
 
 **3. Eksperimen 3**
@@ -75,6 +84,7 @@ ls -l percobaan.txt
 chmod 600 percobaan.txt
 ls -l percobaan.txt
 ```
+
 dan
 ```bash
 sudo chown root percobaan.txt
