@@ -234,8 +234,10 @@ herefajri@cloudshell:~$ sudo dmesg | tail -n 10
 herefajri@cloudshell:~$
 ```
 Amati log kernel yang muncul. Apa bedanya output ini dengan output dari program biasa?
-- dmesg : menampilkan pesan dari kernel yang bersumber dari buffer kernel, dengan log kernel berisi informasi hardware, aktivitas modul kernel, pesan diagnostik dan keamanan, dan status filesystem.
-- program biasa : menampilkan hasil eksekusi program yang berjalan di User Space, dan hanya berisi seperti data yang diminta pengguna atau hasil perintah langsung
+| Perintah dari | Rincian Output |
+|---------------|----------------|
+| dmesg | menampilkan pesan dari kernel yang bersumber dari buffer kernel, dengan log kernel berisi informasi hardware, aktivitas modul kernel, pesan diagnostik dan keamanan, dan status filesystem.
+| program biasa | menampilkan hasil eksekusi program yang berjalan di User Space, dan hanya berisi seperti data yang diminta pengguna atau hasil perintah langsung
 
 ---
 
