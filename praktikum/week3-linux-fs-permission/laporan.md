@@ -98,6 +98,10 @@ dan
 sudo chown root percobaan.txt
 ls -l percobaan.txt
 ```
+echo "Hello Muhammad Fajri Abdullah 250202979" > percobaan.txt
+ls -l percobaan.txt
+chmod 600 percobaan.txt
+ls -l percobaan.txt
 
 ---
 
