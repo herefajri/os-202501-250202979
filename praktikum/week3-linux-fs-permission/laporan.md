@@ -49,26 +49,26 @@ cd /tmp
 ls -a
 ```
 
-# pwd
+#pwd
 ```bash
 herefajri@cloudshell:~$ pwd
 /home/herefajri
 ```
 
-# ls -1
+#ls -1
 ```bash
 herefajri@cloudshell:~$ ls -l
 total 4
 -rwxr-xr-x 1 herefajri herefajri 913 Oct 15 09:31 README-cloudshell.txt
 ```
 
-# cd /tmp
+#cd /tmp
  ```bash
 herefajri@cloudshell:~$ cd /tmp
 herefajri@cloudshell:/tmp$
 ```
 
-# ls -a
+#ls -a
 ```bash
 herefajri@cloudshell:/tmp$ ls -a
 .                     cloudcode-tempguPmuY                                            node-compile-cache  tmp.OqDkBJFEVa                                        vscode-skaffold-events-logs
@@ -85,7 +85,7 @@ herefajri@cloudshell:/tmp$
 cat /etc/passwd | head -n 5
 ```
 
-# cat /etc/passwd | head -n 5
+#cat /etc/passwd | head -n 5
 ```bash
 herefajri@cloudshell:/tmp$ cat /etc/passwd | head -n 5
 root:x:0:0:root:/root:/bin/bash
