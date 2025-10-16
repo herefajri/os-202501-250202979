@@ -135,13 +135,16 @@ ls -l percobaan.txt
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
+1. Eksperimen 1 – Navigasi Sistem File
 ![Screenshot hasil](screenshots/Eksperimen%201%20pwd.png)
 ![Screenshot hasil](screenshots/Eksperimen%201%20ls%20-1.png)
 ![Screenshot hasil](screenshots/Eksperimen%201%20cd%20tmp.png)
 ![Screenshot hasil](screenshots/Eksperimen%201%20ls%20-a.png)
 
+2. Eksperimen 2 – Membaca File
 ![Screenshot hasil](screenshots/E2cat_etcpasswd%20head-n5.png)
 
+3. Eksperimen 3 – Permission & Ownership
 ![Screenshot hasil](screenshots/echo%20NAMExNIM.png)
 ![Screenshot hasil](screenshots/sudo%20chown.png)
 
