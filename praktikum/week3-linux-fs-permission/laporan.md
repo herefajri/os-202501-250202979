@@ -140,7 +140,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/Eksperimen%201%20cd%20tmp.png)
 ![Screenshot hasil](screenshots/Eksperimen%201%20ls%20-a.png)
 
-![Screenshot hasil](screenshots/E2%20cat%20etcpasswd%20head-n5.png)
+![Screenshot hasil](screenshots/E2cat_etcpasswd%20head-n5.png)
 
 ![Screenshot hasil](screenshots/echo%20NAMExNIM.png)
 ![Screenshot hasil](screenshots/sudo%20chown.png)
