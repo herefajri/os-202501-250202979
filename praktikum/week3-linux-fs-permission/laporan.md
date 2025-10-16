@@ -92,6 +92,10 @@ ls -l percobaan.txt
 chmod 600 percobaan.txt
 ls -l percobaan.txt
 ```
+```bash 
+250202979
+<img width="142" height="21" alt="image" src="https://github.com/user-attachments/assets/5c164a7c-4957-4d42-9dd9-f08bb7ec75c0" />
+```
 
 dan
 ```bash
