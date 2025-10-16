@@ -48,42 +48,35 @@ ls -1
 cd /tmp
 ls -a
 ```
-```bash
-herefajri@cloudshell:~$ pwd
-/home/herefajri
-```
-```bash
-herefajri@cloudshell:~$ ls -l
+`herefajri@cloudshell:~$ pwd
+/home/herefajri`
+`herefajri@cloudshell:~$ ls -l
 total 4
--rwxr-xr-x 1 herefajri herefajri 913 Oct 15 09:31 README-cloudshell.txt
-```
-```bash
-herefajri@cloudshell:~$ cd /tmp
-herefajri@cloudshell:/tmp$
-```
-```bash
+-rwxr-xr-x 1 herefajri herefajri 913 Oct 15 09:31 README-cloudshell.txt`
+
+`herefajri@cloudshell:~$ cd /tmp
+herefajri@cloudshell:/tmp$`
+`
 herefajri@cloudshell:/tmp$ ls -a
 .                     cloudcode-tempguPmuY                                            node-compile-cache  tmp.OqDkBJFEVa                                        vscode-skaffold-events-logs
 ..                    code-oss-vm-session-state.json                                  tmp                 tmp.RKaLrptHWp
 cloudcode-temp0cZEhu  gemini-ide-server-40473.json                                    tmp.CBditOvVKN      tmux-1000
 cloudcode-temp4LPnlR  gemini-ide-server-481.json                                      tmp.mtKrxx4rb9      vscode-git-7a51ddf9a8.sock
 cloudcode-tempfLWQgl  minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.mWrjcuheDd      vscode-ipc-137304b5-54df-496d-a9b7-7909a49cdea0.sock
-herefajri@cloudshell:/tmp$ 
-```
+herefajri@cloudshell:/tmp$`
+
 
 **2. Eksperimen 2 – Membaca File**
 ```bash
 cat /etc/passwd | head -n 5
 ```
-```bash
-herefajri@cloudshell:/tmp$ cat /etc/passwd | head -n 5
+`herefajri@cloudshell:/tmp$ cat /etc/passwd | head -n 5
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
 sys:x:3:3:sys:/dev:/usr/sbin/nologin
 sync:x:4:65534:sync:/bin:/bin/sync
-herefajri@cloudshell:/tmp$
-```
+herefajri@cloudshell:/tmp$`
 
 **3. Eksperimen 3**
 ```bash
@@ -92,16 +85,25 @@ ls -l percobaan.txt
 chmod 600 percobaan.txt
 ls -l percobaan.txt
 ```
-```bash 
-250202979
-![Screenshot hasil] (https://github.com/user-attachments/assets/5c164a7c-4957-4d42-9dd9-f08bb7ec75c0)
-```
+`herefajri@cloudshell:~$ echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt
+herefajri@cloudshell:~$ ls -l percobaan.txt
+-rw-rw-r-- 1 herefajri herefajri 42 Oct 16 15:26 percobaan.txt
+herefajri@cloudshell:~$ sudo chmod 600 percobaan.txt
+herefajri@cloudshell:~$ ls -l percobaan.txt
+-rw------- 1 herefajri herefajri 42 Oct 16 15:26 percobaan.txt
+herefajri@cloudshell:~$`
 
 dan
 ```bash
 sudo chown root percobaan.txt
 ls -l percobaan.txt
 ```
+`herefajri@cloudshell:~$ sudo chown root percobaan.txt
+herefajri@cloudshell:~$ ls -l percobaan.txt
+-rw------- 1 root herefajri 42 Oct 16 15:26 percobaan.txt
+herefajri@cloudshell:~$`
+
+
 echo "Hello Muhammad Fajri Abdullah 250202979" > percobaan.txt
 ls -l percobaan.txt
 chmod 600 percobaan.txt
