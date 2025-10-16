@@ -135,6 +135,16 @@ ls -l percobaan.txt
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
+![Screenshot hasil](screenshots/Eksperimen%201%20pwd.png)
+![Screenshot hasil](screenshots/Eksperimen%201%20ls%20-1.png)
+![Screenshot hasil](screenshots/Eksperimen%201%20cd%20tmp.png)
+![Screenshot hasil](screenshots/Eksperimen%201%20ls%20-a.png)
+![Screenshot hasil](screenshots/E2%20cat%20etcpasswd%20head%20-n%205.png)
+![Screenshot hasil](screenshots/echo%20NAMExNIM.png)
+![Screenshot hasil](screenshots/sudo%20chown.png)
+
+_**Bonus:**_
+![Screenshot hasil](screenshots/Hasil%20echo%20sampai%20ls%20-1%20sebelum%20root.png)
 ![Screenshot hasil](screenshots/Hasil_Keseluruhan.png)
 
 ---
