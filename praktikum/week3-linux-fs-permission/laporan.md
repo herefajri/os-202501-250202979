@@ -142,7 +142,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/Eksperimen%201%20ls%20-a.png)
 
 2. Eksperimen 2 – Membaca File
-![Screenshot hasil](screenshots/E2cat_etcpasswd%20head-n5.png)
+![Screenshot hasil](screenshots/E2cat_etcpasswdhead-n5.png)
 
 3. Eksperimen 3 – Permission & Ownership
 ![Screenshot hasil](screenshots/echo%20NAMExNIM.png)
