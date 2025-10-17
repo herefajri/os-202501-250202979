@@ -63,8 +63,10 @@ herefajri@cloudshell:~$ pwd
 #ls -1
 ```bash
 herefajri@cloudshell:~$ ls -l
-total 4
--rwxr-xr-x 1 herefajri herefajri 913 Oct 15 09:31 README-cloudshell.txt
+total 12
+-rw------- 1 herefajri herefajri   42 Oct 17 12:58 percobaan.txt
+drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum
+-rwxr-xr-x 1 herefajri herefajri  913 Oct 17 12:58 README-cloudshell.txt
 ```
 **Analisis & Penjelasan**
 - 
@@ -77,12 +79,11 @@ herefajri@cloudshell:/tmp$
 
 #ls -a
 ```bash
-herefajri@cloudshell:/tmp$ ls -a
-.                     cloudcode-tempguPmuY                                            node-compile-cache  tmp.OqDkBJFEVa                                        vscode-skaffold-events-logs
-..                    code-oss-vm-session-state.json                                  tmp                 tmp.RKaLrptHWp
-cloudcode-temp0cZEhu  gemini-ide-server-40473.json                                    tmp.CBditOvVKN      tmux-1000
-cloudcode-temp4LPnlR  gemini-ide-server-481.json                                      tmp.mtKrxx4rb9      vscode-git-7a51ddf9a8.sock
-cloudcode-tempfLWQgl  minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.mWrjcuheDd      vscode-ipc-137304b5-54df-496d-a9b7-7909a49cdea0.sock
+herefajri@cloudshell:/tmp$  ls -a
+.                               gemini-ide-server-446.json                                      tmp.0NHMVi75Dv  tmp.4QDQea0t1X  vscode-git-a3d1a5f5c9.sock
+..                              minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.1ivNYhsXLu  tmp.HboOvNEZtn  vscode-ipc-fe411929-83f4-46e2-8a53-d0b91972634c.sock
+code-oss-vm-session-state.json  node-compile-cache                                              tmp.2ySuu9UsQG  tmp.VM5vSF8YBB  vscode-skaffold-events-logs
+gemini-ide-server-37777.json    tmp                                                             tmp.3qj6157Xs9  tmux-1000
 herefajri@cloudshell:/tmp$
 ```
 
@@ -94,13 +95,13 @@ cat /etc/passwd | head -n 5
 
 #cat /etc/passwd | head -n 5
 ```bash
-herefajri@cloudshell:/tmp$ cat /etc/passwd | head -n 5
+herefajri@cloudshell:/tmp$ cd
+herefajri@cloudshell:~$ cat /etc/passwd | head -n 5
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
 sys:x:3:3:sys:/dev:/usr/sbin/nologin
 sync:x:4:65534:sync:/bin:/bin/sync
-herefajri@cloudshell:/tmp$
 ```
 
 **3. Eksperimen 3**
@@ -113,11 +114,12 @@ ls -l percobaan.txt
 ```bash
 herefajri@cloudshell:~$ echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt
 herefajri@cloudshell:~$ ls -l percobaan.txt
--rw-rw-r-- 1 herefajri herefajri 42 Oct 16 15:26 percobaan.txt
+-rw------- 1 herefajri herefajri 42 Oct 17 12:59 percobaan.txt
 herefajri@cloudshell:~$ sudo chmod 600 percobaan.txt
 herefajri@cloudshell:~$ ls -l percobaan.txt
--rw------- 1 herefajri herefajri 42 Oct 16 15:26 percobaan.txt
-herefajri@cloudshell:~$
+-rw------- 1 herefajri herefajri 42 Oct 17 12:59 percobaan.txt
+herefajri@cloudshell:~$ 
+
 ```
 
 dan
