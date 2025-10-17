@@ -169,7 +169,14 @@ herefajri@cloudshell:~$ ls -l percobaan.txt
 herefajri@cloudshell:~$ 
 ```
 **Analisis perbedaan sebelum chmod dan sesudah sudo chown root**
-
+| Sebelum | Setelah |
+|---|---|
+| Status kepemilikan : `herefajri`  | Status kepemilikan : `root` |
+| Group : `herefajri` | Group : `herefajri` |
+| Hak akses : `-rw------- 1` | Hak akses : `-rw------- 1` |
+Analisis menunjukkan bahwa perbedaan terbukti hanya ada pada status kepemilikan yang tadinya `User > Root`
+![Screenshot salah_satu_bukti](screenshots/bukti_sudo_chown_root.png)
+Dimana jika User ingin bisa mendapatkan status kepemilikan kembali harus memberikan perintah ```bash sudo chown <nama user> percobaan.txt```
 
 [Lihat hasil keseluruhan I/O dari Navigasi Sistem File, Membaca File, dan Permission & Ownership.txt](code/Keseluruhan.txt)
 
