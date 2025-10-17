@@ -150,6 +150,12 @@ herefajri@cloudshell:~$ sudo chmod 600 percobaan.txt
 herefajri@cloudshell:~$ ls -l percobaan.txt
 -rw------- 1 herefajri herefajri 42 Oct 17 13:31 percobaan.txt
 ```
+**Analisis perbedaan sebelum chmod dan sesudah chmod**
+| Topik | Data Perbedaa yang tercantum dan Kesimpulannya |
+|---|----|
+| Sebelum `chmod` | `-rw-------` |
+| Sesudah `chmod` | `-rw-------` |
+| Kesimpulan | Tak ada perubahan yang terlihat dikarenakan permission awal atau izin awal sudah terdata `600` secara default. |
 
 dan
 ```bash
@@ -162,6 +168,7 @@ herefajri@cloudshell:~$ ls -l percobaan.txt
 -rw------- 1 root herefajri 42 Oct 17 13:31 percobaan.txt
 herefajri@cloudshell:~$ 
 ```
+**Analisis perbedaan sebelum chmod dan sesudah sudo chown root**
 
 
 [Lihat hasil keseluruhan I/O dari Navigasi Sistem File, Membaca File, dan Permission & Ownership.txt](code/Keseluruhan.txt)
