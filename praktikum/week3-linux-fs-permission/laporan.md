@@ -131,6 +131,9 @@ ls -l percobaan.txt
 chmod 600 percobaan.txt
 ls -l percobaan.txt
 
+
+[Lihat analisis hasil I/O dari Navigasi Sistem File, Membaca File, Permission & Ownership, dan .txt](code/keseluruhan.txt)
+
 ---
 
 ## Hasil Eksekusi
