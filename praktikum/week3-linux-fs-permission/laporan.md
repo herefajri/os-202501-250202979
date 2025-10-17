@@ -122,6 +122,16 @@ bin:x:2:2:bin:/bin:/usr/sbin/nologin
 sys:x:3:3:sys:/dev:/usr/sbin/nologin
 sync:x:4:65534:sync:/bin:/bin/sync
 ```
+**Penjelasann isi file dan struktur barisnya (user, UID, GID, home, shell).**
+- Tujuan perintah untuk menampilkan 5 baris pertama dari file `/etc/paswd` dimana berisi informasi terkait akun pengguna di Linux, yang mana biasa digunakan oleh sistem untuk proses login, menentukan direktori home, dan menetapkan shell default.
+- Struktur barisnya
+  | Nama Struktur Baris | Penjelasan |
+  |---------------------|------------|
+  | Username | Nama login User (example : `root` dan `daemon` bisa dilihat pada kode diatas) |
+  | UID | User ID unik dengan `0` untuk memulai `root`|
+  | GID | Group ID utama User yan dihubungkan ke `/etc/group` |
+  | Home Directory (home_directory) | Direktori home User (kalau di Cloud contohnya `/root` dan `/home/herefajri`) |
+  | Shell | SHell default yang digunakan User (contohnya seperti diatas `/bin/bash` dan `/usr/sbin/nologin`) |
 
 ~~
 
