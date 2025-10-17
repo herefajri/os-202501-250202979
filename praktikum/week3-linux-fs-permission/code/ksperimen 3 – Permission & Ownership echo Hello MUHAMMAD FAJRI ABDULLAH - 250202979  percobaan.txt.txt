@@ -1,0 +1,7 @@
+herefajri@cloudshell:~$ echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt
+herefajri@cloudshell:~$ ls -l percobaan.txt
+-rw-rw-r-- 1 herefajri herefajri 42 Oct 16 15:26 percobaan.txt
+herefajri@cloudshell:~$ sudo chmod 600 percobaan.txt
+herefajri@cloudshell:~$ ls -l percobaan.txt
+-rw------- 1 herefajri herefajri 42 Oct 16 15:26 percobaan.txt
+herefajri@cloudshell:~$ 

@@ -1,0 +1,30 @@
+herefajri@cloudshell:~$ pwd
+/home/herefajri
+herefajri@cloudshell:~$ ls -l
+total 8
+drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum
+-rwxr-xr-x 1 herefajri herefajri  913 Oct 16 15:25 README-cloudshell.txt
+herefajri@cloudshell:~$ cd /tmp
+herefajri@cloudshell:/tmp$ ls -a
+.                     cloudcode-temphJACJq                                            node-compile-cache  tmp.r7HNX1iqkv  vscode-git-94357e1698.sock
+..                    code-oss-vm-session-state.json                                  percobaan.txt       tmp.Sy9PIerx2K  vscode-ipc-644f5157-61c9-4066-8b29-592d2f77ce61.sock
+cloudcode-temp0KgQpr  gemini-ide-server-1180.json                                     tmp                 tmp.TRYAbOfQm6  vscode-skaffold-events-logs
+cloudcode-temp3H6jE9  gemini-ide-server-34867.json                                    tmp.A1KsGSWiQl      tmp.wZl9hSAHd4
+cloudcode-temp7cGHET  minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.BabUGcfXvj      tmux-1000
+herefajri@cloudshell:/tmp$ cd
+herefajri@cloudshell:~$ cat /etc/passwd | head -n 5
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+herefajri@cloudshell:~$ echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt
+herefajri@cloudshell:~$ ls -l percobaan.txt
+-rw-rw-r-- 1 herefajri herefajri 42 Oct 16 15:26 percobaan.txt
+herefajri@cloudshell:~$ sudo chmod 600 percobaan.txt
+herefajri@cloudshell:~$ ls -l percobaan.txt
+-rw------- 1 herefajri herefajri 42 Oct 16 15:26 percobaan.txt
+herefajri@cloudshell:~$ sudo chown root percobaan.txt
+herefajri@cloudshell:~$ ls -l percobaan.txt
+-rw------- 1 root herefajri 42 Oct 16 15:26 percobaan.txt
+herefajri@cloudshell:~$ 
