@@ -48,19 +48,26 @@ ls -1
 cd /tmp
 ls -a
 ```
-
+--
 #pwd
 ```bash
 herefajri@cloudshell:~$ pwd
 /home/herefajri
 ```
+**Analisis & Penjelasan**
+- `pwd` adalah singkatan dari "Print Working Directory".
+-  Fungsinya menampilkan direktori aktif saat ini.
+-  Pada hasil I/O diatas bisa dilihat ada bagian `/home/herefajri` yang mana artinya posisi direktori sedang ada di directory home milik User atau Saya sendiri.
 
+--
 #ls -1
 ```bash
 herefajri@cloudshell:~$ ls -l
 total 4
 -rwxr-xr-x 1 herefajri herefajri 913 Oct 15 09:31 README-cloudshell.txt
 ```
+**Analisis & Penjelasan**
+- 
 
 #cd /tmp
  ```bash
@@ -132,7 +139,7 @@ chmod 600 percobaan.txt
 ls -l percobaan.txt
 
 
-[Lihat analisis hasil I/O dari Navigasi Sistem File, Membaca File, Permission & Ownership, dan .txt](code/keseluruhan.txt)
+[Lihat hasil keseluruhan I/O dari Navigasi Sistem File, Membaca File, dan Permission & Ownership.txt](code/keseluruhan.txt)
 
 ---
 
