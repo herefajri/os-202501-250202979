@@ -57,11 +57,9 @@ ls -a
 herefajri@cloudshell:~$ pwd
 /home/herefajri
 ```
-**Analisis & Penjelasan**
+**Penjelasan Hasil**
 - `pwd` adalah singkatan dari "Print Working Directory".
--  Fungsinya menampilkan direktori aktif saat ini.
--  Pada hasil I/O diatas bisa dilihat ada bagian `/home/herefajri` yang mana artinya posisi direktori sedang ada di directory home milik User atau Saya sendiri.
-
+-  Pada hasil I/O diatas bisa dilihat ada bagian `/home/herefajri` yang mana artinya posisi direktori sedang ada di directory home milik User `herefajri`.
 ~~
 
 #ls -1
@@ -72,9 +70,10 @@ total 12
 drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum
 -rwxr-xr-x 1 herefajri herefajri  913 Oct 17 13:27 README-cloudshell.txt
 ```
-**Analisis & Penjelasan**
-- 
-
+**Penjelasan Hasil**
+- Pada `-rw------- 1 root herefajri 42 Oct 16 15:26 percobaan.txt` file ini hanya bisa diakses (baik dibaca maupun ditulis) oleh pemiliknya `root` grup dan orang lain tak punya akses sama sekali.
+- Pada `drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum` folder ini mempunyai akses penuh untuk pemilik dan grup, namum tidak untuk orang lainnya yang mana bukan bagian dari grup dan hanya bisa baca dan eksekusi.
+- Pada `-rwxr-xr-x 1 herefajri herefajri 913 Oct 17 12:50 README-cloudshell.txt` yang mana titik utamanya pada `README-cloudshell.txt` yaitu file yang bisa dibaca oleh publik baik orang lain maupun grup, namun untuk menulis hanya pemilik yang mempunyai akses.
 ~~
 
 #cd /tmp
@@ -82,6 +81,8 @@ drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum
 herefajri@cloudshell:~$ cd /tmp
 herefajri@cloudshell:/tmp$
 ```
+**Penjelasan Hasil**
+- Direktori aktif berpindah ke `/tmp` yang mana adalah direktori yang digunakan sistem dan aplikasi untuk menyimpan file dalam jangka waktu sementara.
 
 ~~
 
@@ -97,6 +98,12 @@ minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.HboOvNEZtn  
 node-compile-cache                                              tmp.VM5vSF8YBB  vscode-git-f303b373af.sock  vscode-typescript1000
 tmp                                                             tmp.vqyBRcQfRL  vscode-git-fe28e5148a.sock
 ```
+**Penjelasan Hasil**
+- `.` menunjukkan direktori saat ini dengan status tetap di `/home/herefajri/praktikum`.
+- `..` menunjukkan direktori induk (satu tingkat diatas direktori saat ini) dengan status pindah dari `/home/herefajri/praktikum` ke `/home/herefajri`.
+- Bagian-bagian seperti `tmp.0...... (dan selanjutnya)` (Status: File sementara yang dibuat oleh aplikasi) , `gemini-ide-server-3.... (dan selanjutnya)` (Status: File Konfigurasi dari server Gemini IDE) , dan `vscode-ip...... (dan selanjutnya)` (Status: File Socket yang dipakai oleh VSCode) adalah file sementara dan socket yang dipakai oleh aplikasi seperti Gemini IDE dan VSCode.
+- `tmux-1000` adalah file runtime (file yang dibuat atau dipakai oleh suatu program disaat progam tersebut sedang berjalan dan biasanya berstatus sementara) yang dipakai oleh tmux (terminal multiplexer) yang dibuat di `/tmp` agar tmux bisa mengelola sesi terminal User
+- `node-compile-cache` data yang disimpan oleh aplikasi setelah proses kompilasi (proses mengubah kode sumber menjadi kode mesin/bytecode) atau bisa disebut dengan cache hasil komplikasi (supaya tak perlu mengulangi proses yang sama setiap dijalankan) yang dijalankan oleh aplikasi Node.js
 
 ~~
 
@@ -145,12 +152,6 @@ herefajri@cloudshell:~$ ls -l percobaan.txt
 -rw------- 1 root herefajri 42 Oct 17 13:31 percobaan.txt
 herefajri@cloudshell:~$ 
 ```
-
-
-echo "Hello Muhammad Fajri Abdullah 250202979" > percobaan.txt
-ls -l percobaan.txt
-chmod 600 percobaan.txt
-ls -l percobaan.txt
 
 
 [Lihat hasil keseluruhan I/O dari Navigasi Sistem File, Membaca File, dan Permission & Ownership.txt](code/keseluruhan.txt)
