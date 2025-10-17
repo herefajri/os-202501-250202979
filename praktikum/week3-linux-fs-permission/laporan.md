@@ -172,23 +172,22 @@ herefajri@cloudshell:~$
 Sertakan screenshot hasil percobaan atau diagram:
 1. Eksperimen 1 – Navigasi Sistem File
 
-![Screenshot hasil](screenshots/Eksperimen%201%20pwd.png)
-![Screenshot hasil](screenshots/Eksperimen%201%20ls%20-1.png)
-![Screenshot hasil](screenshots/Eksperimen%201%20cd%20tmp.png)
-![Screenshot hasil](screenshots/Eksperimen%201%20ls%20-a.png)
+![Screenshot hasil](screenshots/pwd_E1.png)
+![Screenshot hasil](screenshots/ls_-1_E1.png)
+![Screenshot hasil](screenshots/cd_tmp_E1.png)
+![Screenshot hasil](screenshots/ls_-a_E1.png)
 
 2. Eksperimen 2 – Membaca File
 
-![Screenshot hasil](screenshots/E2cat_etcpasswdhead-n5.png)
+![Screenshot hasil](screenshots/cat_E2.png)
 
 3. Eksperimen 3– Permission & Ownership
 
-![Screenshot hasil](screenshots/echo%20NAMExNIM.png)
-![Screenshot hasil](screenshots/sudo%20chown.png)
+![Screenshot hasil](screenshots/echo_E3.png)
+![Screenshot hasil](screenshots/sudo_chown_E3.png)
 
 _**Bonus:**_
-![Screenshot hasil](screenshots/Hasil%20echo%20sampai%20ls%20-1%20sebelum%20root.png)
-![Screenshot hasil](screenshots/Hasil_Keseluruhan.png)
+![Screenshot hasil](screenshots/Keseluruhan.png)
 
 ---
 
