@@ -164,7 +164,7 @@ herefajri@cloudshell:~$
 ```
 
 
-[Lihat hasil keseluruhan I/O dari Navigasi Sistem File, Membaca File, dan Permission & Ownership.txt](code/keseluruhan.txt)
+[Lihat hasil keseluruhan I/O dari Navigasi Sistem File, Membaca File, dan Permission & Ownership.txt](code/Keseluruhan.txt)
 
 ---
 
