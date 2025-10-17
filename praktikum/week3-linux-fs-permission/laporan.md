@@ -48,7 +48,10 @@ ls -1
 cd /tmp
 ls -a
 ```
---
+
+
+~~
+
 #pwd
 ```bash
 herefajri@cloudshell:~$ pwd
@@ -59,17 +62,20 @@ herefajri@cloudshell:~$ pwd
 -  Fungsinya menampilkan direktori aktif saat ini.
 -  Pada hasil I/O diatas bisa dilihat ada bagian `/home/herefajri` yang mana artinya posisi direktori sedang ada di directory home milik User atau Saya sendiri.
 
---
+~~
+
 #ls -1
 ```bash
 herefajri@cloudshell:~$ ls -l
 total 12
--rw------- 1 herefajri herefajri   42 Oct 17 12:58 percobaan.txt
+-rw------- 1 herefajri herefajri   42 Oct 17 12:59 percobaan.txt
 drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum
--rwxr-xr-x 1 herefajri herefajri  913 Oct 17 12:58 README-cloudshell.txt
+-rwxr-xr-x 1 herefajri herefajri  913 Oct 17 13:27 README-cloudshell.txt
 ```
 **Analisis & Penjelasan**
 - 
+
+~~
 
 #cd /tmp
  ```bash
@@ -77,16 +83,22 @@ herefajri@cloudshell:~$ cd /tmp
 herefajri@cloudshell:/tmp$
 ```
 
+~~
+
 #ls -a
 ```bash
-herefajri@cloudshell:/tmp$  ls -a
-.                               gemini-ide-server-446.json                                      tmp.0NHMVi75Dv  tmp.4QDQea0t1X  vscode-git-a3d1a5f5c9.sock
-..                              minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.1ivNYhsXLu  tmp.HboOvNEZtn  vscode-ipc-fe411929-83f4-46e2-8a53-d0b91972634c.sock
-code-oss-vm-session-state.json  node-compile-cache                                              tmp.2ySuu9UsQG  tmp.VM5vSF8YBB  vscode-skaffold-events-logs
-gemini-ide-server-37777.json    tmp                                                             tmp.3qj6157Xs9  tmux-1000
-herefajri@cloudshell:/tmp$
+herefajri@cloudshell:/tmp$ ls -a
+.                                                               tmp.0NHMVi75Dv  tmp.xVOCP68s0c              vscode-ipc-0a1eb557-8c8c-487e-84b8-ac3afcbf5a7e.sock
+..                                                              tmp.1ivNYhsXLu  tmp.ZdoDgmEpap              vscode-ipc-4a55d0c1-bbf6-41ec-992e-353e57c89088.sock
+code-oss-vm-session-state.json                                  tmp.2ySuu9UsQG  tmux-1000                   vscode-ipc-7239c235-0d16-43e8-80a2-49d69e5db462.sock
+gemini-ide-server-38747.json                                    tmp.3qj6157Xs9  vscode-git-a3d1a5f5c9.sock  vscode-ipc-94740fdd-5fa5-4c62-bf08-2cc8ecb35d85.sock
+gemini-ide-server-446.json                                      tmp.4QDQea0t1X  vscode-git-b69ec5b210.sock  vscode-ipc-fe411929-83f4-46e2-8a53-d0b91972634c.sock
+minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.HboOvNEZtn  vscode-git-e21923c9f4.sock  vscode-skaffold-events-logs
+node-compile-cache                                              tmp.VM5vSF8YBB  vscode-git-f303b373af.sock  vscode-typescript1000
+tmp                                                             tmp.vqyBRcQfRL  vscode-git-fe28e5148a.sock
 ```
 
+~~
 
 **2. Eksperimen 2 – Membaca File**
 ```bash
@@ -104,6 +116,8 @@ sys:x:3:3:sys:/dev:/usr/sbin/nologin
 sync:x:4:65534:sync:/bin:/bin/sync
 ```
 
+~~
+
 **3. Eksperimen 3**
 ```bash
 echo "Hello <NAME><NIM>" > percobaan.txt
@@ -114,12 +128,10 @@ ls -l percobaan.txt
 ```bash
 herefajri@cloudshell:~$ echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt
 herefajri@cloudshell:~$ ls -l percobaan.txt
--rw------- 1 herefajri herefajri 42 Oct 17 12:59 percobaan.txt
+-rw------- 1 herefajri herefajri 42 Oct 17 13:31 percobaan.txt
 herefajri@cloudshell:~$ sudo chmod 600 percobaan.txt
 herefajri@cloudshell:~$ ls -l percobaan.txt
--rw------- 1 herefajri herefajri 42 Oct 17 12:59 percobaan.txt
-herefajri@cloudshell:~$ 
-
+-rw------- 1 herefajri herefajri 42 Oct 17 13:31 percobaan.txt
 ```
 
 dan
@@ -130,8 +142,8 @@ ls -l percobaan.txt
 ```bash
 herefajri@cloudshell:~$ sudo chown root percobaan.txt
 herefajri@cloudshell:~$ ls -l percobaan.txt
--rw------- 1 root herefajri 42 Oct 16 15:26 percobaan.txt
-herefajri@cloudshell:~$
+-rw------- 1 root herefajri 42 Oct 17 13:31 percobaan.txt
+herefajri@cloudshell:~$ 
 ```
 
 
