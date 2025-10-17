@@ -177,6 +177,7 @@ herefajri@cloudshell:~$
 
 Analisis menunjukkan bahwa perbedaan terbukti hanya ada pada status kepemilikan yang tadinya `User > Root`
 ![Screenshot salah_satu_bukti](screenshots/bukti_sudo_chown_root.png)
+
 Dimana jika User ingin bisa mendapatkan status kepemilikan kembali harus memberikan perintah 
 ```bash 
 sudo chown <nama user> percobaan.txt
