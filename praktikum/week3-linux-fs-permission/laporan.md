@@ -27,7 +27,18 @@ Contoh:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+- Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+File permission adalah aturan yang menentukan siapa yang dapat membaca (read), menulis (write), atau mengeksekusi (execute) sebuah file atau direktori di sistem Linux. Setiap file atau direktori memiliki pengaturan izin yang dapat dikonfigurasi untuk pengguna tertentu.
+- Secara default, Linux membagi pengguna menjadi tiga kategori:
+ 1. Owner (Pemilik) Pemilik file biasanya adalah pengguna yang membuat file tersebut.
+ 2. Group (Grup) Setiap file dapat dikaitkan dengan grup tertentu. Semua anggota grup ini dapat memiliki izin akses sesuai yang ditentukan.
+ 3. Others (Lainnya) Ini adalah semua pengguna lain di sistem yang bukan pemilik atau bagian dari grup terkait.
+- Ada tiga jenis izin utama di Linux, yaitu:
+ 1. Read (r) Izin untuk membaca isi file atau melihat daftar isi direktori.
+ 2. Write (w) Izin untuk mengubah isi file atau menambahkan file ke dalam direktori.
+ 3. Execute (x) Izin untuk menjalankan file sebagai program atau script.
+
+Sumber : Mengenal File Permission pada Linux Serta Contoh Penerapannya, Jetorbit, by Minz (https://www.jetorbit.com/panduan/mengenal-file-permission-pada-linux-serta-contoh-penerapannya/)
 
 ---
 
