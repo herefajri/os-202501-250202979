@@ -266,17 +266,31 @@ Tugas
 | 11. | `sudo chown root percobaan.txt` | [Output `chown`](code/sudo%20chown.txt) |   |
 | 12. | `ls -l percobaan.txt` | [Output `ls -l #4`](code/ls_-l_4.txt)  |   |
 
-3. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
+2. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
     **Jawaban:** 
+- Fungsi tiap perintah (Linux)
+  | Perintah | Fungsi |
+  |---|---|
+  | `pwd` | Menampilkan posisi direktori sat itu |
+  | `ls -l` | Menampilkan daftar file dan folder juga dengan tipe hak aksesnya/permission. |
+  | `cd /tmp` | Pemindahan direktori home Owner ke direktori `/tmp` yang menjadi tempat penyimpanan file sementara. |
+  | `ls -a` | Menampikan semua file termasuk yang tersembuyi. |
+  | `cat/etc/passwd \| head -n 5` | Menampilkan 5 baris pertama dari file `/etc/paswd` dimana berisi informasi terkait akun pengguna di Linux. |
+
+3. Analisis peran chmod dan chown dalam keamanan sistem Linux.
+    **Jawaban:**
+   | Subyek | Fungsi | Peran dalam keamanan sistem Linux |
+   |---|---|---|
+   | `chmod` | mengubah Permission/ hak akses. | - Mencegah akases yang tidak sah dengan membatasi permission untuk user tertentu.
+   - Menghindari eksekusi berbahaya yang disengaja atau tak disengaja.
+   - Mengatur kolaborasi dengan memberikan akses pada user yang ditargetkan saja. |
+   | `chown` | mengubah kepemilikan file . | - Menetapkan siapa pemilik file dan mengontrol siapa yang memiliki hak penuh atas suatu file
+- Mencegah potensi penyalahgunaan jika file diubah kepemilikannya ke `root` oleh user biasa. |
 
 
-5. Analisis peran chmod dan chown dalam keamanan sistem Linux.
-    **Jawaban:** 
-
-
-7. Upload hasil dan laporan ke repositori Git sebelum deadline.
-    **Jawaban:** 
-
+5. Upload hasil dan laporan ke repositori Git sebelum deadline.
+    **Jawaban:**
+   Terkait hal ini bisa dilihat pada `laporan.md` , folder `screenshots` , dan folder `code` pada  folder `week3-linux-fs-permission`.
 
 
 ---
@@ -298,8 +312,8 @@ Tuliskan jawaban di bagian Quiz pada laporan:
    - `r--` > Others > Others hanya bisa membaca.
 4. Jelaskan perbedaan antara chown dan chmod.
   **Jawaban:**
-   - `chmod` fungsinya menngubah Permissio/ hak akses.
-   - `chown` fungsinya mengubah kepemilikan file 
+   - `chmod` fungsinya mengubah Permission/ hak akses.
+   - `chown` fungsinya mengubah kepemilikan file.
 
 ---
 
