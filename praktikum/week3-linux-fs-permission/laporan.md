@@ -126,7 +126,7 @@ sync:x:4:65534:sync:/bin:/bin/sync
 - Tujuan perintah untuk menampilkan 5 baris pertama dari file `/etc/paswd` dimana berisi informasi terkait akun pengguna di Linux, yang mana biasa digunakan oleh sistem untuk proses login, menentukan direktori home, dan menetapkan shell default.
 - Struktur barisnya
   | Nama Struktur Baris | Penjelasan |
-  |---------------------|------------|
+  |---|---|
   | Username | Nama login User (example : `root` dan `daemon` bisa dilihat pada kode diatas) |
   | UID | User ID unik dengan `0` untuk memulai `root`|
   | GID | Group ID utama User yan dihubungkan ke `/etc/group` |
@@ -151,7 +151,7 @@ herefajri@cloudshell:~$ ls -l percobaan.txt
 -rw------- 1 herefajri herefajri 42 Oct 17 13:31 percobaan.txt
 ```
 **Analisis perbedaan sebelum chmod dan sesudah chmod**
-| Topik | Data Perbedaa yang tercantum dan Kesimpulannya |
+| Topik | Data Perbedaan yang tercantum dan Kesimpulannya |
 |---|----|
 | Sebelum `chmod` | `-rw-------` |
 | Sesudah `chmod` | `-rw-------` |
@@ -219,15 +219,32 @@ _**Bonus:**_
 ## Analisis Hasil
 Tugas
 1. Dokumentasikan hasil seluruh perintah pada tabel observasi di laporan.md.
+    **Jawaban:** 
+| No. | Perintah | Output | Penjelasan |
+|---|----|---|---|
+| 1. | `pwd` |   |   |
+| 2. | `ls -l` |   |   |
+| 3. | `cd /tmp` |   |   |
+| 4. | `ls -a` |   |   |
+| 5. | `cd` |   |   |
+| 6. | `cat /etc/passwd \| head -n 5` |   |   |
+| 7. | `echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt` |   |   |
+| 8. | `ls -l percobaan.txt` |   |   |
+| 9. | `sudo chmod 600 percobaan.txt` |   |   |
+| 10. | `ls -l percobaan.txt` |   |   |
+| 11. | `sudo chown root percobaan.txt` |   |   |
+| 12. | `ls -l percobaan.txt` |   |   |
+
+3. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
+    **Jawaban:** 
 
 
-2. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
+5. Analisis peran chmod dan chown dalam keamanan sistem Linux.
+    **Jawaban:** 
 
 
-3. Analisis peran chmod dan chown dalam keamanan sistem Linux.
-
-
-4. Upload hasil dan laporan ke repositori Git sebelum deadline.
+7. Upload hasil dan laporan ke repositori Git sebelum deadline.
+    **Jawaban:** 
 
 
 
