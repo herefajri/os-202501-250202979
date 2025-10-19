@@ -1,0 +1,2 @@
+herefajri@cloudshell:~$ cd /tmp
+herefajri@cloudshell:/tmp$
