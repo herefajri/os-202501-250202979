@@ -205,7 +205,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 1. Eksperimen 1 – Navigasi Sistem File
 
 ![Screenshot hasil](screenshots/pwd_E1.png)
-![Screenshot hasil](screenshots/ls_-1_E1.png)
+![Screenshot hasil](screenshots/ls_-l_E1.png)
 ![Screenshot hasil](screenshots/cd_tmp_E1.png)
 ![Screenshot hasil](screenshots/ls_-a_E1.png)
 
@@ -254,17 +254,17 @@ Tugas
 | No. | Perintah | Output | Penjelasan |
 |---|----|---|---|
 | 1. | `pwd` | [Output `pwd`](code/pwd.txt) |   |
-| 2. | `ls -l` |  [Output `ls -l`](code/ls_-1.txt)  |   |
-| 3. | `cd /tmp` | [Output `cd /tmp`](code/pwd.txt) |   |
-| 4. | `ls -a` |   |   |
-| 5. | `cd` |   |   |
-| 6. | `cat /etc/passwd \| head -n 5` |   |   |
-| 7. | `echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt` |   |   |
-| 8. | `ls -l percobaan.txt` |   |   |
-| 9. | `sudo chmod 600 percobaan.txt` |    |   |
-| 10. | `ls -l percobaan.txt` |  |   |
-| 11. | `sudo chown root percobaan.txt` |  |   |
-| 12. | `ls -l percobaan.txt` |   |   |
+| 2. | `ls -l` |  [Output `ls -l #1`](code/ls_-l.txt)  |   |
+| 3. | `cd /tmp` | [Output `cd /tmp`](code/cd_tmp.txt) |   |
+| 4. | `ls -a` | [Output `ls -a`](code/ls_-a.txt)  |   |
+| 5. | `cd` | [Output `cd`](code/cd.txt)  |   |
+| 6. | `cat /etc/passwd \| head -n 5` | [Output `cat`](code/cat.txt)  |   |
+| 7. | `echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt` | [Output `echo`](code/echo.txt)  |   |
+| 8. | `ls -l percobaan.txt` | [Output `ls -l #2`](code/ls_-l#2.txt)  |   |
+| 9. | `sudo chmod 600 percobaan.txt` | [Output `chmod`](code/sudo.txt) |   |
+| 10. | `ls -l percobaan.txt` | [Output `ls -l #3`](code/ls_-l#3.txt) |   |
+| 11. | `sudo chown root percobaan.txt` | [Output `chown`](code/sudo%20chown.txt) |   |
+| 12. | `ls -l percobaan.txt` | [Output `ls -l #4`](code/ls_-l#4.txt)  |   |
 
 3. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
     **Jawaban:** 
