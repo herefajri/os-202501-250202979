@@ -260,11 +260,11 @@ Tugas
 | 5. | `cd` | [Output `cd`](code/cd.txt)  |   |
 | 6. | `cat /etc/passwd \| head -n 5` | [Output `cat`](code/cat.txt)  |   |
 | 7. | `echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt` | [Output `echo`](code/echo.txt)  |   |
-| 8. | `ls -l percobaan.txt` | [Output `ls -l #2`](code/ls_-l#2.txt)  |   |
+| 8. | `ls -l percobaan.txt` | [Output `ls -l #2`](code/ls_-l_2.txt)  |   |
 | 9. | `sudo chmod 600 percobaan.txt` | [Output `chmod`](code/sudo.txt) |   |
-| 10. | `ls -l percobaan.txt` | [Output `ls -l #3`](code/ls_-l#3.txt) |   |
+| 10. | `ls -l percobaan.txt` | [Output `ls -l #3`](code/ls_-l_3.txt) |   |
 | 11. | `sudo chown root percobaan.txt` | [Output `chown`](code/sudo%20chown.txt) |   |
-| 12. | `ls -l percobaan.txt` | [Output `ls -l #4`](code/ls_-l#4.txt)  |   |
+| 12. | `ls -l percobaan.txt` | [Output `ls -l #4`](code/ls_-l_4.txt)  |   |
 
 3. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
     **Jawaban:** 
