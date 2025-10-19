@@ -27,8 +27,9 @@ Contoh:
 ---
 
 ## Dasar Teori
-- Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
-File permission adalah aturan yang menentukan siapa yang dapat membaca (read), menulis (write), atau mengeksekusi (execute) sebuah file atau direktori di sistem Linux. Setiap file atau direktori memiliki pengaturan izin yang dapat dikonfigurasi untuk pengguna tertentu.
+Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+
+- File permission adalah aturan yang menentukan siapa yang dapat membaca (read), menulis (write), atau mengeksekusi (execute) sebuah file atau direktori di sistem Linux. Setiap file atau direktori memiliki pengaturan izin yang dapat dikonfigurasi untuk pengguna tertentu.
 - Secara default, Linux membagi pengguna menjadi tiga kategori:
  1. Owner (Pemilik) Pemilik file biasanya adalah pengguna yang membuat file tersebut.
  2. Group (Grup) Setiap file dapat dikaitkan dengan grup tertentu. Semua anggota grup ini dapat memiliki izin akses sesuai yang ditentukan.
@@ -286,14 +287,19 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. Tuliskan jawaban di bagian Quiz pada laporan:
-  **Jawaban:**  
-2. Apa fungsi dari perintah chmod?
-  **Jawaban:**  
-3. Apa arti dari kode permission rwxr-xr--?
-  **Jawaban:**  
+Tuliskan jawaban di bagian Quiz pada laporan:
+ 
+1. Apa fungsi dari perintah chmod?
+  **Jawaban:**  Mengubah hak akases/Permission pada file dan direktori untuk hal-hal terkait read, write, dan execute.
+2. Apa arti dari kode permission rwxr-xr--?
+  **Jawaban:**
+   - `rwx` > User/Owner > User/Owner bisa membaca, menulis, dan eksekusi file.
+   - `r-x` > Group > Group hanya bisa membaca dan eksekusi.
+   - `r--` > Others > Others hanya bisa membaca.
 4. Jelaskan perbedaan antara chown dan chmod.
-  **Jawaban:**  
+  **Jawaban:**
+   - `chmod` fungsinya menngubah Permissio/ hak akses.
+   - `chown` fungsinya mengubah kepemilikan file 
 
 ---
 
