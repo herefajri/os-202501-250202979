@@ -1,3 +1,0 @@
-herefajri@cloudshell:~$ ls -l percobaan.txt
--rw------- 1 herefajri herefajri 42 Oct 17 13:31 percobaan.txt
-herefajri@cloudshell:~$                 
