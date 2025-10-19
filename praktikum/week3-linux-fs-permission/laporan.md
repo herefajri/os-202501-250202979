@@ -219,6 +219,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/sudo_chown_E3.png)
 
 _**Bonus:**_
+
 ![Screenshot salah_satu_bukti](screenshots/bukti_sudo_chown_root.png)
 
 ![Screenshot hasil](screenshots/Keseluruhan.png)
