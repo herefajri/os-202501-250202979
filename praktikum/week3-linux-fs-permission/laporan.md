@@ -281,11 +281,8 @@ Tugas
     **Jawaban:**
    | Subyek | Fungsi | Peran dalam keamanan sistem Linux |
    |---|---|---|
-   | `chmod` | mengubah Permission/ hak akses. | - Mencegah akases yang tidak sah dengan membatasi permission untuk user tertentu.
-   - Menghindari eksekusi berbahaya yang disengaja atau tak disengaja.
-   - Mengatur kolaborasi dengan memberikan akses pada user yang ditargetkan saja. |
-   | `chown` | mengubah kepemilikan file . | - Menetapkan siapa pemilik file dan mengontrol siapa yang memiliki hak penuh atas suatu file
-- Mencegah potensi penyalahgunaan jika file diubah kepemilikannya ke `root` oleh user biasa. |
+   | `chmod` | mengubah Permission/ hak akses. |  |
+   | `chown` | mengubah kepemilikan file . |  |
 
 
 5. Upload hasil dan laporan ke repositori Git sebelum deadline.
