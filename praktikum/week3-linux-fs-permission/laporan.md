@@ -70,7 +70,7 @@ herefajri@cloudshell:~$ pwd
 ```
 **Penjelasan Hasil**
 - `pwd` adalah singkatan dari "Print Working Directory".
--  Pada hasil I/O diatas bisa dilihat ada bagian `/home/herefajri` yang mana artinya posisi direktori sedang ada di directory home milik User `herefajri`.
+-  Pada hasil I/O diatas bisa dilihat ada bagian `/home/herefajri` yang mana artinya posisi direktori sedang ada di directory home milik Owner `herefajri`.
 ~~
 
 #ls -l
@@ -82,10 +82,10 @@ drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum
 -rwxr-xr-x 1 herefajri herefajri  913 Oct 17 13:27 README-cloudshell.txt
 ```
 **Penjelasan Hasil**
-- `total 12` Menunjukkan seluruh sis direktori seperti file dan folder menggunakan 12 blok disk.
-- Pada `-rw------- 1 root herefajri 42 Oct 16 15:26 percobaan.txt` file ini hanya bisa diakses (baik dibaca maupun ditulis) oleh pemiliknya `root` grup dan orang lain tak punya akses sama sekali.
-- Pada `drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum` folder ini mempunyai akses penuh untuk pemilik dan grup, namum tidak untuk orang lainnya yang mana bukan bagian dari grup dan hanya bisa baca dan eksekusi.
-- Pada `-rwxr-xr-x 1 herefajri herefajri 913 Oct 17 12:50 README-cloudshell.txt` yang mana titik utamanya pada `README-cloudshell.txt` yaitu file yang bisa dibaca oleh publik baik orang lain maupun grup, namun untuk menulis hanya pemilik yang mempunyai akses.
+- Pada `total 12` menunjukkan seluruh isi direktori seperti file dan folder menggunakan 12 blok disk.
+- Pada `-rw------- 1 root herefajri 42 Oct 16 15:26 percobaan.txt` file ini hanya bisa diakses (baik dibaca maupun ditulis) oleh Owner `root`. Group dan Others tak punya akses sama sekali.
+- Pada `drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum` folder ini mempunyai akses penuh untuk Owner dan Group, namum tidak untuk Others yang mana bukan bagian dari Group dan hanya bisa baca dan eksekusi.
+- Pada `-rwxr-xr-x 1 herefajri herefajri 913 Oct 17 12:50 README-cloudshell.txt` yang mana titik utamanya pada `README-cloudshell.txt` yaitu file yang bisa dibaca oleh publik baik Others maupun Group, namun untuk menulis hanya Owner yang mempunyai akses.
 ~~
 
 #cd /tmp
@@ -225,9 +225,25 @@ _**Bonus:**_
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+- Jelaskan makna hasil percobaan.
+    **Jawaban:**
+  1. Pada eksperimen Navigasi Sistem File menunjukkan kemampuan berpindah dan mengamati isi direktori dengan memberikan perintah seperti diatas, dan khusus `ls -l` dgunakan untuk melihat detail terkait file seperti permission dan owner.
+  2. Pada eksperimen Membaca File Sistem menampilkan informasi User dari sistem Linux.
+  3. Pada eksperimen Permission & Ownership, disini memiliki beberapa hal yang mencolok dalam segi I/O seperti `echo` membuat file baru, `chmod` mengatur hak akses baca/tulis, `chown` mengubah kepemilikan ke root, dan `ls -l` untuk memverifikasi perubahan permission dan ownership.
+
+  
+- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).
+    **Jawaban:**
+  1. Fungsi Kernel > Saat menjalankan `chmod`, `chown`, dsb, kernel bertindak sebagai perantara antara perintah User dan hardware yang mana Kernel ini mengatur akes ke file, memori dan perangkat I/O.
+  2. System Call > Jembatan atau penghubung antara User dan Kernel, seperti dari contoh eksperimen `pwd` sebenarnya memicu respon System Call `getcwd()`dan jikalau tanpa System Call maka perintah layaknya `cat /etc/passwd` tak bisa membaca file.
+  3. Arsitektur OS > dimana perintah yang User jalankan itu berada di User Space dan System Call yang dipicu (contohnya pada poin no. 2) akan dijalankan di Kernel Space.
+- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?
+    **Jawaban:**
+  | Lingkungan OS | Model Permission |
+  |---|---|
+  | Linux | `rwx` untuk User/owner, Group, dan Others |
+  | Windows | Acl (Sccess Control List) |
+
 
 ## Analisis Hasil
 Tugas
