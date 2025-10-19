@@ -44,7 +44,7 @@ Tuliskan potongan kode atau perintah utama:
 **1. Eksperimen 1 – Navigasi Sistem File**
 ```bash
 pwd
-ls -1
+ls -l
 cd /tmp
 ls -a
 ```
@@ -62,7 +62,7 @@ herefajri@cloudshell:~$ pwd
 -  Pada hasil I/O diatas bisa dilihat ada bagian `/home/herefajri` yang mana artinya posisi direktori sedang ada di directory home milik User `herefajri`.
 ~~
 
-#ls -1
+#ls -l
 ```bash
 herefajri@cloudshell:~$ ls -l
 total 12
@@ -71,6 +71,7 @@ drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum
 -rwxr-xr-x 1 herefajri herefajri  913 Oct 17 13:27 README-cloudshell.txt
 ```
 **Penjelasan Hasil**
+- `total 12` Menunjukkan seluruh sis direktori seperti file dan folder menggunakan 12 blok disk.
 - Pada `-rw------- 1 root herefajri 42 Oct 16 15:26 percobaan.txt` file ini hanya bisa diakses (baik dibaca maupun ditulis) oleh pemiliknya `root` grup dan orang lain tak punya akses sama sekali.
 - Pada `drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum` folder ini mempunyai akses penuh untuk pemilik dan grup, namum tidak untuk orang lainnya yang mana bukan bagian dari grup dan hanya bisa baca dan eksekusi.
 - Pada `-rwxr-xr-x 1 herefajri herefajri 913 Oct 17 12:50 README-cloudshell.txt` yang mana titik utamanya pada `README-cloudshell.txt` yaitu file yang bisa dibaca oleh publik baik orang lain maupun grup, namun untuk menulis hanya pemilik yang mempunyai akses.
