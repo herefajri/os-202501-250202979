@@ -1,0 +1,2 @@
+herefajri@cloudshell:~$ sudo chown root percobaan.txt
+herefajri@cloudshell:~$        

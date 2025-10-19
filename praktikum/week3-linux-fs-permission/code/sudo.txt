@@ -1,0 +1,2 @@
+herefajri@cloudshell:~$ sudo chmod 600 percobaan.txt
+herefajri@cloudshell:~$               

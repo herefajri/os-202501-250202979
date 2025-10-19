@@ -1,0 +1,5 @@
+herefajri@cloudshell:~$ ls -l
+total 12
+-rw------- 1 herefajri herefajri   42 Oct 17 12:59 percobaan.txt
+drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum
+-rwxr-xr-x 1 herefajri herefajri  913 Oct 17 13:27 README-cloudshell.txt

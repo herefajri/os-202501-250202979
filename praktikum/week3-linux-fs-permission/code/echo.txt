@@ -1,0 +1,2 @@
+herefajri@cloudshell:~$ echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt
+herefajri@cloudshell:~$                           

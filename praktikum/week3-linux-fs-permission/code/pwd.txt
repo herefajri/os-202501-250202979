@@ -1,0 +1,2 @@
+herefajri@cloudshell:~$ pwd
+/home/herefajri
