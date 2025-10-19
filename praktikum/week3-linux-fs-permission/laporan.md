@@ -224,49 +224,18 @@ Tugas
 
 | No. | Perintah | Output | Penjelasan |
 |---|----|---|---|
-| 1. | `pwd` | herefajri@cloudshell:~$ pwd
-/home/herefajri  |   |
-| 2. | `ls -l` | herefajri@cloudshell:~$ ls -l
-total 12
--rw------- 1 herefajri herefajri   42 Oct 17 12:59 percobaan.txt
-drwxrwxr-x 3 herefajri herefajri 4096 Oct 16 15:23 praktikum
--rwxr-xr-x 1 herefajri herefajri  913 Oct 17 13:27 README-cloudshell.txt  |   |
-| 3. | `cd /tmp` | herefajri@cloudshell:~$ cd /tmp
-herefajri@cloudshell:/tmp$  |   |
-| 4. | `ls -a` | herefajri@cloudshell:/tmp$ ls -a
-.                                                               tmp.0NHMVi75Dv  tmp.xVOCP68s0c              vscode-ipc-0a1eb557-8c8c-487e-84b8-ac3afcbf5a7e.sock
-..                                                              tmp.1ivNYhsXLu  tmp.ZdoDgmEpap              vscode-ipc-4a55d0c1-bbf6-41ec-992e-353e57c89088.sock
-code-oss-vm-session-state.json                                  tmp.2ySuu9UsQG  tmux-1000                   vscode-ipc-7239c235-0d16-43e8-80a2-49d69e5db462.sock
-gemini-ide-server-38747.json                                    tmp.3qj6157Xs9  vscode-git-a3d1a5f5c9.sock  vscode-ipc-94740fdd-5fa5-4c62-bf08-2cc8ecb35d85.sock
-gemini-ide-server-446.json                                      tmp.4QDQea0t1X  vscode-git-b69ec5b210.sock  vscode-ipc-fe411929-83f4-46e2-8a53-d0b91972634c.sock
-minikube_delete_7d205c9ac03a60edf48a1c0a3ed3a4d118782338_0.log  tmp.HboOvNEZtn  vscode-git-e21923c9f4.sock  vscode-skaffold-events-logs
-node-compile-cache                                              tmp.VM5vSF8YBB  vscode-git-f303b373af.sock  vscode-typescript1000
-tmp                                                             tmp.vqyBRcQfRL  vscode-git-fe28e5148a.sock
-herefajri@cloudshell:/tmp$  |   |
-| 5. | `cd` | herefajri@cloudshell:/tmp$ cd
-herefajri@cloudshell:~$  |   |
-| 6. | `cat /etc/passwd \| head -n 5` | herefajri@cloudshell:~$ cat /etc/passwd | head -n 5
-root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync  |   |
-| 7. | `echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt` | herefajri@cloudshell:~$ echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt
-herefajri@cloudshell:~$  |   |
-| 8. | `ls -l percobaan.txt` | herefajri@cloudshell:~$ ls -l percobaan.txt
--rw------- 1 herefajri herefajri 42 Oct 17 13:31 percobaan.txt
-herefajri@cloudshell:~$  |   |
-| 9. | `sudo chmod 600 percobaan.txt` | herefajri@cloudshell:~$ sudo chmod 600 percobaan.txt
-herefajri@cloudshell:~$   |   |
-| 10. | `ls -l percobaan.txt` |  herefajri@cloudshell:~$ ls -l percobaan.txt
--rw------- 1 herefajri herefajri 42 Oct 17 13:31 percobaan.txt
-herefajri@cloudshell:~$ |   |
-| 11. | `sudo chown root percobaan.txt` | herefajri@cloudshell:~$ sudo chown root percobaan.txt
-herefajri@cloudshell:~$  |   |
-| 12. | `ls -l percobaan.txt` | herefajri@cloudshell:~$ ls -l percobaan.txt
--rw------- 1 root herefajri 42 Oct 17 13:31 percobaan.txt
-herefajri@cloudshell:~$ 
-  |   |
+| 1. | `pwd` | [Output `pwd`](code/pwd.txt) |   |
+| 2. | `ls -l` |  [Output `ls -l`](code/ls_-1.txt)  |   |
+| 3. | `cd /tmp` | [Output `cd /tmp`](code/pwd.txt) |   |
+| 4. | `ls -a` |   |   |
+| 5. | `cd` |   |   |
+| 6. | `cat /etc/passwd \| head -n 5` |   |   |
+| 7. | `echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt` |   |   |
+| 8. | `ls -l percobaan.txt` |   |   |
+| 9. | `sudo chmod 600 percobaan.txt` |    |   |
+| 10. | `ls -l percobaan.txt` |  |   |
+| 11. | `sudo chown root percobaan.txt` |  |   |
+| 12. | `ls -l percobaan.txt` |   |   |
 
 3. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
     **Jawaban:** 
