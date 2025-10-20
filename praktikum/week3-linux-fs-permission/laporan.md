@@ -260,11 +260,11 @@ Tugas
 | 4. | `ls -a` | [Output `ls -a`](code/ls_-a.txt)  | - |
 | 5. | `cd` | [Output `cd`](code/cd.txt)  | - |
 | 6. | `cat /etc/passwd \| head -n 5` | [Output `cat`](code/cat.txt)  | - |
-| 7. | `echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt` | [Output `echo`](code/echo.txt)  | - |
+| 7. | `echo "Hello MUHAMMAD FAJRI ABDULLAH - 250202979" > percobaan.txt` | [Output `echo`](code/echo.txt)  | Tidak menampilkan Output dikarenakan hasilnya langsung tersimpan ke file. |
 | 8. | `ls -l percobaan.txt` | [Output `ls -l #2`](code/ls_-l_2.txt)  | - |
-| 9. | `sudo chmod 600 percobaan.txt` | [Output `chmod`](code/sudo.txt) | - |
+| 9. | `sudo chmod 600 percobaan.txt` | [Output `chmod`](code/sudo.txt) | Ketiadaan Output dikarenakan strandar kerja Linux dimana perintah yang sukses sering kali tidak memberikan Output keciali jika terjadi error. |
 | 10. | `ls -l percobaan.txt` | [Output `ls -l #3`](code/ls_-l_3.txt) | - |
-| 11. | `sudo chown root percobaan.txt` | [Output `chown`](code/sudo%20chown.txt) | - |
+| 11. | `sudo chown root percobaan.txt` | [Output `chown`](code/sudo%20chown.txt) | Tidak memberikan Output saat berhasil, namun kepemilikan bisa diveribfikasi dengan `ls -l file.txt`. |
 | 12. | `ls -l percobaan.txt` | [Output `ls -l #4`](code/ls_-l_4.txt)  | - |
 
 2. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
