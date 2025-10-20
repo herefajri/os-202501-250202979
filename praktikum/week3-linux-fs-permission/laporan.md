@@ -1,5 +1,5 @@
 
-# Laporan Praktikum Minggu ke 3
+# Laporan Praktikum Minggu ke-3
 Topik:  Manajemen File dan Permission di Linux
 
 ---
@@ -145,6 +145,9 @@ Sumber : Mengenal File Permission pada Linux Serta Contoh Penerapannya, Jetorbit
 
 3. File dan kode yang dibuat.
    **Jawaban:**
+Code dijalankan di Shell Cloud Google dengan standar dokumentasi gambar adalah .png dan .txt untuk code. Bagian hasilnya bisa dilihat pada bagian **Hasil EKsekusi** atau ke Folder `/screenshots` untuk dokumentasi gambar dengan standar .png dan **Analisis Hasil** atau Folder `/code` untuk melihat dokumentasi code dengan standar .txt.
+
+
    
 4. Commit message yang digunakan.
    **Jawaban:**
