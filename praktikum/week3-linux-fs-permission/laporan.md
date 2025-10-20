@@ -319,7 +319,8 @@ Tuliskan jawaban di bagian Quiz pada laporan:
 Tuliskan secara singkat:
 - Apa bagian yang paling menantang minggu ini?
   **Jawaban:** Pendataan dan Dokumentasi yang sering terjadi masalah dan kebingungan akibat adanya kesenjangan hasil output dengan apa yang diperoleh teman, hasil data akses yang mana sebelumnya ada beberapa gambar yang menunjukkan waktu akses yang berbeda, adanya percobaan ulang dan hasilnya berbeda dari percobaan pertama, dan semacamnya.
-- Bagaimana cara Anda mengatasinya?  Mengulang sebagai bentuk tindakan pemastian terkait hasil output dimana mencapai titik yang tetap sama antara percobaan sebelumnya dan percobaan saat itu dan membandingkan dengan hasil output teman.
+- Bagaimana cara Anda mengatasinya?
+  **Jawaban:** Mengulang sebagai bentuk tindakan pemastian terkait hasil output dimana mencapai titik yang tetap sama antara percobaan sebelumnya dan percobaan saat itu dan membandingkan dengan hasil output teman.
 
 ---
 
