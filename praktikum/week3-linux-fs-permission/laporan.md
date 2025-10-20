@@ -264,7 +264,7 @@ Tugas
 | 8. | `ls -l percobaan.txt` | [Output `ls -l #2`](code/ls_-l_2.txt)  | - |
 | 9. | `sudo chmod 600 percobaan.txt` | [Output `chmod`](code/sudo.txt) | Ketiadaan Output dikarenakan strandar kerja Linux dimana perintah yang sukses sering kali tidak memberikan Output keciali jika terjadi error. |
 | 10. | `ls -l percobaan.txt` | [Output `ls -l #3`](code/ls_-l_3.txt) | - |
-| 11. | `sudo chown root percobaan.txt` | [Output `chown`](code/sudo%20chown.txt) | Tidak memberikan Output saat berhasil, namun kepemilikan bisa diveribfikasi dengan `ls -l file.txt`. |
+| 11. | `sudo chown root percobaan.txt` | [Output `chown`](code/sudo%20chown.txt) | Tidak memberikan Output saat berhasil, namun kepemilikan bisa diverifikasi dengan `ls -l file.txt`. |
 | 12. | `ls -l percobaan.txt` | [Output `ls -l #4`](code/ls_-l_4.txt)  | - |
 
 2. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
@@ -294,12 +294,13 @@ Tugas
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+2–3 poin kesimpulan dari praktikum ini.
+-
 
 ---
 
 ## Quiz
-Tuliskan jawaban di bagian Quiz pada laporan:
+Jawaban bagian Quiz :
  
 1. Apa fungsi dari perintah chmod?
   **Jawaban:**  Mengubah hak akases/Permission pada file dan direktori untuk hal-hal terkait read, write, dan execute.
