@@ -44,10 +44,106 @@ Sumber : Mengenal File Permission pada Linux Serta Contoh Penerapannya, Jetorbit
 ---
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.  
-2. Perintah yang dijalankan.  
-3. File dan kode yang dibuat.  
-4. Commit message yang digunakan.
+1. Langkah-langkah yang dilakukan.
+- Set-up Environment
+  1. Gunakan Linux (Ubuntu/WSL/Shell Cloud Google).
+  2. Pastikan folder kerja berada di dalam direktori repositori Git praktikum: 
+  ```bash
+     praktikum/week3-linux-fs-permission/
+     ```
+  3. Laksanakan beberapa eksperimen dibawah, beberapa perintah yang perlu diaplikasikan di Linux, dan juga perintah akan penjelasan, pencatatan, analisis hasil,dan semacanya.
+
+2. Eksperimen 1 – Navigasi Sistem File
+   Jalankan perintah berikut:
+   ```bash
+   pwd
+   ls -l
+   cd /tmp
+   ls -a
+   ```
+   - Jelaskan hasil tiap perintah.
+   - Catat direktori aktif, isi folder, dan file tersembunyi (jika ada).
+
+3. Eksperimen 2 – Membaca File
+   Jalankan perintah:
+   ```bash
+   cat /etc/passwd | head -n 5
+   ```
+   - Jelaskan isi file dan struktur barisnya (user, UID, GID, home, shell).
+
+4. Eksperimen 3 – Permission & Ownership
+   Buat file baru:
+   ```bash
+   echo "Hello <NAME><NIM>" > percobaan.txt
+   ls -l percobaan.txt
+   chmod 600 percobaan.txt
+   ls -l percobaan.txt
+   ```
+   - Analisis perbedaan sebelum dan sesudah chmod.  
+   - Ubah pemilik file (jika memiliki izin sudo):
+   ```bash
+   sudo chown root percobaan.txt
+   ls -l percobaan.txt
+   ```
+   - Catat hasilnya.
+
+5. Eksperimen 4 – Dokumentasi
+   - Ambil screenshot hasil terminal dan simpan di:
+     ```
+     praktikum/week3-linux-fs-permission/screenshots/
+     ```
+   - Tambahkan analisis hasil pada `laporan.md`.
+
+6. Commit & Push
+   ```bash
+   git add .
+   git commit -m "Minggu 3 - Linux File System & Permission"
+   git push origin main
+   ```
+
+2. Perintah yang dijalankan.
+- Eksperimen 1 – Navigasi Sistem File
+   ```bash
+   pwd
+   ```
+   ```bash
+   ls -l
+   ```
+   ```bash
+   cd /tmp
+   ```
+   ```bash
+   ls -a
+   ```
+
+- Eksperimen 2 – Membaca File
+   ```bash
+   cat /etc/passwd | head -n 5
+   ```
+
+- Eksperimen 3 – Permission & Ownership
+   ```bash
+   echo "Hello <NAME><NIM>" > percobaan.txt
+   ```
+   ```bash
+   ls -l percobaan.txt
+   ```
+   ```bash
+   chmod 600 percobaan.txt
+   ```
+   ```bash
+   ls -l percobaan.txt
+   ```
+  ```bash
+   sudo chown root percobaan.txt
+  ```
+  ```bash
+   ls -l percobaan.txt
+   ```
+
+3. File dan kode yang dibuat.
+   
+5. Commit message yang digunakan.
 
 ---
 
@@ -295,7 +391,10 @@ Tugas
 
 ## Kesimpulan
 2–3 poin kesimpulan dari praktikum ini.
--
+-	Pada lingkup Linux ada 3 jenis pengguna; Owner, Group, dan Others. Linux juga memiliki 3 jenis izin utama di lingkup Linux yaitu; write, read, dan execute.
+-	Pembelajaran tentang Ownership dan Sistem Permission dalam eksperimen terutama pada beberapa perintah dalam praktikum seperti; `chmod`, `chown`, dan `pwd`.
+-	Mempelajari fungsi-fungsi dari beberapa perintah seperti tempat penampungan file sementara, pemindahan file, perpindahan izin, verifikasi posisi direktori, dan semacamnya.
+
 
 ---
 
