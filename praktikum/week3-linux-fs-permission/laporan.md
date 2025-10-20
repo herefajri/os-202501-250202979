@@ -45,6 +45,7 @@ Sumber : Mengenal File Permission pada Linux Serta Contoh Penerapannya, Jetorbit
 
 ## Langkah Praktikum
 1. Langkah-langkah yang dilakukan.
+   **Jawaban:**
 - Set-up Environment
   1. Gunakan Linux (Ubuntu/WSL/Shell Cloud Google).
   2. Pastikan folder kerja berada di dalam direktori repositori Git praktikum: 
@@ -53,7 +54,7 @@ Sumber : Mengenal File Permission pada Linux Serta Contoh Penerapannya, Jetorbit
      ```
   3. Laksanakan beberapa eksperimen dibawah, beberapa perintah yang perlu diaplikasikan di Linux, dan juga perintah akan penjelasan, pencatatan, analisis hasil,dan semacanya.
 
-2. Eksperimen 1 – Navigasi Sistem File
+- Eksperimen 1 – Navigasi Sistem File
    Jalankan perintah berikut:
    ```bash
    pwd
@@ -64,14 +65,14 @@ Sumber : Mengenal File Permission pada Linux Serta Contoh Penerapannya, Jetorbit
    - Jelaskan hasil tiap perintah.
    - Catat direktori aktif, isi folder, dan file tersembunyi (jika ada).
 
-3. Eksperimen 2 – Membaca File
+- Eksperimen 2 – Membaca File
    Jalankan perintah:
    ```bash
    cat /etc/passwd | head -n 5
    ```
    - Jelaskan isi file dan struktur barisnya (user, UID, GID, home, shell).
 
-4. Eksperimen 3 – Permission & Ownership
+- Eksperimen 3 – Permission & Ownership
    Buat file baru:
    ```bash
    echo "Hello <NAME><NIM>" > percobaan.txt
@@ -87,14 +88,14 @@ Sumber : Mengenal File Permission pada Linux Serta Contoh Penerapannya, Jetorbit
    ```
    - Catat hasilnya.
 
-5. Eksperimen 4 – Dokumentasi
+- Eksperimen 4 – Dokumentasi
    - Ambil screenshot hasil terminal dan simpan di:
      ```
      praktikum/week3-linux-fs-permission/screenshots/
      ```
    - Tambahkan analisis hasil pada `laporan.md`.
 
-6. Commit & Push
+- Commit & Push
    ```bash
    git add .
    git commit -m "Minggu 3 - Linux File System & Permission"
@@ -102,6 +103,7 @@ Sumber : Mengenal File Permission pada Linux Serta Contoh Penerapannya, Jetorbit
    ```
 
 2. Perintah yang dijalankan.
+   **Jawaban:**
 - Eksperimen 1 – Navigasi Sistem File
    ```bash
    pwd
@@ -142,8 +144,11 @@ Sumber : Mengenal File Permission pada Linux Serta Contoh Penerapannya, Jetorbit
    ```
 
 3. File dan kode yang dibuat.
+   **Jawaban:**
    
-5. Commit message yang digunakan.
+4. Commit message yang digunakan.
+   **Jawaban:**
+Commit message yang saya gunakan adalah Update laporan.md
 
 ---
 
