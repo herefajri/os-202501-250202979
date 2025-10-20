@@ -29,16 +29,17 @@ Contoh:
 ## Dasar Teori
 Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 
-- File permission adalah aturan yang menentukan siapa yang dapat membaca (read), menulis (write), atau mengeksekusi (execute) sebuah file atau direktori di sistem Linux. Setiap file atau direktori memiliki pengaturan izin yang dapat dikonfigurasi untuk pengguna tertentu.
-- Secara default, Linux membagi pengguna menjadi tiga kategori:
- 1. Owner (Pemilik) Pemilik file biasanya adalah pengguna yang membuat file tersebut.
- 2. Group (Grup) Setiap file dapat dikaitkan dengan grup tertentu. Semua anggota grup ini dapat memiliki izin akses sesuai yang ditentukan.
- 3. Others (Lainnya) Ini adalah semua pengguna lain di sistem yang bukan pemilik atau bagian dari grup terkait.
-- Ada tiga jenis izin utama di Linux, yaitu:
- 1. Read (r) Izin untuk membaca isi file atau melihat daftar isi direktori.
- 2. Write (w) Izin untuk mengubah isi file atau menambahkan file ke dalam direktori.
- 3. Execute (x) Izin untuk menjalankan file sebagai program atau script.
+-	File Permission (Izin File) adalah sistem aturan yang mengatur siapa yang diperbolehkan melakukan hal-hal layaknya read, write, dan execute, atas sebuah file ataupun direktori di sistem linux.
+-	Linux membagi 3 tipe pihak peng-akses utama:
+1.	Owner / Pemilik – Pemilik dari suatu file ataupun direktori.
+2.	Group / Grup – Sekumpulan pengguna yang berada di suatu grup yang mana semuanya memiliki izin akses yang sama.
+3.	Others – Semua pengguna lain yang mana bukan Owner dan juga bukan bagian dari Group.
+-	Linux juga membagi 3 jenis izin utama:
+1.	Read (r) – Izin untuk membaca/melihat isi file/direktori.
+2.	Write (w) – Izin untuk mengubah atau bahkan menambahkan isi file maupun file ke direktori.
+3.	Execute (x) – Izin untuk menjalankan file sebagai program/script.
 
+Terinspirasi dari:
 Sumber : Mengenal File Permission pada Linux Serta Contoh Penerapannya, Jetorbit, by Minz (https://www.jetorbit.com/panduan/mengenal-file-permission-pada-linux-serta-contoh-penerapannya/)
 
 ---
