@@ -40,7 +40,7 @@ Tujuan praktikum minggu ini.
   1. Pengaturan Akses pada perangkat keras.
   2. Manajemen Sumber Daya Sistem.
 
-Terinspirasi & hasil rangkuman dari ;
+Terinspirasi & hasil rangkuman dari :
 1. System Call dalam SO (Sistem Operasi), eko's Article (https://ekomartantoh.net/artikel/2025/06/15/system-call-dalam-so-sistem-operasi/).
 2. Panggilan Sistem di OS (Operating System): Apa itu, Jenis dan Contohnya, GURU99 (https://www.guru99.com/id/system-call-operating-system.html).
 3. Pengertian Kernel pada Sistem Operasi: Fungsi, Jenis, dan Peranannya, by Tian Hos, RUJUKAN EDUKASI (https://www.rujukanedukasi.com/pengertian-kernel-pada-sistem-operasi/).
