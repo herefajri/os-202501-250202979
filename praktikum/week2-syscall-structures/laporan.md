@@ -21,13 +21,30 @@ Tujuan praktikum minggu ini.
 ---
 
 ## Dasar Teori
-- Jembatan komunikasi aman antara User Space yang memiliki keterbatasan gerak dan Kernel Space yang memiliki akses ke semua bidang sekaligus pusat kendali, dipegang oleh System Call, dimana bagian daripada User Space, ketika mereka ingin menjalankan sebuah operasi dengan Kernel harus di periksa oleh System Call. 
-- Kernel sebagai pusat kendali memiliki fungsi utama yaitu; manajemen proses, manajemen memori, manajemen perangkat I/O, dan manajemen berkas atau File Ststem. 
-- System Call sendiri memiliki beberapa Struktur seperti;
-  1. **Permintaan**, untuk memanggil fungsi yang telah disediakan oleh Standard Library (Jembatan awal ke System Call)
-  2. **Penyiapan Parameter**, untuk mempersiapkan laporan permintaan yang jelas dan terstruktur untuk dikirim ke Kernel
-  3. **Transisi Mode (Trap/Interrupt)**, bagian yang sama dengan System Call namun mekanisme nya ke CPU untuk mengubah hak akses dari User ke Kernel
-  4. **Pengembalian Kontrol**, agar setelah kernel selesai menerima, menjalankan tugas, dan memberikan output, anda bisa kembali ke mode pengguna dan bisa input lagi
+- Sistem Call adalah suatu mekanisme yang menyediakan antarmuka antara suatu proses dan sistem operasi yang mana ini adalah metode terprogram sekaligus terstruktur di mana program komputer meminta layanan dari kernel dan juga System Call ini menawarkan layanan OS kepada program User melalui API (Application Programing Interface) sekaligus System Call ini adalah satu satunya gerbang masuk untuk menuju sistem Kernel.
+- Arsitektur System Call seperti:
+  1. Proses dijalankan di User Space sampai dihentikan oleh System Call.
+  2. System Call dieksekusi dalam mode Kernel berdasarkan prioritas .
+  3. Setelah eksekusi System Call selesai, kontrol kembali ke User.
+  4. Eksekusi proses penggunaan dilanjutkan dalam Kernel Space.
+- Situasi dimana memerlukan panggilan dari System Call seperti; tindakan membaca, menulis, membuat, menghapus, pembuatan, dan pengolahan, serta akses ke suatu file atau berkas.
+
+- Jenis panggilan System Call di OS.
+  1. Pengendalian proses.
+  2. Manajemen file.
+  3. Manajemen perangkat.
+  4. Pemeliharaan informasi.
+  5. Komunikasi.
+
+- Fungsi Kernel pada OS.
+  1. Pengaturan Akses pada perangkat keras.
+  2. Manajemen Sumber Daya Sistem.
+
+Terinspirasi & hasil rangkuman dari ;
+1. System Call dalam SO (Sistem Operasi), eko's Article (https://ekomartantoh.net/artikel/2025/06/15/system-call-dalam-so-sistem-operasi/).
+2. Panggilan Sistem di OS (Operating System): Apa itu, Jenis dan Contohnya, GURU99 (https://www.guru99.com/id/system-call-operating-system.html).
+3. Pengertian Kernel pada Sistem Operasi: Fungsi, Jenis, dan Peranannya, by Tian Hos, RUJUKAN EDUKASI (https://www.rujukanedukasi.com/pengertian-kernel-pada-sistem-operasi/).
+
 ---
 
 ## Langkah Praktikum
