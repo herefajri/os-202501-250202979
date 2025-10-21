@@ -173,7 +173,7 @@ herefajri@cloudshell:~$
 | 9. | read | Membaca isi file yang baru dibuka dan memastikan agar isi file dapat digunakan dengan format yang diharapkan.|
 
 
-[Lihat hasil analisis syscall_ls.txt](code/result_syscall_ls_(strace%20ls).txt)
+[Lihat hasil analisis syscall_ls.txt](result/syscall_ls.txt)
 
 
 
