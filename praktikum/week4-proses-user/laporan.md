@@ -43,7 +43,6 @@ pada mesin (bukan hanya proses pada shell saat ini) dengan format :
 
  Sumber:
  - Modul Praktikum Sistem Operasi – Universitas Sebelas Maret (UNS),  Proses dan Manajemen Proses (https://spada.uns.ac.id/pluginfile.php/880150/mod_resource/content/1/Modul%206%20-%20Proses%20dan%20Manajemen%20Proses.pdf)
- - 
 ---
 
 ## Langkah Praktikum
