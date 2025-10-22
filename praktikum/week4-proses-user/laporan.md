@@ -50,7 +50,7 @@ proses
 ## Langkah Praktikum
 1. Langkah-langkah yang dilakukan.
 
-  1. **Setup Environment**
+   1. **Setup Environment**
    - Gunakan Linux (Ubuntu/WSL).  
    - Pastikan Anda sudah login sebagai user non-root.  
    - Siapkan folder kerja:
@@ -58,7 +58,7 @@ proses
      praktikum/week4-proses-user/
      ```
 
-  2. **Eksperimen 1 – Identitas User**
+   2. **Eksperimen 1 – Identitas User**
    Jalankan perintah berikut:
    ```bash
    whoami
@@ -73,7 +73,7 @@ proses
      ```
    - Uji login ke user baru.
 
-  3. **Eksperimen 2 – Monitoring Proses**
+   3. **Eksperimen 2 – Monitoring Proses**
    Jalankan:
    ```bash
    ps aux | head -10
@@ -85,7 +85,7 @@ proses
      praktikum/week4-proses-user/screenshots/top.png
      ```
 
-  4. **Eksperimen 3 – Kontrol Proses**
+   4. **Eksperimen 3 – Kontrol Proses**
    - Jalankan program latar belakang:
      ```bash
      sleep 1000 &
@@ -98,7 +98,7 @@ proses
      ```
    - Pastikan proses telah berhenti dengan `ps aux | grep sleep`.
 
-  5. **Eksperimen 4 – Analisis Hierarki Proses**
+   5. **Eksperimen 4 – Analisis Hierarki Proses**
    Jalankan:
    ```bash
    pstree -p | head -20
@@ -106,7 +106,7 @@ proses
    - Amati hierarki proses dan identifikasi proses induk (`init`/`systemd`).  
    - Catat hasilnya dalam laporan.
 
-  6. **Commit & Push**
+   6. **Commit & Push**
    ```bash
    git add .
    git commit -m "Minggu 4 - Manajemen Proses & User"
