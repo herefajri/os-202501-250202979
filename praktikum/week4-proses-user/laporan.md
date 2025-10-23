@@ -48,7 +48,6 @@ proses
 ---
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.
 
    1. **Setup Environment**
    - Gunakan Linux (Ubuntu/WSL).  
@@ -112,8 +111,12 @@ proses
    git commit -m "Minggu 4 - Manajemen Proses & User"
    git push origin main
    ```
-2. Perintah yang dijalankan.
-   ```bash
+
+---
+
+## Kode / Perintah
+Tuliskan potongan kode atau perintah utama:
+```bash
    whoami
    id
    groups
@@ -136,22 +139,6 @@ proses
   ```bash
   pstree -p | head -20
   ```
-3. File dan kode yang dibuat.
-
-
-4. Commit message yang digunakan.
-
-
-
----
-
-## Kode / Perintah
-Tuliskan potongan kode atau perintah utama:
-```bash
-uname -a
-lsmod | head
-dmesg | head
-```
 
 ---
 
