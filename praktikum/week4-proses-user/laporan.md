@@ -150,8 +150,43 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 ## Analisis
 
+1. **Eksperimen 1 – Identitas User**
+| Perintah | Dokumentasi Output | Output | Fungsi |
+|---|---|---|---|
+| `whoami` | - | Menampilkan nama User yang berstatus sedang aktif di terminal. | Memastikan pengguna sedang login sebagai siapa. |
+| `id` | - | Menampilkan UID (User ID), GID (Group ID), dan daftar grup yang dimiliki User. | Menunjukkan identitas sistem dari User. |
+| `groups` | - | Menampilkan nama-nama grup yang diikuti oleh User aktif | Menentukan hak akses User terhadap file, folder, dan perintah khusus atau tertentu. |
+
+3. **Eksperimen 2 – Monitoring Proses**
+| Kolom | Penjelasan |
+|---|---|
+| USER |  |
+| PID |  |
+| %CPU |  |
+| %MEM |  |
+| VSZ |  |
+| RSS |  |
+| TTY |  |
+| STAT |  |
+| START |  |
+| TIME |  |
+| COMMAND |  |
+
+5. **Eksperimen 3 – Kontrol Proses**
+
+
+6. **Eksperimen 4 – Analisis Hierarki Proses**
+
+
+
+---
+
+## Analisis Tugas
+
 1. Gambar hierarki proses dalam bentuk diagram pohon (`pstree`).  
 2. Penjelasan hubungan antara user management dan keamanan sistem Linux.  
+
+
 
 ---
 
