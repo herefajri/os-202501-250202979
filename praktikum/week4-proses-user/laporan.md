@@ -149,9 +149,9 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+
+1. Gambar hierarki proses dalam bentuk diagram pohon (`pstree`).  
+2. Penjelasan hubungan antara user management dan keamanan sistem Linux.  
 
 ---
 
