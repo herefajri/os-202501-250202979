@@ -1,0 +1,121 @@
+Welcome to Cloud Shell! Type "help" to get started, or type "gemini" to try prompting with Gemini CLI.
+To set your Cloud Platform project in this session use `gcloud config set project [PROJECT_ID]`.
+You can view your projects by running `gcloud projects list`.
+herefajri@cloudshell:~$ whoami
+herefajri
+herefajri@cloudshell:~$ id
+uid=1000(herefajri) gid=1000(herefajri) groups=1000(herefajri),4(adm),27(sudo),996(docker)
+herefajri@cloudshell:~$ groups
+herefajri adm sudo docker
+herefajri@cloudshell:~$ sudo adduser praktikan
+fatal: The user `praktikan' already exists.
+herefajri@cloudshell:~$ sudo passwd praktikan
+New password: 
+Retype new password: 
+passwd: password updated successfully
+herefajri@cloudshell:~$ ps aux | head -10
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.0   4324  3412 ?        Ss   13:51   0:00 /bin/bash /google/scripts/onrun.sh sleep infinity
+syslog         9  0.0  0.0 222140  3772 ?        Ssl  13:51   0:00 /usr/sbin/rsyslogd
+root          25  0.0  0.3  39056 29056 ?        S    13:51   0:01 /usr/bin/python /usr/bin/supervisord -n -c /google/devshell/supervisord.conf --pidfile=/var/run/supervisor.pid --logfile=/var/log/supervisord.log
+root          26  0.0  0.0   6196  2620 ?        S    13:51   0:00 logger -t supervisord
+root          70  0.0  0.0  12020  4292 ?        S<s  13:51   0:00 sshd: /usr/sbin/sshd -p 22 -o AuthorizedKeysFile=/etc/ssh/keys/authorized_keys [listener] 0 of 10-60 startups
+root         206  0.0  0.9 1972948 73608 ?       Sl   13:51   0:01 /usr/bin/dockerd -p /var/run/docker.pid --mtu=1460 --registry-mirror=https://asia-mirror.gcr.io
+root         233  0.1  0.5 1803036 47488 ?       Ssl  13:51   0:06 containerd --config /var/run/docker/containerd/containerd.toml
+root         242  0.0  0.1 1233352 12428 ?       Sl   13:51   0:01 /google/devshell/editor/proxy/editor-proxy -static-content-dir=/google/devshell/editor/code-oss-for-cloud-shell/static-content -etag-file=/google/devshell/editor/proxy/code-oss-for-cloud-shell-etags.txt -editor-dir=/google/devshell/editor/code-oss-for-cloud-shell
+root         244  0.0  0.0  16320  6424 ?        S    13:51   0:00 sudo /google/devshell/tmux-agent
+herefajri@cloudshell:~$ top -n 1
+top - 15:27:09 up  1:59,  0 user,  load average: 0.03, 0.08, 0.08
+Tasks:  49 total,   1 running,  48 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :   7947.4 total,   4564.7 free,   1939.3 used,   1685.2 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.   6008.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                                                
+      1 root      20   0    4324   3412   3132 S   0.0   0.0   0:00.11 bash                                                                                                                   
+      9 syslog    20   0  222140   3772   2412 S   0.0   0.0   0:00.13 rsyslogd                                                                                                               
+     25 root      20   0   39056  29056  10884 S   0.0   0.4   0:01.87 python                                                                                                                 
+     26 root      20   0    6196   2620   2380 S   0.0   0.0   0:00.00 logger                                                                                                                 
+     70 root      10 -10   12020   4292   3180 S   0.0   0.1   0:00.09 sshd                                                                                                                   
+    206 root      20   0 1972948  73608  53432 S   0.0   0.9   0:01.40 dockerd                                                                                                                
+    233 root      20   0 1803036  47488  34880 S   0.0   0.6   0:07.09 containerd                                                                                                             
+    242 root      20   0 1233352  12428   7632 S   0.0   0.2   0:01.98 editor-proxy                                                                                                           
+    244 root      20   0   16320   6424   5500 S   0.0   0.1   0:00.02 sudo                                                                                                                   
+    253 root      20   0 1226100   2680   1976 S   0.0   0.0   0:00.01 tmux-agent                                                                                                             
+    445 root      20   0    2696   1480   1380 S   0.0   0.0   0:00.00 sleep                                                                                                                  
+    464 root      20   0    9196   4004   3628 S   0.0   0.0   0:00.00 runuser                                                                                                                
+    465 herefaj+  20   0    4324   3284   3016 S   0.0   0.0   0:00.00 sh                                                                                                                     
+    478 herefaj+  20   0   11.3g 172312  50496 S   0.0   2.1   0:29.97 node                                                                                                                   
+    498 herefaj+  10 -10    8032   3560   1988 S   0.0   0.0   0:00.26 tmux                                                                                                                   
+    499 herefaj+  10 -10    8800   5900   4036 S   0.0   0.1   0:00.05 bash                                                                                                                   
+   1279 herefaj+  10 -10    8800   5848   3968 S   0.0   0.1   0:00.05 bash                                                                                                                   
+   1872 herefaj+  10 -10    8800   5804   3924 S   0.0   0.1   0:00.08 bash                                                                                                                   
+   2272 herefaj+  10 -10    8800   5972   4100 S   0.0   0.1   0:00.05 bash                                                                                                                   
+   2664 herefaj+  10 -10    8800   6008   4136 S   0.0   0.1   0:00.05 bash                                                                                                                   
+   3129 herefaj+  10 -10    8800   5852   3976 S   0.0   0.1   0:00.05 bash                                                                                                                   
+   3665 herefaj+  10 -10    8800   5960   4084 S   0.0   0.1   0:00.04 bash                                                                                                                   
+   4153 herefaj+  10 -10    8800   5868   3980 S   0.0   0.1   0:00.07 bash                                                                                                                   
+   4616 herefaj+  10 -10    8800   5808   3924 S   0.0   0.1   0:00.07 bash                                                                                                                   
+   5086 herefaj+  10 -10    8800   5908   4032 S   0.0   0.1   0:00.06 bash                                                                                                                   
+   5470 herefaj+  10 -10    5688   2032   1916 S   0.0   0.0   0:00.00 sleep                                                                                                                  
+   5491 herefaj+  10 -10    8800   5800   3928 S   0.0   0.1   0:00.04 bash                                                                                                                   
+   5866 herefaj+  10 -10    5688   2280   2168 S   0.0   0.0   0:00.00 sleep                                                                                                                  
+   5877 root      10 -10   13992   9828   8452 S   0.0   0.1   0:00.03 sshd                                                                                                                   
+   5879 root      10 -10   13992   9728   8352 S   0.0   0.1   0:00.02 sshd                                                                                                                   
+   5881 herefaj+  10 -10   14252   6348   4692 S   0.0   0.1   0:00.00 sshd                                                                                                                   
+   5882 herefaj+  10 -10    7340   3540   3288 S   0.0   0.0   0:00.00 bash                                                                                                                   
+   5883 herefaj+  10 -10    7340   3720   3460 S   0.0   0.0   0:00.00 start-shell.sh                                                                                                         
+   5884 herefaj+  10 -10    6880   3292   2992 S   0.0   0.0   0:00.00 tmux                                                                                                                   
+   5885 herefaj+  10 -10   14252   6276   4620 S   0.0   0.1   0:00.00 sshd                                                                                                                   
+   5886 herefaj+  10 -10    7340   3724   3476 S   0.0   0.0   0:00.00 bash                                                                                                                   
+   5889 herefaj+  10 -10    7604   4340   3712 S   0.0   0.1   0:00.00 bash                                                                                                                   
+   5892 root      10 -10   13992   9636   8260 S   0.0   0.1   0:00.02 sshd                                                                                                                   
+   5894 herefaj+  10 -10   14252   6280   4624 S   0.0   0.1   0:00.00 sshd                                                                                                                   
+   5895 herefaj+  10 -10    7340   3624   3376 S   0.0   0.0   0:00.00 bash                                                                                                                   
+   5896 herefaj+  10 -10    7340   3768   3504 S   0.0   0.0   0:00.00 start-shell.sh                                                                                                         
+   5897 herefaj+  10 -10    6880   3268   2968 S   0.0   0.0   0:00.00 tmux                                                                                                                   
+   5898 herefaj+  10 -10    8800   5816   3936 S   0.0   0.1   0:00.05 bash                                                                                                                   
+   6136 herefaj+  20   0   32.3g 587012  59960 S   0.0   7.2   0:28.88 node                                                                                                                   
+   6293 herefaj+  20   0 1014380  59544  44876 S   0.0   0.7   0:00.28 node                                                                                                                   
+   6300 herefaj+  20   0 1393992  98840  66396 S   0.0   1.2   0:00.31 cloudcode_cli                                                                                                          
+   6307 herefaj+  20   0 1828808 591908  47560 S   0.0   7.3   0:08.63 node                                                                                                                   
+herefajri@cloudshell:~$ sleep 1000 &
+[1] 6338
+herefajri@cloudshell:~$ ps aux | grep sleep
+root           1  0.0  0.0   4324  3412 ?        Ss   13:51   0:00 /bin/bash /google/scripts/onrun.sh sleep infinity
+root         445  0.0  0.0   2696  1480 ?        S    13:51   0:00 sleep infinity
+herefaj+    5866  0.0  0.0   5688  2280 pts/14   S<   15:21   0:00 sleep 1000
+herefaj+    6338  0.0  0.0   5688  2284 pts/12   S<   15:29   0:00 sleep 1000
+herefaj+    6342  0.0  0.0   6548  2420 pts/12   S<+  15:29   0:00 grep --color=auto sleep
+herefajri@cloudshell:~$ sudo kill 1772 1773 1774
+kill: (1772): No such process
+kill: (1773): No such process
+kill: (1774): No such process
+herefajri@cloudshell:~$ ps aux | grep adduser
+herefaj+    6353  0.0  0.0   6548  2400 pts/12   S<+  15:31   0:00 grep --color=auto adduser
+herefajri@cloudshell:~$ sudo kill 5866 6338
+[1]+  Terminated              sleep 1000
+herefajri@cloudshell:~$ ps aux | grep adduser
+herefaj+    6366  0.0  0.0   6548  2392 pts/12   S<+  15:32   0:00 grep --color=auto adduser
+herefajri@cloudshell:~$ pstree -p | head -20
+bash(1)-+-dockerd(206)-+-containerd(233)-+-{containerd}(247)
+        |              |                 |-{containerd}(250)
+        |              |                 |-{containerd}(251)
+        |              |                 |-{containerd}(252)
+        |              |                 |-{containerd}(259)
+        |              |                 |-{containerd}(262)
+        |              |                 `-{containerd}(1803)
+        |              |-{dockerd}(212)
+        |              |-{dockerd}(213)
+        |              |-{dockerd}(214)
+        |              |-{dockerd}(215)
+        |              |-{dockerd}(229)
+        |              |-{dockerd}(230)
+        |              |-{dockerd}(263)
+        |              |-{dockerd}(264)
+        |              `-{dockerd}(387)
+        |-logger(26)
+        |-python(25)-+-editor-proxy(242)-+-runuser(464)---sh(465)---node(478)-+-node(6136)-+-cloudcode_cli(6300)-+-{cloudcode_cli}(+
+        |            |                   |                                    |            |                     |-{cloudcode_cli}(+
+        |            |                   |                                    |            |                     |-{cloudcode_cli}(+
+herefajri@cloudshell:~$ 
