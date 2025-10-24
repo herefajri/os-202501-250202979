@@ -146,7 +146,7 @@ Tuliskan potongan kode atau perintah utama:
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/whoami-id-groups-sudo_adduser_praktikan-sudo_passwd_praktikan-ps_aux_head-10.png)
 ![Screenshot hasil](screenshots/top.png)
-![Screenshot hasil](screenshots/sleep_1000&ps_aux%20_grep_sleep-killPID-pstree-p%20head-20.png)
+![Screenshot hasil](screenshots/sleep_1000&ps_aux%20_grep_sleep-killPID-pstree-p%20%20head-20.png)
 
 ---
 
