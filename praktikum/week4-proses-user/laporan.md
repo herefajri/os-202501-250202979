@@ -162,6 +162,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 2. **Eksperimen 2 – Monitoring Proses**
 Dari kolom perintah `ps aux | head -10` dan `top -n 1`
+
 | Kolom | Penjelasan |
 |---|---|
 | USER | Nama User yang menjalankan proses tersebut. Bisa `root`, User biasa, atau sistem.  |
