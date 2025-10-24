@@ -177,11 +177,12 @@ Dari kolom perintah `ps aux | head -10` dan `top -n 1`
 
 3. **Eksperimen 3 – Kontrol Proses**
 
+[W4](code/W4.txt)
 
 
 4. **Eksperimen 4 – Analisis Hierarki Proses**
 
-
+Perintah : `pstree -p | head -20`
 
 
 
