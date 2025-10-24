@@ -161,20 +161,18 @@ Sertakan screenshot hasil percobaan atau diagram:
 | `groups` | - | Menampilkan nama-nama grup yang diikuti oleh User aktif | Menentukan hak akses User terhadap file, folder, dan perintah khusus atau tertentu. |
 
 2. **Eksperimen 2 – Monitoring Proses**
-
+Dari kolom perintah `ps aux | head -10` dan `top -n 1`
 | Kolom | Penjelasan |
 |---|---|
-| USER |  |
-| PID |  |
-| %CPU |  |
-| %MEM |  |
-| VSZ |  |
-| RSS |  |
-| TTY |  |
-| STAT |  |
-| START |  |
-| TIME |  |
-| COMMAND |  |
+| USER | Nama User yang menjalankan proses tersebut. Bisa `root`, User biasa, atau sistem.  |
+| PID | (Singkatan dari: Process ID) Nomor unik yang diberikan oleh sistem untuk setiap proses. |
+| %CPU | Persentase penggunaan CPU oleh proses tersebut. |
+| %MEM | Persentase penggunaan memori fisik (RAM) oleh proses. |
+| VSZ | (Singkatan dari: Virtual Memory Size) Total memori virtual yang digunakan proses (dalam KB). |
+| RSS | (Singkatan dari: Resident Set Size) Jumlah memori fisik (RAM) yang digunakan proses (dalam KB). |
+| TTY | Terminal yang terkait dengan proses |
+| STAT | Status proses |
+| COMMAND | Perintah yang dijalankan oleh proses |
 
 3. **Eksperimen 3 – Kontrol Proses**
 
