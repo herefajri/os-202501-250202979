@@ -202,7 +202,8 @@ Dimana PID (Process ID) adalah angka `429`.
 
 1. Gambar hierarki proses dalam bentuk diagram pohon (`pstree`).
     **Jawaban:**  
-`systemd(1)-+-agetty(168)
+```bash
+systemd(1)-+-agetty(168)
            |-agetty(181)
            |-cron(142)
            |-dbus-daemon(143)
@@ -221,7 +222,8 @@ Dimana PID (Process ID) adalah angka `429`.
            |-systemd-timesyn(106)---{systemd-timesyn}(140)
            |-systemd-udevd(91)
            |-unattended-upgr(194)---{unattended-upgr}(225)
-           `-wsl-pro-service(163)-+-{wsl-pro-service}(197)`
+           `-wsl-pro-service(163)-+-{wsl-pro-service}(197)
+```
 
 2. Penjelasan hubungan antara user management dan keamanan sistem Linux.
     **Jawaban:**
