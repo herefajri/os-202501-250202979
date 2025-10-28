@@ -229,7 +229,7 @@ systemd(1)-+-agetty(168)
     **Jawaban:**
   User Management di Linux erat kaitannya dengan keamanan system
 - Isolasi Akses, dimana setiap user memiliki UID dan GID yang membatasi akses terhadap file, proses, dan perangkat. Ini mencegah User Biasa mengakses data milik User Lain atau Sytem.
-- Group dan Hak IStimewa, dimana User bisa tergabung dalam grup seperti `sudo`, `adm`, atau lainnya.
+- Group dan Hak Istimewa, dimana User bisa tergabung dalam grup seperti `sudo`, `adm`, atau lainnya.
 - User Root, yang mana merupakan Super User dengan akses penuh ke system, namum dibatasi penggunaannya agar mencegah perubahan system yang tak disengaja atau berbahaya.
 - Keamanan Proses, proses yang dijalankan oleh User hanya bisa dimodifikasi atau dihentikan oleh User itu sendiri untuk mencegah manipulasi proses antar-user.
 
@@ -244,11 +244,15 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ## Quiz
 Tuliskan jawaban di bagian **Quiz** pada laporan:
 1. Apa fungsi dari proses `init` atau `systemd` dalam sistem Linux?   
-   **Jawaban:**  
-2. Apa perbedaan antara `kill` dan `killall`?  
-   **Jawaban:**  
-3. Mengapa user `root` memiliki hak istimewa di sistem Linux?  
-   **Jawaban:**  
+   **Jawaban:**
+    `init` atau `systemd` memiliki fungsi untuk menginisialiasi system, memulai semua layanan daemon, dan menjadi induk dari proses lain.
+3. Apa perbedaan antara `kill` dan `killall`?  
+   **Jawaban:**
+   - `kill` digunakan untuk menghentikan proses berdasarkan PID tertentu.
+   - `killall` digunakan untuk menghentikan semua proses yang memiliki nama program tertentu.
+5. Mengapa user `root` memiliki hak istimewa di sistem Linux?  
+   **Jawaban:**
+   User `root` yang mana merupakan Super User dengan akses penuh ke seluruh system, yang memungkinkan `root` mrngubah konfigurasi sistem, mengakses semua file, menjalankan perintah administratif, dan mengelola User lain.
 
 ---
 
