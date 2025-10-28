@@ -183,12 +183,16 @@ Dari kolom perintah `ps aux | head -10` dan `top -n 1`
 
 3. **Eksperimen 3 – Kontrol Proses**
 
-[W4](code/W4.txt) Belum di crop 
+`bung_fajri024@USER:~$ sleep 1000 &
+[1] 429`
+Dimana PID (Process ID) adalah angka `429`.
 
 
 4. **Eksperimen 4 – Analisis Hierarki Proses**
 
-Perintah : `pstree -p | head -20`
+| Nama Perintah | Fungsi | Tujuan | Hasil | Penjelasan |
+|---|---|---|---|---|
+| `pstree -p \| head -20` | Menampilkan struktr hierark proses dalam bentuk pohon dan membatasi output ke 20 baris pertama | Mengidentifikasi proses induk yang menjadi akar dari seluruh proses lain di sistem | - | `systemd` sendiri adalah init system modern yang mana semua proses layaknya shell (bash), dbus-daemon, dan sebagainya adalah anak dari `systemd`
 
 
 
@@ -196,9 +200,36 @@ Perintah : `pstree -p | head -20`
 
 ## Analisis Tugas
 
-1. Gambar hierarki proses dalam bentuk diagram pohon (`pstree`).  
-2. Penjelasan hubungan antara user management dan keamanan sistem Linux.  
+1. Gambar hierarki proses dalam bentuk diagram pohon (`pstree`).
+    **Jawaban:**  
+`systemd(1)-+-agetty(168)
+           |-agetty(181)
+           |-cron(142)
+           |-dbus-daemon(143)
+           |-init-systemd(Ub(2)-+-SessionLeader(255)---Relay(257)(256)---bash(257)-+-head(435)
+           |                    |                                                  `-pstree(434)
+           |                    |-init(7)---{init}(8)
+           |                    |-login(258)---bash(342)
+           |                    `-{init-systemd(Ub}(9)
+           |-rsyslogd(186)-+-{rsyslogd}(220)
+           |               |-{rsyslogd}(221)
+           |               `-{rsyslogd}(222)
+           |-systemd(320)---(sd-pam)(324)
+           |-systemd-journal(49)
+           |-systemd-logind(150)
+           |-systemd-resolve(101)
+           |-systemd-timesyn(106)---{systemd-timesyn}(140)
+           |-systemd-udevd(91)
+           |-unattended-upgr(194)---{unattended-upgr}(225)
+           `-wsl-pro-service(163)-+-{wsl-pro-service}(197)`
 
+2. Penjelasan hubungan antara user management dan keamanan sistem Linux.
+    **Jawaban:**
+  User Management di Linux erat kaitannya dengan keamanan system
+- Isolasi Akses, dimana setiap user memiliki UID dan GID yang membatasi akses terhadap file, proses, dan perangkat. Ini mencegah User Biasa mengakses data milik User Lain atau Sytem.
+- Group dan Hak IStimewa, dimana User bisa tergabung dalam grup seperti `sudo`, `adm`, atau lainnya.
+- User Root, yang mana merupakan Super User dengan akses penuh ke system, namum dibatasi penggunaannya agar mencegah perubahan system yang tak disengaja atau berbahaya.
+- Keamanan Proses, proses yang dijalankan oleh User hanya bisa dimodifikasi atau dihentikan oleh User itu sendiri untuk mencegah manipulasi proses antar-user.
 
 
 ---
@@ -221,8 +252,9 @@ Tuliskan jawaban di bagian **Quiz** pada laporan:
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?  Menjalankan perintah yang mana tidak bisa memperoleh hasil yang ditentukan pada perintah `pstree -p | head -20
+ terutama di Shell Cloud Google dan kegagalan berulang kali melawan mode `root` pada Linux.
+- Bagaimana cara Anda mengatasinya? Menjalankannya di device yang berbeda, menggunakan device universitas sebagai alat pengganti device sebelumnya dikarenakan kekhawatiran akan keamanan device pribadi. Pemecahan masalah terkait mode `root` diselesaikan dengan lebih dari 3 kali percobaan yang gagal dan konsultasi dengan teman.
 
 ---
 
