@@ -147,7 +147,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/whoami.png)
 ![Screenshot hasil](screenshots/top.png)
 ![Screenshot hasil](screenshots/top%20n%20-1.png)
-![Screenshot hasil](screenshots/sleep_1000_&_until_systemd.png)
+![Screenshot hasil](screenshots/sleep_1000_&_until_systemd%20(1).png)
 
 ---
 
