@@ -175,10 +175,6 @@ Dari kolom perintah `ps aux | head -10` dan `top -n 1`
 | PID | (Singkatan dari: Process ID) Nomor unik yang diberikan oleh sistem untuk setiap proses. |
 | %CPU | Persentase penggunaan CPU oleh proses tersebut. |
 | %MEM | Persentase penggunaan memori fisik (RAM) oleh proses. |
-| VSZ | (Singkatan dari: Virtual Memory Size) Total memori virtual yang digunakan proses (dalam KB). |
-| RSS | (Singkatan dari: Resident Set Size) Jumlah memori fisik (RAM) yang digunakan proses (dalam KB). |
-| TTY | Terminal yang terkait dengan proses |
-| STAT | Status proses |
 | COMMAND | Perintah yang dijalankan oleh proses |
 
 3. **Eksperimen 3 – Kontrol Proses**
@@ -236,7 +232,12 @@ systemd(1)-+-agetty(168)
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+
+Kesimpulan dari praktikum ini.
+- Melalui praktikum ini, mahasiswa bisa mengenal tentang sistem Linux mengelola proses dan User, termasuk juga UID, Hak akses, dan sebagainya.
+- Mahasiswa dapat memantau, emgontrol, dan menganalisis proses yang berjalan di sistem melalui beberapa perintah yang teah disediakan dan memahami peran penting proses induk yang diaplikasikanj dalam praktikum ini `systemd`.
+- Mempelajari hubungan antara User Management dengan keamanan sistem.
+
 
 ---
 
