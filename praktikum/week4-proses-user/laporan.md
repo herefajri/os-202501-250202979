@@ -156,7 +156,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 1. **Eksperimen 1 – Identitas User**
 
 | Perintah | Hasil Output | Output | Fungsi |
-|---|---|---|---|
+|----------|--------------|--------|--------|
 | `whoami` | `bung_fajri024
 ` | Menampilkan nama User yang berstatus sedang aktif di terminal. | Memastikan pengguna sedang login sebagai siapa. |
 | `id` | `uid=1000(bung_fajri024) gid=1000(bung_fajri024) groups=1000(bung_fajri024),4(adm),...` (disingkat)| Menampilkan UID (User ID), GID (Group ID), dan daftar grup yang dimiliki User. | Menunjukkan identitas sistem dari User. |
