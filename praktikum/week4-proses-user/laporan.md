@@ -192,8 +192,7 @@ Dimana PID (Process ID) adalah angka `429`.
 
 | Nama Perintah | Fungsi | Tujuan | Hasil | Penjelasan |
 |---|---|---|---|---|
-| `pstree -p \| head -20` | Menampilkan struktr hierark proses dalam bentuk pohon dan membatasi output ke 20 baris pertama | Mengidentifikasi proses induk yang menjadi akar dari seluruh proses lain di sistem | - | `systemd` sendiri adalah init system modern yang mana semua proses layaknya shell (bash), dbus-daemon, dan sebagainya adalah anak dari `systemd`
-
+| `pstree -p \| head -20` | Menampilkan struktr hierark proses dalam bentuk pohon dan membatasi output ke 20 baris pertama | Mengidentifikasi proses induk yang menjadi akar dari seluruh proses lain di sistem | [Hasil bisa dilihat pada Analisis Tugas] atau klik ini [Hasil pstree](code/pstree-p_head-20.txt)| `systemd` sendiri adalah init system modern yang mana semua proses layaknya shell (bash), dbus-daemon, dan sebagainya adalah anak dari `systemd` |
 
 
 ---
