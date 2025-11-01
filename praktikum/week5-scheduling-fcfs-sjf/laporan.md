@@ -108,15 +108,15 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 ## Analisis
 - **Eksperimen 1 – FCFS (First Come First Served)**
-
+```
   | P1 | P2 | P3 | P4 |
      0    6    14   21   24
-
+```
 - **Eksperimen 2 – SJF (Shortest Job First)**
-
+```
   | P1 | P4 | P3 | P2 |
      0    6    9   x   x
-
+```
 - **Tabel hasil FCFS dan SJF**
   
 | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
