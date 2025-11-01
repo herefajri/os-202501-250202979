@@ -132,7 +132,7 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ## Refleksi Diri
 Tuliskan secara singkat:
 - Apa bagian yang paling menantang minggu ini?
-  **Jawaban:**  Memahami SJF yang mana memerlukan waktu.
+  **Jawaban:**  Memahami SJF yang mana memerlukan waktu dan pengaplikasian Gantt Chart yang membingungkan.
 - Bagaimana cara Anda mengatasinya?
   **Jawaban:**  Menonton Youtube.
 
