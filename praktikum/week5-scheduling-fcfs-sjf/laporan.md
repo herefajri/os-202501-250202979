@@ -43,9 +43,8 @@ Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System C
 ---
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.
-    **Jawaban:**
-    1. **Siapkan Data Proses**
+
+1. **Siapkan Data Proses**
        Gunakan tabel proses berikut sebagai contoh (boleh dimodifikasi dengan data baru):
        | Proses | Burst Time | Arrival Time |
        |:--:|:--:|:--:|
@@ -54,7 +53,7 @@ Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System C
        | P3 | 7 | 2 |
        | P4 | 3 | 3 |
 
-    2. **Eksperimen 1 – FCFS (First Come First Served)**
+2. **Eksperimen 1 – FCFS (First Come First Served)**
        - Urutkan proses berdasarkan *Arrival Time*.  
        - Hitung nilai berikut untuk tiap proses:
          ```
@@ -68,7 +67,7 @@ Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System C
          0    6    14   21   24
          ```
 
-    3. **Eksperimen 2 – SJF (Shortest Job First)**
+3. **Eksperimen 2 – SJF (Shortest Job First)**
        - Urutkan proses berdasarkan *Burst Time* terpendek (dengan memperhatikan waktu kedatangan).  
        - Lakukan perhitungan WT dan TAT seperti langkah sebelumnya.  
        - Bandingkan hasil FCFS dan SJF pada tabel berikut:
@@ -78,7 +77,7 @@ Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System C
          | FCFS | ... | ... | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
          | SJF | ... | ... | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
 
-    4. **Eksperimen 3 – Visualisasi Spreadsheet (Opsional)**
+4. **Eksperimen 3 – Visualisasi Spreadsheet (Opsional)**
        - Gunakan Excel/Google Sheets untuk membuat perhitungan otomatis:
        - Kolom: Arrival, Burst, Start, Waiting, Turnaround, Finish.
        - Gunakan formula dasar penjumlahan/subtraksi.
@@ -87,26 +86,17 @@ Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System C
          praktikum/week5-scheduling-fcfs-sjf/screenshots/
          ```
 
-    5. **Analisis**
+5. **Analisis**
        - Bandingkan hasil rata-rata WT dan TAT antara FCFS & SJF.  
        - Jelaskan kondisi kapan SJF lebih unggul dari FCFS dan sebaliknya.  
        - Tambahkan kesimpulan singkat di akhir laporan.
 
-    6. **Commit & Push**
+6. **Commit & Push**
        ```bash
        git add .
        git commit -m "Minggu 5 - CPU Scheduling FCFS & SJF"
        git push origin main
        ```
-
-2. Perintah yang dijalankan.
-    **Jawaban:**
-
-3. File dan kode yang dibuat.
-   **Jawaban:**
-   
-4. Commit message yang digunakan.
-   **Jawaban:** Update laporan.md
 
 ---
 
