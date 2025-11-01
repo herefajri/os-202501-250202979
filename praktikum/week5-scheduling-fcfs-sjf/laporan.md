@@ -108,6 +108,11 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 ## Analisis
 
+| Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+|------------|------------------|----------------------|------------|-------------|
+| FCFS | ... | ... | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+| SJF | ... | ... | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+
 ---
 
 ## Kesimpulan
