@@ -45,58 +45,59 @@ Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System C
 ## Langkah Praktikum
 
 1. **Siapkan Data Proses**
-Gunakan tabel proses berikut sebagai contoh (boleh dimodifikasi dengan data baru):
-| Proses | Burst Time | Arrival Time |
-|:--:|:--:|:--:|
-| P1 | 6 | 0 |
-| P2 | 8 | 1 |
-| P3 | 7 | 2 |
-| P4 | 3 | 3 |
+   Gunakan tabel proses berikut sebagai contoh (boleh dimodifikasi dengan data baru):
+   | Proses | Burst Time | Arrival Time |
+   |:--:|:--:|:--:|
+   | P1 | 6 | 0 |
+   | P2 | 8 | 1 |
+   | P3 | 7 | 2 |
+   | P4 | 3 | 3 |
 
 2. **Eksperimen 1 – FCFS (First Come First Served)**
-- Urutkan proses berdasarkan *Arrival Time*.  
-- Hitung nilai berikut untuk tiap proses:
-   ```
-   Waiting Time (WT) = waktu mulai eksekusi - Arrival Time
-   Turnaround Time (TAT) = WT + Burst Time
-   ```
-- Hitung rata-rata Waiting Time dan Turnaround Time.  
-- Buat Gantt Chart sederhana:  
-  ```
-  | P1 | P2 | P3 | P4 |
-  0    6    14   21   24
-  ```
+   - Urutkan proses berdasarkan *Arrival Time*.  
+   - Hitung nilai berikut untuk tiap proses:
+     ```
+     Waiting Time (WT) = waktu mulai eksekusi - Arrival Time
+     Turnaround Time (TAT) = WT + Burst Time
+     ```
+   - Hitung rata-rata Waiting Time dan Turnaround Time.  
+   - Buat Gantt Chart sederhana:  
+     ```
+     | P1 | P2 | P3 | P4 |
+     0    6    14   21   24
+     ```
 
 3. **Eksperimen 2 – SJF (Shortest Job First)**
-- Urutkan proses berdasarkan *Burst Time* terpendek (dengan memperhatikan waktu kedatangan).  
-- Lakukan perhitungan WT dan TAT seperti langkah sebelumnya.  
-- Bandingkan hasil FCFS dan SJF pada tabel berikut:
+   - Urutkan proses berdasarkan *Burst Time* terpendek (dengan memperhatikan waktu kedatangan).  
+   - Lakukan perhitungan WT dan TAT seperti langkah sebelumnya.  
+   - Bandingkan hasil FCFS dan SJF pada tabel berikut:
 
-| Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
-|------------|------------------|----------------------|------------|-------------|
-| FCFS | ... | ... | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
-| SJF | ... | ... | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+     | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+     |------------|------------------|----------------------|------------|-------------|
+     | FCFS | ... | ... | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+     | SJF | ... | ... | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
 
 4. **Eksperimen 3 – Visualisasi Spreadsheet (Opsional)**
-- Gunakan Excel/Google Sheets untuk membuat perhitungan otomatis:
-- Kolom: Arrival, Burst, Start, Waiting, Turnaround, Finish.
-- Gunakan formula dasar penjumlahan/subtraksi.
-- Screenshot hasil perhitungan dan simpan di:
-```
-praktikum/week5-scheduling-fcfs-sjf/screenshots/
-```
+   - Gunakan Excel/Google Sheets untuk membuat perhitungan otomatis:
+     - Kolom: Arrival, Burst, Start, Waiting, Turnaround, Finish.
+     - Gunakan formula dasar penjumlahan/subtraksi.
+   - Screenshot hasil perhitungan dan simpan di:
+     ```
+     praktikum/week5-scheduling-fcfs-sjf/screenshots/
+     ```
 
 5. **Analisis**
-- Bandingkan hasil rata-rata WT dan TAT antara FCFS & SJF.  
-- Jelaskan kondisi kapan SJF lebih unggul dari FCFS dan sebaliknya.  
-- Tambahkan kesimpulan singkat di akhir laporan.
+   - Bandingkan hasil rata-rata WT dan TAT antara FCFS & SJF.  
+   - Jelaskan kondisi kapan SJF lebih unggul dari FCFS dan sebaliknya.  
+   - Tambahkan kesimpulan singkat di akhir laporan.
 
 6. **Commit & Push**
-```bash
-git add .
-git commit -m "Minggu 5 - CPU Scheduling FCFS & SJF"
-git push origin main
-```
+   ```bash
+   git add .
+   git commit -m "Minggu 5 - CPU Scheduling FCFS & SJF"
+   git push origin main
+   ```
+
 
 ---
 
