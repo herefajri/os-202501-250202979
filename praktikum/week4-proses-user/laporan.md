@@ -23,28 +23,14 @@ Tuliskan tujuan praktikum minggu ini.
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+1. Proses dalam Sistem Operasi Proses adalah program yang sedang dieksekusi. Setiap proses memiliki state, program counter, dan sejumlah register; Sistem operasi bertanggung jawab untuk membuat, menjadwalkan, dan mengelola proses-proses ini.
+2. Manajemen Proses Sistem operasi menyediakan mekanisme untuk pembuatan dan penghentian proses, serta komunikasi antar proses. Proses dapat saling berinteraksi melalui IPC (Inter-Process Communication) dan dapat memiliki hubungan hierarki (parent-child).
+3. User dan Hak Akses Sistem operasi mendukung multi-user environment, di mana setiap user memiliki identitas (UID) dan grup (GID). Hak akses terhadap file dan proses ditentukan berdasarkan identitas ini, yang penting untuk menjaga keamanan sistem.
+4. Monitoring dan Kontrol Proses Sistem operasi menyediakan utilitas seperti ps, top, dan kill untuk memantau dan mengontrol proses. Informasi seperti PID, penggunaan CPU/memori, dan perintah yang dijalankan sangat penting untuk administrasi sistem.
+5. Keamanan Sistem melalui Manajemen User Dengan memisahkan hak akses antar user dan membatasi kemampuan user biasa terhadap proses dan file sistem, sistem operasi dapat mencegah manipulasi yang tidak sah dan menjaga integritas sistem.
 
-1. Perintah ps dapat digunakan untuk menunjukkan semua proses yang sedang berjalan
-pada mesin (bukan hanya proses pada shell saat ini) dengan format :
- - `ps–fae` atau
- - `ps-aux`
-  
-2. Beberapa versi UNIX mempunyai utilitas sistem yang disebut top yang menyediakan
-cara interaktif untuk memonitor aktifitas sistem. Statistik secara detail dengan proses yang
-berjalan ditampilkan dan secara terus-menerus di-refresh . Proses
-ditampilkan secara terurut dari utilitas CPU. Kunci yang berguna pada top adalah
- - s– set update frequency
- - u– display proses dari satu user
- - k– kill proses (dengan PID)
- - q– qui
+Sumber : Operating System Concepts (Silberschatz et al., 2018) 
 
-3.  Utilitas untuk melakukan pengontrolan proses dapat ditemukan pada sistem UNIX
-adalah perintah `killall`. Perintah ini akan menghentikan proses sesuai PID atau job number
-proses
-
- Sumber:
- - Modul Praktikum Sistem Operasi – Universitas Sebelas Maret (UNS),  Proses dan Manajemen Proses (https://spada.uns.ac.id/pluginfile.php/880150/mod_resource/content/1/Modul%206%20-%20Proses%20dan%20Manajemen%20Proses.pdf)
 ---
 
 ## Langkah Praktikum
