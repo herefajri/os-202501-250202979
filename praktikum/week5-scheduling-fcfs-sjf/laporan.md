@@ -102,7 +102,7 @@ Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System C
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/FCFS&SJF_CE.png)
+![Screenshot hasil](screenshots/FCFS&SJF_ECE.png)
 
 ---
 
