@@ -24,6 +24,21 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 ## Dasar Teori
 Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+**1. First-Come, First-Served (FCFS)** 
+FCFS adalah algoritma penjadwalan paling sederhana, di mana proses dieksekusi berdasarkan urutan kedatangan. Proses yang datang lebih dulu akan dijalankan lebih dulu.
+- Kelebihan: Mudah diimplementasikan dan dipahami.
+- Kekurangan: Dapat menyebabkan convoy effect, yaitu proses pendek harus menunggu proses panjang selesai.
+
+**2. Shortest Job First (SJF)**
+SJF memilih proses dengan waktu eksekusi (burst time) terpendek. Algoritma ini dapat bersifat non-preemptive maupun preemptive.
+- Kelebihan: Memberikan waktu tunggu rata-rata paling rendah secara teoritis.
+- Kekurangan: Sulit diterapkan karena memerlukan prediksi burst time, dan dapat menyebabkan starvation bagi proses panjang.
+
+**3. Turnaround Time dan Waiting Time**
+- Turnaround Time adalah total waktu yang dibutuhkan proses sejak tiba hingga selesai.
+- Waiting Time adalah waktu yang dihabiskan proses dalam antrian sebelum dieksekusi.
+
+Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System Concepts, 10th Edition, Wiley, 2018.
 
 ---
 
