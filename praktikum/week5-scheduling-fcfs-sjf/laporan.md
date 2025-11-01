@@ -23,7 +23,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+
 **1. First-Come, First-Served (FCFS)** 
 FCFS adalah algoritma penjadwalan paling sederhana, di mana proses dieksekusi berdasarkan urutan kedatangan. Proses yang datang lebih dulu akan dijalankan lebih dulu.
 - Kelebihan: Mudah diimplementasikan dan dipahami.
