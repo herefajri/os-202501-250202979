@@ -131,8 +131,10 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?
+  **Jawaban:**  Memahami SJF yang mana memerlukan waktu.
+- Bagaimana cara Anda mengatasinya?
+  **Jawaban:**  Menonton Youtube.
 
 ---
 
