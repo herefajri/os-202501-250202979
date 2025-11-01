@@ -86,14 +86,10 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 
 2. Perintah yang dijalankan.
     **Jawaban:**
-- **Eksperimen 1 – FCFS (First Come First Served)**
-   ```bash
-         Waiting Time (WT) = waktu mulai eksekusi - Arrival Time
-         Turnaround Time (TAT) = WT + Burst Time
-         ```
-  
+
 3. File dan kode yang dibuat.
    **Jawaban:**
+   
 4. Commit message yang digunakan.
    **Jawaban:** Update laporan.md
 
