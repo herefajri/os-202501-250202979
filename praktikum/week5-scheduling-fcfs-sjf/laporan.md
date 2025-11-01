@@ -127,21 +127,28 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+Kesimpulan dari praktikum ini.
+- Algoritma SJF (Shortest Job First) menghasilkan Waktu Tunggu (Waiting Time) rata-rata dan juga Waktu Penyelesaian (Turnaround Time) rata-rata yang lebih rendah dibandingkan FCFS (First Come First Served).
+- FCFS memang lebih sederhana dan mudah diterapkan namun tidak efisien untuk proses dengan burst time panjang, sedangkan SJF lebih optimal untuk proses panjang namun sulit diterapkan karena memerlukan prediksi burst time dan bisa menyebabkan stratvation pada proses panjang.
+- FCFS cocok diterapkan/digunakan untuk sistem yang tiidak memerlukan efisiensi tinggi dan prosesnya sederhana, sedangkan SJF lebih cocok untuk sistem proses dengan burst pendek yang dapat di prediksi.
 
 ---
 
 ## Quiz
 1. Apa perbedaan utama antara FCFS dan SJF?
    **Jawaban:**
-   
+   - FCFS mengeksekusi atau melayani proses berdasarkan urutan kedatangan, siapa yang datang lebih dulu, dia yang dilayani lebih dulu.
+   - SJF mengeksekusi atau melayani berdasarkan durasi proses burst time terpendek terlebih dahulu atau dengan kata lain yang prosesnya paling cepat ia didahulukan.
+     
 2. Mengapa SJF dapat menghasilkan rata-rata waktu tunggu minimum?
    **Jawaban:**
+   Karena SJF menerapkan metode memilih proses burst time terpendek, sehingga proses-proses cepat tidak tertunda oleh proses yang lebih lama dan meminimalkan waktu tunggu/waiting time total karena proses panjang tidak mengahalangi proses pendek yang menjadikan efisiensi waktu tunggu secara keseluruhan meningkat.
    
 3. Apa kelemahan SJF jika diterapkan pada sistem interaktif?
-   **Jawaban:**  
-
-
+   **Jawaban:**
+   - dapat menyebabkan starvation atau kondisi di mana proses dengan proses waktu eksekusi/burst time yang panjang tak pernah mendapatkan giliran untuk dilayani/dieksekusi.
+   - Proses interaktif memerlukan repon yang cepat dan adil untuk semua proses, sedangkan SJF bisa membuat beberapa proses penting tak pernah dieksekusi secara tepat waktu.
+   - SJF memerlukan prediksi burst time yang akurat, yang sulit dilakukan dalam sistem interaktif dikarenakan durasi proses sering tidak diketahui sebelumnya.
 
 ---
 
