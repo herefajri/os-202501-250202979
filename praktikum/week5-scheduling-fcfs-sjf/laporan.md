@@ -1,6 +1,6 @@
 
 # Laporan Praktikum Minggu 5
-Topik: [Penjadwalan CPU – FCFS dan SJF]
+Topik: Penjadwalan CPU – FCFS dan SJF
 
 ---
 
@@ -125,13 +125,13 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Apa perbedaan utama antara FCFS dan SJF?]
+1. Apa perbedaan utama antara FCFS dan SJF?
    **Jawaban:**
    
-2. [Mengapa SJF dapat menghasilkan rata-rata waktu tunggu minimum?]
+2. Mengapa SJF dapat menghasilkan rata-rata waktu tunggu minimum?
    **Jawaban:**
    
-3. [Apa kelemahan SJF jika diterapkan pada sistem interaktif?]
+3. Apa kelemahan SJF jika diterapkan pada sistem interaktif?
    **Jawaban:**  
 
 
