@@ -115,7 +115,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 - **Eksperimen 2 – SJF (Shortest Job First)**
 ```
   | P1 | P4 | P3 | P2 |
-  0    6    9   x   x
+  0    6    9   16   24
 ```
 - **Tabel hasil FCFS dan SJF**
   
