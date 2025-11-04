@@ -23,13 +23,9 @@ Tuliskan tujuan praktikum minggu ini.
 ---
 
 ## Dasar Teori
-1. Proses dalam Sistem Operasi Proses adalah program yang sedang dieksekusi. Setiap proses memiliki state, program counter, dan sejumlah register; Sistem operasi bertanggung jawab untuk membuat, menjadwalkan, dan mengelola proses-proses ini.
-2. Manajemen Proses Sistem operasi menyediakan mekanisme untuk pembuatan dan penghentian proses, serta komunikasi antar proses. Proses dapat saling berinteraksi melalui IPC (Inter-Process Communication) dan dapat memiliki hubungan hierarki (parent-child).
-3. User dan Hak Akses Sistem operasi mendukung multi-user environment, di mana setiap user memiliki identitas (UID) dan grup (GID). Hak akses terhadap file dan proses ditentukan berdasarkan identitas ini, yang penting untuk menjaga keamanan sistem.
-4. Monitoring dan Kontrol Proses Sistem operasi menyediakan utilitas seperti ps, top, dan kill untuk memantau dan mengontrol proses. Informasi seperti PID, penggunaan CPU/memori, dan perintah yang dijalankan sangat penting untuk administrasi sistem.
-5. Keamanan Sistem melalui Manajemen User Dengan memisahkan hak akses antar user dan membatasi kemampuan user biasa terhadap proses dan file sistem, sistem operasi dapat mencegah manipulasi yang tidak sah dan menjaga integritas sistem.
+- 
 
-Sumber : Operating System Concepts (Silberschatz et al., 2018) 
+Sumber Materi : Operating System Concepts (Silberschatz et al., 2018) 
 
 ---
 
