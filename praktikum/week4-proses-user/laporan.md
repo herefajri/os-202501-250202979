@@ -23,9 +23,18 @@ Tuliskan tujuan praktikum minggu ini.
 ---
 
 ## Dasar Teori
-- 
+1. Kernel memelihara tabel dinamis dari semua driver yang diketahui dan menyediakan serangkaian rutin fungsi untuk memungkinkan menambahkan atau dihapus dari tabel ini kapan saja. Kernel memastikan bahwa ia memanggil Model's Startup Routine ketika modul tersebut dimuat dan memanggil Model's Cleanup Routine sebelum modul tersebut dibongkar. Rutinitas ini bertanggung jawab untuk mendaftarkan fungsionalitas modul.
+2. Sebuah modul dapat mendaftarkan banyak jenis fungsionalitas, tidak terbatas pada satu jenis saja. Misalnya, driver perangkat mungkin ingin mendaftarkan mekanisme terpisah untuk mengakses perangkat. Tabel registrasi mencakup antara lain, item-item berikut:
+• Driver perangkat (Driver ini mencakup perangkat karakter (seperti printer, terminal, dan mouse), perangkat blok (termasuk semua disk drive), dan
+perangkat antarmuka jaringan).
+• Sistem berkas (Sistem berkas dapat berupa apa pun yang mengimplementasikan pemanggilan rutin sistem berkas virtual Linux. Modul ini mungkin mengimplementasikan format untuk menyimpan berkas pada disk, tetapi bisa juga berupa sistem berkas jaringan, seperti NFS, atau sistem berkas virtual yang isinya dibuat sesuai permintaan, seperti sistem berkas `/proc` di Linux).
+• Protokol jaringan (Sebuah modul dapat mengimplementasikan seluruh protokol jaringan seperti TCP, atau sekadar seperangkat aturan penyaringan paket baru untuk firewall jaringan).
+• Format biner (Format ini menentukan cara mengenali, memuat, dan mengeksekusi jenis berkas eksekusi baru).
+3. Dalam Manajemen Proses, sebuah proses merupakan konteks dasar di mana seluruh aktivitas yang di minta User dilayani dalam OS, dan agar kompatibel dengan sistem UNIX lain, Linux harus menggunakan proses model yang serupa dengan versi UNIX lain tersebut.
+ 
 
-Sumber Materi : Operating System Concepts (Silberschatz et al., 2018) 
+Sumber Materi : Operating System Concepts (Silberschatz et al., 2018)
+atau bisa akses link berikut (https://lib.zu.edu.pk/ebookdata/Engineering/Cyber%20Security/Operating%20System%20Concepts-Wiley%20Global%20Education%20(2018)%20BY%20Abraham%20Silberschatz_%20Greg%20Gagne_%20Peter%20B.%20Galvin%20-.pdf)
 
 ---
 
