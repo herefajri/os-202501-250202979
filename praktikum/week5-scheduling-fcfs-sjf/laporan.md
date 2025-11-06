@@ -26,7 +26,7 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 - Penjadwalan FCFS atau First Come, First Served adalah algoritma penjadwalan CPU yang paling sederhana dengan skema proses yang pertama kali meminta CPU akan mendapatkan CPU lebih dulu.
 - Implementasi kebijakan FCFS mudah dilakukan dengan antrian FIFO (First In, First Out).
-- Penjadwalan SJF (Short Job First) adalah algoritma penjadwalan yang mengaitkan setiap proses dengan lama waktu CPU burst berikutnya yaitu durasi penggunaan CPU berikutnya oleh proses tersebut. Ketika CPU tersedia, CPU akan diberikan kepada proses yang memiliki CPU burst berikutnya paling pendek. Namun, jika dua proses memiliki durasi CPU burst yang sama, maka digunakan penjadwalan FCFS untuk menentukan eksekusi.
+- Penjadwalan SJF atau Short Job First adalah algoritma penjadwalan yang mengaitkan setiap proses dengan lama waktu CPU burst berikutnya yaitu durasi penggunaan CPU berikutnya oleh proses tersebut. Ketika CPU tersedia, CPU akan diberikan kepada proses yang memiliki CPU burst berikutnya paling pendek. Namun, jika dua proses memiliki durasi CPU burst yang sama, maka akanb digunakan penjadwalan FCFS untuk menentukan eksekusinya.
 
 
 Sumber Materi : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System Concepts, 10th Edition, Wiley, 2018.
