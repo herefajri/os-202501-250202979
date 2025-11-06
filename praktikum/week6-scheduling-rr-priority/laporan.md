@@ -12,7 +12,7 @@ Topik: Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling
 ---
 
 ## Tujuan
-Diharapkan mahasiswa dapat mempelajari tentang:
+Diharapkan setelah menyelesaikan sesi praktikum ini, mahasiswa dapat :
 - Menghitung waiting time (WT) dan turnaround time (TAT) pada algoritma RR dan Priority.
 - Menyusun tabel "hasil perhitungan" dengan benar dan sistematis.
 - Membandingkan performa algoritma antara RR dan Priority.
