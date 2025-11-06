@@ -87,8 +87,12 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
-
-
+### Tugas
+1. Hitung *waiting time* dan *turnaround time* untuk algoritma RR dan Priority.  
+2. Sajikan hasil perhitungan dan Gantt Chart dalam `laporan.md`.  
+3. Bandingkan performa dan jelaskan pengaruh *time quantum* serta prioritas.  
+4. Simpan semua bukti (tabel, grafik, atau gambar) ke folder `screenshots/`.  
+(Masih prototipe pengerjaan)
 
 ---
 
