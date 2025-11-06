@@ -29,8 +29,7 @@ Sumber Materi : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating S
 ---
 
 ## Langkah Praktikum
-1. **Siapkan Data Proses**
-   Gunakan contoh data dibawah ini dan boleh dimodifikasi sesuai kebutuhan:
+1. Siapkan Data Proses dengan menggunakan contoh data dibawah ini dan boleh dimodifikasi sesuai kebutuhan:
    | Proses | Burst Time | Arrival Time | Priority |
    |:--:|:--:|:--:|:--:|
    | P1 | 5 | 0 | 2 |
@@ -38,7 +37,7 @@ Sumber Materi : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating S
    | P3 | 8 | 2 | 4 |
    | P4 | 6 | 3 | 3 |
 
-2. **Eksperimen 1 – Round Robin (RR)**
+2. Untuk Eksperimen 1 – tentang Round Robin (RR), ikuti instruksi dibawah ini:
    - Gunakan *time quantum (q)* = 3.  
    - Hitung *waiting time* dan *turnaround time* untuk tiap proses.  
    - Simulasikan eksekusi menggunakan Gantt Chart (manual atau spreadsheet).  
@@ -48,7 +47,7 @@ Sumber Materi : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating S
      ```
    - Tugas : Catat sisa *burst time* tiap putaran.
 
-3. **Eksperimen 2 – Priority Scheduling (Non-Preemptive)**
+3. Untuk Eksperimen 2 – tentang Priority Scheduling (Non-Preemptive), ikuti instruksi dibawah ini:
    - Urutkan proses berdasarkan nilai prioritas (angka kecil = prioritas tinggi) dan lakukan perhitungan manual untuk:
      ```
      WT[i] = waktu mulai eksekusi - Arrival[i]
@@ -56,17 +55,16 @@ Sumber Materi : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating S
      ```
    - Tugas : Buat tabel perbandingan hasil RR dan Priority.
 
-4. **Eksperimen 3 – Analisis Variasi Time Quantum (Opsional)**
+4.  Untuk Eksperimen 3 – tentang Analisis Variasi Time Quantum (Opsional), ikuti instruksi dibawah ini:
    - Ubah *quantum* menjadi 2 dan 5.  
    - Amati perubahan nilai rata-rata *waiting time* dan *turnaround time*.  
    - Tugas : Buat tabel perbandingan efek *quantum*.
 
-5. **Eksperimen 4 – Dokumentasi**
-   - Simpan semua hasil tabel dan screenshot ke:
+5. Untuk Eksperimen 4 – terkait dengan dokumentasi. Simpan semua hasil tabel dan screenshot ke:
      ```
      praktikum/week6-scheduling-rr-priority/screenshots/
      ```
-   - Tugas : Buat tabel perbandingan seperti berikut:
+   dan tambahan, Tugas : Buat tabel perbandingan seperti berikut:
 
      | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
      |------------|------------------|----------------------|------------|-------------|
