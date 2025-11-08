@@ -99,14 +99,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 ## Analisis
 - **Eksperimen 1 – FCFS (First Come First Served)**
-
-FCFS						
-Proses	Arrival Time	Burst Time	Waiting Time	Turnaround Time	Start Time	Finish Time
-P1	0	6	0	6	0	6
-P2	1	8	5	13	6	14
-P3	2	7	12	19	14	21
-P4	3	3	18	21	21	24
-Average			8,75	14,75		
+	
 <img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/3a475c59-8f54-4e7a-b738-6b80a116bec8" />
 
 ```
