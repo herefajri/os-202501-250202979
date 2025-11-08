@@ -22,7 +22,10 @@ Diharapkan setelah menyelesaikan sesi praktikum ini, mahasiswa dapat :
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+1. Penjadwalan Round-Robin (RR) dirancang khusus untuk sistem time-sharing. Algoritma ini mirip dengan penjadwalan First-Come, First-Served (FCFS), namun dengan penambahan preemption agar proses dapat bergantian. Unit waktu kecil yang disebut time quantum atau time slice ditentukan. Antrian proses siap diperlakukan sebagai antrian melingkar. Penjadwal CPU akan berputar mengalokasikan CPU ke setiap proses selama interval waktu maksimal satu time quantum. Jika proses belum selesai dalam waktu tersebut, maka proses akan dipreempt dan ditempatkan di akhir antrian.
+2. Penjadwalan prioritas dimana setiap proses diberi nilai prioritas, dan CPU dialokasikan ke proses dengan prioritas tertinggi (angka kecil = prioritas tinggi). Jika dua proses memiliki prioritas yang sama, maka dijadwalkan berdasarkan urutan kedatangan (FCFS). Algoritma Shortest Job First (SJF) merupakan bentuk khusus dari penjadwalan prioritas, di mana prioritas ditentukan berdasarkan kebalikan dari prediksi burst time berikutnya. Penjadwalan prioritas dapat bersifat preemptive maupun non-preemptive. Masalah utama dari algoritma ini adalah kemungkinan terjadinya starvation atau kelaparan proses dengan prioritas rendah. Solusi untuk masalah ini adalah dengan menerapkan aging.
+3. Waktu tunggu (Waiting Time) adalah total waktu yang dihabiskan proses dalam antrian siap. Turnaround time adalah total waktu dari saat proses dikirimkan hingga selesai dieksekusi. Kedua metrik ini digunakan untuk mengevaluasi performa algoritma penjadwalan.
+4. Penjadwalan RR cenderung adil karena setiap proses mendapatkan jatah waktu CPU yang sama. Namun, jika time quantum terlalu besar, algoritma ini akan menyerupai FCFS; jika terlalu kecil, akan terjadi terlalu banyak context switching. Penjadwalan prioritas efisien untuk proses-proses penting, tetapi berisiko menyebabkan starvation pada proses dengan prioritas rendah jika tidak diimbangi dengan mekanisme aging.
 
 Sumber Materi : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System Concepts, 10th Edition, Wiley, 2018.
 
@@ -87,7 +90,17 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
-### Tugas
+| Proses | Burst Time | Arrival Time | Priority |
+   |:--:|:--:|:--:|:--:|
+   | P1 | 5 | 0 | 2 |
+   | P2 | 3 | 1 | 1 |
+   | P3 | 8 | 2 | 4 |
+   | P4 | 6 | 3 | 3 |
+
+
+---
+
+## Tugas
 1. Hitung *waiting time* dan *turnaround time* untuk algoritma RR dan Priority.  
 2. Sajikan hasil perhitungan dan Gantt Chart dalam `laporan.md`.  
 3. Bandingkan performa dan jelaskan pengaruh *time quantum* serta prioritas.  
