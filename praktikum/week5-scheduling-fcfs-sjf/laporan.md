@@ -133,14 +133,13 @@ Sertakan screenshot hasil percobaan atau diagram:
    | P3 | 9 | 2 |
    | P4 | 4 | 3 |
 
-- FCFS	
+	- FCFS	
 <img width="599" height="145" alt="image" src="https://github.com/user-attachments/assets/4e04548b-86a0-4b72-a4ce-6d136cc63697" />
 
-- SJF
+	- SJF
 <img width="599" height="145" alt="image" src="https://github.com/user-attachments/assets/7615afde-88c6-42e9-9907-3ed58909633d" />
 
 2. Sajian hasil perhitungan dalam tabel perbandingan (FCFS vs SJF) dan analisis terhadap kelebihan dan kelemahan tiap algoritma.
-
 | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
 |------------|------------------|----------------------|------------|-------------|
 | FCFS | 7,75 | 13,75 | Sederhana dan mudah diterapkan. | Tidak efisien untuk proses panjang. |
