@@ -123,7 +123,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 ---
 
-Tugas
+## Tugas
 1. Skenario tambahan FCFS dan SJF.
 
 | Proses | Burst Time | Arrival Time |
