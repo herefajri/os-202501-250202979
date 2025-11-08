@@ -117,6 +117,18 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 ---
 
+Tugas
+1. Hitung waiting time dan turnaround time dari minimal 2 skenario FCFS dan SJF.
+
+2. Sajikan hasil perhitungan dalam tabel perbandingan (FCFS vs SJF).
+
+3. Analisis kelebihan dan kelemahan tiap algoritma.
+
+4. Simpan seluruh hasil dan analisis ke laporan.md.
+
+
+---
+
 ## Kesimpulan
 Kesimpulan dari praktikum ini.
 - Algoritma SJF (Shortest Job First) menghasilkan Waktu Tunggu (Waiting Time) rata-rata dan juga Waktu Penyelesaian (Turnaround Time) rata-rata yang lebih rendah dibandingkan FCFS (First Come First Served).
