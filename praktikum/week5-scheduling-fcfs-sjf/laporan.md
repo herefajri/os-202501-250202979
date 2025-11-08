@@ -107,6 +107,9 @@ Sertakan screenshot hasil percobaan atau diagram:
   0    6    14   21   24
 ```
 - **Eksperimen 2 – SJF (Shortest Job First)**
+
+<img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/efdb6595-a27f-4676-b610-52b6cc2c4e8f" />
+
 ```
   | P1 | P4 | P3 | P2 |
   0    6    9   16   24
@@ -121,13 +124,24 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 Tugas
-1. Hitung waiting time dan turnaround time dari minimal 2 skenario FCFS dan SJF.
+1. Skenario tambahan FCFS dan SJF.
 
-2. Sajikan hasil perhitungan dalam tabel perbandingan (FCFS vs SJF).
+| Proses | Burst Time | Arrival Time |
+   |---|---|---|
+   | P1 | 6 | 0 |
+   | P2 | 5 | 1 |
+   | P3 | 9 | 2 |
+   | P4 | 4 | 3 |
 
-3. Analisis kelebihan dan kelemahan tiap algoritma.
+- FCFS	
+<img width="599" height="145" alt="image" src="https://github.com/user-attachments/assets/4e04548b-86a0-4b72-a4ce-6d136cc63697" />
 
-4. Simpan seluruh hasil dan analisis ke laporan.md.
+- SJF
+<img width="599" height="145" alt="image" src="https://github.com/user-attachments/assets/7615afde-88c6-42e9-9907-3ed58909633d" />
+
+
+
+3. Sajian hasil perhitungan dalam tabel perbandingan (FCFS vs SJF) dan analisis terhadap kelebihan dan kelemahan tiap algoritma.
 
 
 ---
