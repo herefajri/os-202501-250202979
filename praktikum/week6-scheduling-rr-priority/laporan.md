@@ -97,6 +97,9 @@ Sertakan screenshot hasil percobaan atau diagram:
    | P3 | 8 | 2 | 4 |
    | P4 | 6 | 3 | 3 |
 
+1. Eksperimen 1 – Round Robin (RR)
+
+2. Eksperimen 2 – Priority Scheduling (Non-Preemptive)
 
 ---
 
