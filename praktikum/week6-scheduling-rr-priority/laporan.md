@@ -102,10 +102,10 @@ Sertakan screenshot hasil percobaan atau diagram:
 	Time Quantum =3
 	<img width="637" height="204" alt="image" src="https://github.com/user-attachments/assets/e0691c40-cd07-48ee-a3ae-10353fb6434f" />
 
-   ```
-      | P1 | P2 | P3 | P4 | P1 | P3 | P4 | P3 |
-      0    3    6    9   12   14   17    20   22
-   ```
+```bash
+| P1 | P2 | P3 | P4 | P1 | P3 | P4 | P3 |
+0    3    6    9   12   14   17    20   22
+ ```
 
    	| Putaran | Time Quantum | P1 | P2 | P3 | P4
 	|---|---|---|---|---|---|---|
@@ -117,10 +117,10 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 	<img width="751" height="184" alt="image" src="https://github.com/user-attachments/assets/cb97c1af-2894-4eb4-8b9e-a2fd10169c77" />
 
-   ```
-      | P1 | P2 | P4 | P3 | 
-      0    5    8    14   22
-   ```
+```bash
+| P1 | P2 | P4 | P3 | 
+ 0    5    8    14   22
+```
 
 	
 
@@ -130,13 +130,13 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 	- Time Quantum =2
   
-    ```
+    ```bash
       | P1 | P2 | P3 | P4 | P1 | P2 | P3 | P4 | P1 | P3 | P4 | P3 |
       0    2    4    6   8   10   11    13   15   16   18   20   22
     ```
 	- Time Quantum =5
 
-    ```
+    ```bash
       | P1 | P2 | P3 | P4 | P3 | P4 | 
       0    5   8    13   18   21   22   
     ```
