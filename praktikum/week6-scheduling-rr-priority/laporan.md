@@ -152,37 +152,41 @@ Sertakan screenshot hasil percobaan atau diagram:
 | Waiting time | Besar | Seimbang | Bisa kecil untuk job panjang dan besar untuk job pendek |
 | Turnaround time (Short Jobs) | Memburuk dikarenakan sering terpotong | Baik | Sangat Baik  |
 | Turnaround time (Long Jobs) | Buruk | Seimbang | Baik |
-| Pengulangan (content switch) | Tinggi | Sedang | Rendah |
+| Pengulangan (context switch) | Tinggi | Sedang | Rendah |
 | Overhead CPU | Tinggi | Sedang | Rendah |
 | Keadilan | Tinggi | Baik | Rendah |
 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+- Round Robin (RR) memberikan keadilan karena semua proses mendapat giliran (Quantum time) yang sama, namun efektivitas dipengaruhi pada besar kecilnya Quantum.
+- Priority Scheduling  efisien untuk proses penting karena prioritas tinggi di jalankan terlebih dahulu, namun resiko starvation muncul dengan proses prioritas rendah jika ada banyak proses prioritas tinggi.
+- RR unggul di keadilan dan cocok untuk sistem interaktif sedangkan Priority Schedulingunggul di bidang efisiensi untuk proses kritis.
 
 ---
 
 ## Quiz
 1. Apa perbedaan utama antara Round Robin dan Priority Scheduling?
    **Jawaban:**
-
+- Round Robin memberikan layanan kepada proses dengan adil dikarenakan semua proses mendapatkan giliran yang sama.
+- Priority Scheduling mengutamakan proses yang diprioritaskan sehingga efisien untuk proses penting.
    
 2. Apa pengaruh besar/kecilnya *time quantum* terhadap performa sistem?
    **Jawaban:**
-
+   Berpengaruh pada Context Switch, jika Quantum terlalu kecil akan banyajk adanya Context Switch yang menyebabkan kemungkinan Overhead System tinggi, dan jika
+   Quantum terlalu besar akan menghambat proses pendek.
     
 3. Mengapa algoritma Priority dapat menyebabkan *starvation*?  
    **Jawaban:**
-   
+   DIkarenakan adanya proses dengan status prioritas rendah yang terus tertunda karena selalu didahului proses yang status prioritasnya lebih tinggi menyebabkan Starvation atau kelaparan pada proses dengan status prioritas rendah dikarenakan tidak dieksekusi.
 
 
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?
+- Bagaimana cara Anda mengatasinya?
 
 ---
 
