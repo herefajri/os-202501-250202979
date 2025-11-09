@@ -90,7 +90,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 ---
 
-## Analisis
+## Analisis dan Tugas
 | Proses | Burst Time | Arrival Time | Priority |
    |:--:|:--:|:--:|:--:|
    | P1 | 5 | 0 | 2 |
@@ -114,6 +114,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 | Ke-2 | 3 | BT=2 <br> Sisa = 0 | BT=0 | BT=5 <br> Sisa = 2 | BT=3 <br> Sisa = 0 |
 | Ke-3 | 3 | BT=0 | BT=0 | BT=2 <br> Sisa = 0 | BT=0 |
 
+
 **2. Eksperimen 2 – Priority Scheduling (Non-Preemptive)**
 
 <img width="751" height="184" alt="image" src="https://github.com/user-attachments/assets/cb97c1af-2894-4eb4-8b9e-a2fd10169c77" />
@@ -122,7 +123,10 @@ Sertakan screenshot hasil percobaan atau diagram:
 | P1 | P2 | P4 | P3 | 
  0    5    8    14   22
 ```
-
+| Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+|------------|------------------|----------------------|------------|-------------|
+| RR | 8,50 | 14,00 | Adil terhadap semua proses | Tidak efisien jika quantum tidak tepat |
+| Priority | 3,00 | 7,67 | Efisien untuk proses penting | Potensi *starvation* pada prioritas rendah |
 	
 
 **3. Eksperimen 3 – Analisis Variasi Time Quantum**
@@ -142,14 +146,15 @@ Sertakan screenshot hasil percobaan atau diagram:
       0    5   8    13   18   21   22   
     ```
 
----
-
-## Tugas
-1. Hitung *waiting time* dan *turnaround time* untuk algoritma RR dan Priority.  
-2. Sajikan hasil perhitungan dan Gantt Chart dalam `laporan.md`.  
-3. Bandingkan performa dan jelaskan pengaruh *time quantum* serta prioritas.  
-4. Simpan semua bukti (tabel, grafik, atau gambar) ke folder `screenshots/`.  
-(Masih prototipe pengerjaan)
+| Aspek | Quantum kecil | Quantum sedang | Quantum besar |
+|---|---|---|---|
+| Respon awal (arrival Time) | Sangat cepat | Cepat | Lambat |
+| Waiting time | Besar | Seimbang | Bisa kecil untuk job panjang dan besar untuk job pendek |
+| Turnaround time (Short Jobs) | Memburuk dikarenakan sering terpotong | Baik | Sangat Baik  |
+| Turnaround time (Long Jobs) | Buruk | Seimbang | Baik |
+| Pengulangan (content switch) | Tinggi | Sedang | Rendah |
+| Overhead CPU | Tinggi | Sedang | Rendah |
+| Keadilan | Tinggi | Baik | Rendah |
 
 ---
 
