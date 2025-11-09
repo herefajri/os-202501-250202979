@@ -85,7 +85,8 @@ Sumber Materi : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating S
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+![Screenshot hasil](screenshots/Eks1&2-RR&PS.png)
+![Screenshot hasil](screenshots/Eks3-RR_Modif.png)
 
 ---
 
@@ -98,8 +99,41 @@ Sertakan screenshot hasil percobaan atau diagram:
    | P4 | 6 | 3 | 3 |
 
 1. Eksperimen 1 – Round Robin (RR)
+Time Quantum =3
+<img width="637" height="204" alt="image" src="https://github.com/user-attachments/assets/e0691c40-cd07-48ee-a3ae-10353fb6434f" />
 
+   ```
+      | P1 | P2 | P3 | P4 | P1 | P3 | P4 | P3 |
+      0    3    6    9   12   14   17    20   22
+   ```
+   
 2. Eksperimen 2 – Priority Scheduling (Non-Preemptive)
+
+<img width="751" height="184" alt="image" src="https://github.com/user-attachments/assets/cb97c1af-2894-4eb4-8b9e-a2fd10169c77" />
+
+   ```
+      | P1 | P2 | P4 | P3 | 
+      0    5    8    14   22
+   ```
+
+3. Eksperimen 3 – Analisis Variasi Time Quantum 
+
+Eksperimen 3 						
+						
+<img width="637" height="404" alt="image" src="https://github.com/user-attachments/assets/3f5dd790-b790-4629-bba2-0a45d2d1317c" />
+
+- Time Quantum =2
+  
+    ```
+      | P1 | P2 | P3 | P4 | P1 | P2 | P3 | P4 | P1 | P3 | P4 | P3 |
+      0    2    4    6   8   10   11    13   15   16   18   20   22
+    ```
+- Time Quantum =5
+
+    ```
+      | P1 | P2 | P3 | P4 | P3 | P4 | 
+      0    5   8    13   18   21   22   
+    ```
 
 ---
 
