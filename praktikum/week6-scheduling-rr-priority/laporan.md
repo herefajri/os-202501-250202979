@@ -109,7 +109,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 
 | Putaran | Time Quantum | P1 | P2 | P3 | P4 |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|
 | Ke-1 | 3 | BT=5 <br> Sisa = 2 | BT=0 <br> Sisa = 0 | BT=8 <br> Sisa = 5 | BT=6 <br> Sisa = 3 |
 | Ke-2 | 3 | BT=2 <br> Sisa = 0 | BT=0 | BT=5 <br> Sisa = 2 | BT=3 <br> Sisa = 0 |
 | Ke-3 | 3 | BT=0 | BT=0 | BT=2 <br> Sisa = 0 | BT=0 |
