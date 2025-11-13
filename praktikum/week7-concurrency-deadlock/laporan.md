@@ -1,5 +1,5 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu 7
 Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ---
@@ -90,10 +90,61 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
-1. Analisis versi *Dining Philosophers* yang menyebabkan deadlock dan versi fixed yang bebas deadlock.  
-2. Dokumentasikan hasil diskusi kelompok ke dalam `laporan.md`.  
-3. Sertakan diagram atau screenshot hasil simulasi/pseudocode.  
-4. Laporkan temuan penyebab deadlock dan solusi pencegahannya.  
+1. **Eksperimen 1 – Simulasi Dining Philosophers (Deadlock Version)**
+
+Pseudocode Deadlock Version
+
+```pseudo
+while true:
+    think()
+    pick_left_fork()
+    pick_right_fork()
+    eat()
+    put_left_fork()
+    put_right_fork()
+```
+
+Analisis Deadlock: 
+Deadlock terjadi saat semua filosofi ambil garpu kiri mereka tapi menunggu garpu kanan yang sedang dipegang filosof lain. Maka semua filosofi stuck saling tunggu garpu satu sama lain, tidak ada yang bisa makan, lalu jadilah kondisi deadlock.
+
+2. **Eksperimen 2 – Versi Fixed (Menggunakan Semaphore)**
+
+Modifikasi Pseudocode
+
+```pseudo
+semaphore max_dining = 4
+
+while true:
+    think()
+    wait(max_dining)           # Batasi max filosof yang makan bersamaan
+    if id_filosof == N:        # Filosof terakhir mengambil garpu secara terbalik
+        pick_right_fork()
+        pick_left_fork()
+    else:
+        pick_left_fork()
+        pick_right_fork()
+    eat()
+    put_left_fork()
+    put_right_fork()
+    signal(max_dining)
+```
+
+Analisis hasil:
+- Maksimal 4 filosof makan bersamaan, cegah semuanya ambil garpu dan tunggu.
+- Filosof terakhir ubah urutan pengambilan garpu, lalu hilangkan circular wait.
+- Dengan semaphore, mutual exclusion tetap terjaga.
+- Deadlock tidak terjadi karena semua empat kondisi deadlock dicegah.
+
+
+3. **Eksperimen 3 – Analisis Deadlock dalam Tabel**
+
+| Kondisi Deadlock     | Terjadi di Versi Deadlock | Solusi di Versi Fixed                                              |
+|----------------------|---------------------------|-------------------------------------------------------------------|
+| Mutual Exclusion      | Ya                        | Gunakan semaphore untuk mengontrol akses garpu                    |
+| Hold and Wait        | Ya                        | Batasi jumlah filosof yang makan bersamaan (semaphore max_dining)|
+| No Preemption        | Ya                        | Filosof melepaskan garpu secara sukarela setelah makan            |
+| Circular Wait        | Ya                        | Filosof terakhir mengambil garpu secara terbalik                  |
+   
 
 ---
 
