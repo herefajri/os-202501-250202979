@@ -1,6 +1,6 @@
 
 # Laporan Praktikum Minggu 7
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+Topik: Sinkronisasi Proses dan Masalah Deadlock
 
 ---
 
@@ -21,7 +21,13 @@ Setelah menyelesaikan tugas ini, diharapkan mahasiswa mampu:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+
+-  Cooperating Process adalah proses yang dapat memengaruhi atau dipengaruhi oleh proses lain yang dijalankan dalam sistem. Cooperating Process dapat langsung berbagi ruang alamat logis (yaitu, baik kode maupun data) atau hanya diizinkan untuk berbagi data melalui memori bersama atau pertukaran pesan. Namun, akses bersamaan ke data bersama dapat mengakibatkan ketidakkonsistenan data.
+-  Penggunaan Semaphore Sistem operasi sering membedakan antara semaphore penghitung dan semaphore biner. Nilai dari semaphore penghitung dapat berkisar dalam domain yang tidak terbatas. Nilai dari semaphore biner hanya dapat berkisar antara 0 dan 1. Dengan demikian, semaphore biner berperilaku mirip dengan kunci mutex. Bahkan, pada sistem yang tidak menyediakan kunci mutex, semaphore biner dapat digunakan sebagai pengganti untuk menyediakan eksklusi mutual.
+-  Deadlock, implementasi semaphore dengan waiting queue (antrian tunggu) dapat menyebabkan situasi di mana dua atau lebih proses menunggu tanpa batas waktu untuk suatu kejadian yang hanya dapat disebabkan oleh salah satu dari proses yang sedang menunggu tersebut. Kejadian yang dimaksud adalah eksekusi operasi signal(). Ketika keadaan seperti ini terjadi, proses-proses tersebut dikatakan berada dalam kondisi deadlock (kebuntuan).
+-  The Dining-Philosophers Problem, bayangkan ada lima orang filsuf yang menghabiskan hidup mereka dengan berpikir dan makan. Para filsuf itu duduk melingkar di sebuah meja bundar yang dikelilingi oleh lima kursi, masing-masing milik satu filsuf. Di tengah meja terdapat semangkuk nasi, dan di atas meja tersebut terdapat lima sumpit tunggal. Ketika seorang filsuf sedang berpikir, ia tidak berinteraksi dengan rekan-rekannya. Dari waktu ke waktu, seorang filsuf merasa lapar dan berusaha mengambil dua sumpit yang paling dekat dengannya (yaitu sumpit yang berada di antara dirinya dan tetangga di sisi kiri serta kanannya). Seorang filsuf hanya dapat mengambil satu sumpit dalam satu waktu. Jelas bahwa ia tidak dapat mengambil sumpit yang sudah dipegang oleh tetangganya. Ketika seorang filsuf yang lapar berhasil memegang kedua sumpit secara bersamaan, ia mulai makan tanpa melepaskan sumpit tersebut. Setelah selesai makan, ia meletakkan kembali kedua sumpit dan mulai berpikir lagi.
+
+Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System Concepts, 10th Edition, Wiley, 2018.
 
 ---
 
@@ -90,6 +96,14 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
+
+**Status Kerangka Tim**
+Ketua : Andri Dwi Yuliyanto
+
+Implementasi : Andri Dwi Yuliyanto
+Analisis : Rafi Nurul Fauzan
+Dokumentasi : Muhammad Fajri Abdullah 
+
 1. **Eksperimen 1 – Simulasi Dining Philosophers (Deadlock Version)**
 
 Pseudocode Deadlock Version
@@ -104,7 +118,7 @@ while true:
     put_right_fork()
 ```
 
-Analisis Deadlock: 
+**Analisis Deadlock:**
 Deadlock terjadi saat semua filosofi ambil garpu kiri mereka tapi menunggu garpu kanan yang sedang dipegang filosof lain. Maka semua filosofi stuck saling tunggu garpu satu sama lain, tidak ada yang bisa makan, lalu jadilah kondisi deadlock.
 
 2. **Eksperimen 2 – Versi Fixed (Menggunakan Semaphore)**
@@ -129,7 +143,7 @@ while true:
     signal(max_dining)
 ```
 
-Analisis hasil:
+**Analisis hasil:**
 - Maksimal 4 filosof makan bersamaan, cegah semuanya ambil garpu dan tunggu.
 - Filosof terakhir ubah urutan pengambilan garpu, lalu hilangkan circular wait.
 - Dengan semaphore, mutual exclusion tetap terjaga.
@@ -138,12 +152,12 @@ Analisis hasil:
 
 3. **Eksperimen 3 – Analisis Deadlock dalam Tabel**
 
-| Kondisi Deadlock     | Terjadi di Versi Deadlock | Solusi di Versi Fixed                                              |
-|----------------------|---------------------------|-------------------------------------------------------------------|
-| Mutual Exclusion      | Ya                        | Gunakan semaphore untuk mengontrol akses garpu                    |
-| Hold and Wait        | Ya                        | Batasi jumlah filosof yang makan bersamaan (semaphore max_dining)|
-| No Preemption        | Ya                        | Filosof melepaskan garpu secara sukarela setelah makan            |
-| Circular Wait        | Ya                        | Filosof terakhir mengambil garpu secara terbalik                  |
+| Kondisi Deadlock     | Terjadi di Versi Deadlock | Solusi di Versi Fixed  |
+|---|---|---|
+| Mutual Exclusion | Ya | Gunakan semaphore untuk mengontrol akses garpu |
+| Hold and Wait | Ya | Batasi jumlah filosof yang makan bersamaan (semaphore max_dining) |
+| No Preemption | Ya | Filosof melepaskan garpu secara sukarela setelah makan |
+| Circular Wait | Ya | Filosof terakhir mengambil garpu secara terbalik |
    
 
 ---
