@@ -98,11 +98,12 @@ Sertakan screenshot hasil percobaan atau diagram:
 ## Analisis
 
 **Status Kerangka Tim**
+`
 - Ketua : Andri Dwi Yuliyanto
-
 - Implementasi : Andri Dwi Yuliyanto
 - Analisis : Rafi Nurul Fauzan
-- Dokumentasi : Muhammad Fajri Abdullah 
+- Dokumentasi : Muhammad Fajri Abdullah
+`
 
 1. **Eksperimen 1 – Simulasi Dining Philosophers (Deadlock Version)**
 
