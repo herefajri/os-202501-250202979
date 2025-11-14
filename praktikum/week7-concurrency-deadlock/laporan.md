@@ -141,7 +141,7 @@ for i in range(NUM_PHILOSOPHERS):
 
 ---
 
-## Analisis
+## Analisis & Tugas
 
 **Status Kerangka Tim**
 `
@@ -164,21 +164,8 @@ while true:
     put_left_fork()
     put_right_fork()
 ```
-
-Versi Deadlock
-
-1. Filosof selalu ambil garpu kiri lalu garpu kanan.
-2. Jika semua filosof ambil garpu kiri secara bersamaan, mereka akan tunggu garpu kanan yang sedang dipegang oleh filosofi lain.Terjadi circular wait dan semua stuck (deadlock).
-3. Tidak ada filosof yang dapat makan karena saling tunggu.
-
-Versi Fixed (Bebas Deadlock)
-
-1. Gunakan mekanisme sinkronisasi, misalnya semaphore atau mutex.
-2. Dibatasi jumlah filosof yang boleh makan bersama, misal maksimal 4 dari 5 filosofi.
-3. Filosof terakhir ambil garpu dengan urutan terbalik (kanan dulu, baru kiri) untuk cegah circular wait.
-4. Filosof hanya ambil garpu jika kedua garpu tersedia. 
-5. Deadlock dicegah karena setidaknya satu filosof dapat makan dan melepaskan garpu sehingga siklus berjalan.
-
+**Analisis Deadlock**
+Deadlock terjadi saat semua filosofi mengambil garpu kiri mereka tapi menunggu garpu kanan yang sedang dipegang filosof lain. Maka semua filosofi stuck saling menunggu garpu satu sama lain, tidak ada yang bisa makan, menyebabkan kondisi deadlock.
 
 2. **Eksperimen 2 – Versi Fixed (Menggunakan Semaphore)**
 
@@ -218,6 +205,18 @@ while true:
 | No Preemption | Ya | Filosof melepaskan garpu secara sukarela setelah makan |
 | Circular Wait | Ya | Filosof terakhir mengambil garpu secara terbalik |
    
+4. **Tugas**
+
+**Versi Deadlock**
+1. Filosof selalu ambil garpu kiri lalu garpu kanan.
+2. Jika semua filosof ambil garpu kiri secara bersamaan, mereka akan tunggu garpu kanan yang sedang dipegang oleh filosofi lain.Terjadi circular wait dan semua stuck (deadlock).
+3. Tidak ada filosof yang dapat makan karena saling tunggu.
+**Versi Fixed (Bebas Deadlock)**
+1. Gunakan mekanisme sinkronisasi, misalnya semaphore atau mutex.
+2. Dibatasi jumlah filosof yang boleh makan bersama, misal maksimal 4 dari 5 filosofi.
+3. Filosof terakhir ambil garpu dengan urutan terbalik (kanan dulu, baru kiri) untuk cegah circular wait.
+4. Filosof hanya ambil garpu jika kedua garpu tersedia.
+5. Deadlock dicegah karena setidaknya satu filosof dapat makan dan melepaskan garpu sehingga siklus berjalan.
 
 ---
 
