@@ -135,7 +135,7 @@ for t in threads:
 ---
 
 ## Hasil Eksekusi
-![Screenshot hasil](screenshots/example.png)
+![Screenshot hasil](screenshots/Diagram_Filosof.drawio.png)
 
 ![Screenshot hasil](screenshots/Semaphore-py.png)
 
