@@ -137,7 +137,7 @@ for t in threads:
 ## Hasil Eksekusi
 ![Screenshot hasil](screenshots/example.png)
 
-![Screenshot hasil](screenshots/.png)
+![Screenshot hasil](screenshots/Semaphore-py.png)
 
 **Dokumentasi Kerja Team**
 ![Screenshot hasil](screenshots/Dokumentasi_Kerja_Tim.png)
@@ -232,11 +232,26 @@ while true:
 
 ## Quiz
 1. Sebutkan empat kondisi utama penyebab deadlock.
-   **Jawaban:**    
-2. Mengapa sinkronisasi diperlukan dalam sistem operasi?\
-   **Jawaban:**    
+   **Jawaban:**
+   - Mutual Exclusion (Sumber saya hanya bisa digunakan oleh satu proses pada satu waktu atau tak bisa digunakan secara bersamaan).
+   - Hold and Wait (Proses yang sudah mempunyai sumber daya, masih menunggu sumber daya tambahan yang sedang dipegang oleh proses lain).
+   - No Preemption (Sumber daya yang sudah diberikan tak dapat diambil paksa dan hanya dapat dilepaskan secara sukarela olej proses pemegangya).
+   - Circular Wait (Adanya siklus dimana masing-masing proses menunggu sumber daya yang dipegang proses berikutnya dalam lingkaran).
+   
+2. Mengapa sinkronisasi diperlukan dalam sistem operasi?
+   **Jawaban:**
+   - Untuk menghindari Race Condition (kondisi dimana dua atau lebih proses mengakses dan memodifikasi data bersama secara bersamaan, sehingga hasil akhir bergantung pada urutan eksekusi) sehingga data tak rusak akibat eksekusi bersamaan.
+   - Menjamin Mutual Exclusion sehingga tidak ada konflik penggunaan sumber daya.
+   - Membantu koordinasi antar-proses untuk menjaga urutan logis.
+   - Untuk menghindari terjadinya deadlock atau data corruption (data yang tersimpan atau dalam proses menjadi rusak).
+  
 3. Jelaskan perbedaan antara *semaphore* dan *monitor*.
-   **Jawaban:**  
+   **Jawaban:**
+   | Aspek | Semaphore | Monitor |
+   |---|---|---|
+   | Mekanisme | Sinkronisasi berbasis variable integer | Sinkronisasi tingkat tinggi (Abstraksi) |
+   | Operasi | operasi utama menggunakan wait() dan signal() | Menggabungkan data, prosedur, dan aturan akses dalam satu struktur |
+   | Karakteristik | Semua kontrol di tangan programer dan diperlukan kehati-hatian karena kesalahan urutan bisa menimbulkan Deadlock atau Race Condition | Lebih aman karena mengurangi risiko kesalahan programer dengan mekanisme Hight-level dimana runtime menjamin mutual exclusion |
 
 ---
 
