@@ -86,7 +86,7 @@ Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System C
 ---
 
 ## Kode / Perintah
-```
+```bash
 import threading
 import time
 
@@ -132,8 +132,12 @@ for i in range(NUM_PHILOSOPHERS):
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/example.png)
+
+![Screenshot hasil](screenshots/Pseudocode_Filsuf%20_-py..png)
+
+**Dokumentasi Kerja Team**
+![Screenshot hasil](screenshots/Dokumentasi_Kerja_Tim.png)
 
 ---
 
