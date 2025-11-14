@@ -86,6 +86,48 @@ Sumber : Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Operating System C
 ---
 
 ## Kode / Perintah
+```
+import threading
+import time
+
+NUM_PHILOSOPHERS = 4
+forks = [threading.Semaphore(1) for _ in range(NUM_PHILOSOPHERS)]
+
+def philosopher(i):  # i = 0 to 3
+    left = forks[i]
+    right = forks[(i + 1) % NUM_PHILOSOPHERS]
+    makan_count = 0
+
+    while makan_count < 3:
+        print(f"Filsuf {i + 1} sedang berpikir.")  # tampilkan sebagai 1–4
+        time.sleep(1)
+
+        print(f"Filsuf {i + 1} mencoba mengambil garpu kiri.")
+        left.acquire()
+        print(f"Filsuf {i + 1} mengambil garpu kiri.")
+
+        print(f"Filsuf {i + 1} mencoba mengambil garpu kanan.")
+        right.acquire()
+        print(f"Filsuf {i + 1} mengambil garpu kanan.")
+
+        print(f"Filsuf {i + 1} sedang makan.")
+        time.sleep(2)
+        makan_count += 1
+
+        print(f"Filsuf {i + 1} meletakkan garpu kanan.")
+        right.release()
+        print(f"Filsuf {i + 1} meletakkan garpu kiri.")
+        left.release()
+
+    print(f"Filsuf {i + 1} selesai makan sebanyak {makan_count} kali.")
+
+# Jalankan filsuf 0–3 (tapi tampilkan sebagai 1–4)
+threads = []
+for i in range(NUM_PHILOSOPHERS):
+    t = threading.Thread(target=philosopher, args=(i,))
+    threads.append(t)
+    t.start()
+```
 
 ---
 
@@ -119,8 +161,20 @@ while true:
     put_right_fork()
 ```
 
-**Analisis Deadlock:**
-Deadlock terjadi saat semua filosofi ambil garpu kiri mereka tapi menunggu garpu kanan yang sedang dipegang filosof lain. Maka semua filosofi stuck saling tunggu garpu satu sama lain, tidak ada yang bisa makan, lalu jadilah kondisi deadlock.
+Versi Deadlock
+
+1. Filosof selalu ambil garpu kiri lalu garpu kanan.
+2. Jika semua filosof ambil garpu kiri secara bersamaan, mereka akan tunggu garpu kanan yang sedang dipegang oleh filosofi lain.Terjadi circular wait dan semua stuck (deadlock).
+3. Tidak ada filosof yang dapat makan karena saling tunggu.
+
+Versi Fixed (Bebas Deadlock)
+
+1. Gunakan mekanisme sinkronisasi, misalnya semaphore atau mutex.
+2. Dibatasi jumlah filosof yang boleh makan bersama, misal maksimal 4 dari 5 filosofi.
+3. Filosof terakhir ambil garpu dengan urutan terbalik (kanan dulu, baru kiri) untuk cegah circular wait.
+4. Filosof hanya ambil garpu jika kedua garpu tersedia. 
+5. Deadlock dicegah karena setidaknya satu filosof dapat makan dan melepaskan garpu sehingga siklus berjalan.
+
 
 2. **Eksperimen 2 – Versi Fixed (Menggunakan Semaphore)**
 
