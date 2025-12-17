@@ -64,25 +64,60 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 
 ---
 
-## Kode / Perintah
-Tuliskan potongan kode atau perintah utama:
+## Kode 
+
+- Model FSCS
+  
 ```bash
-...
+print('FSCS proses Model Week-9')
+
+def fcfs(proses):
+    proses.sort(key=lambda x: x['arrival'])
+
+    time = 0
+    for p in proses:
+        p['start'] = max(time, p['arrival'])
+        p['finish'] = p['start'] + p['burst']
+        p['turnaround'] = p['finish'] - p['arrival']
+        p['waiting'] = p['turnaround'] - p['burst']
+
+        time = p["finish"]
+
+    return proses
+
+
+proses = [
+    {'pid': 'P1', 'arrival': 0, 'burst': 6},
+    {'pid': 'P2', 'arrival': 1, 'burst': 8},
+    {'pid': 'P3', 'arrival': 2, 'burst': 7},
+    {'pid': 'P4', 'arrival': 3, 'burst': 3},
+]
+
+result = fcfs(proses)
+print('PID | Arrival | Burst | Start | Finish | Waiting | Turnaround')
+for p in result:
+    print(f'{p['pid']:3} | {p['arrival']:7} | {p['burst']:5} | {p['start']:5} | {p['finish']:10} | {p['waiting']:7} | {p['turnaround']:10}')
+
 ```
 
 ---
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+![Screenshot hasil](screenshots/Execution-FSCS-with-Python-W9.png)
 
 ---
 
-## Tugas
+## Tugas & Analisis
 1. Buat program simulasi FCFS atau SJF.  
 2. Jalankan program dengan dataset uji.  
 3. Sajikan output dalam tabel atau grafik.  
 4. Tulis laporan praktikum pada `laporan.md`.
+
+- Jelaskan alur program.  
+- Bandingkan hasil simulasi dengan perhitungan manual.  
+- Jelaskan kelebihan dan keterbatasan simulasi.
+
 ....
 
 ---
