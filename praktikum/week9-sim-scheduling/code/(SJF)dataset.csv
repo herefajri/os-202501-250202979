@@ -1,0 +1,7 @@
+SJF;;;;;;;;;;
+Versi Copy Paste Mentah dari Vscode;;;;Versi  Tersusun;;;;;;
+PID | Arrival | Burst | Start | Finish | Waiting | Turnaround;;;;PID ;Arrival;Brust;Start;Finish;Waiting;Turnaround
+P1  |       0 |     6 |     0 |          6 |       0 |          6;;;;P1;0;6;0;6;0;6
+P4  |       3 |     3 |     6 |          9 |       3 |          6;;;;P4;3;3;6;9;3;6
+P3  |       2 |     7 |     9 |         16 |       7 |         14;;;;P3;2;7;9;16;7;14
+P2  |       1 |     8 |    16 |         24 |      15 |         23;;;;P2;1;8;16;24;15;23
