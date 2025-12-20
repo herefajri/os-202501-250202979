@@ -70,7 +70,8 @@ Topik: Simulasi Algoritma Penjadwalan CPU
 
 - Model FSCS
 
-  ![Code FCFS](code/Week_9_FCFS_code.txt)
+  [Code FCFS](code/Week_9_FCFS_code.txt)
+  [Code SJF](code/Week_9_SJF_nonpreemtive_code.txt)
   
 ```bash
 def fcfs(proses):
@@ -102,12 +103,56 @@ for p in result:
 
 ```
 
+```bash
+def sjf_non_preemptive(proses):
+    proses.sort(key=lambda x: x['arrival'])
+    
+    time = 0
+    selesai = []
+    ready_queue = []
+    
+    while proses or ready_queue:
+        while proses and proses[0]['arrival'] <= time:
+            ready_queue.append(proses.pop(0))
+        
+        if ready_queue:
+            ready_queue.sort(key=lambda x: x['burst'])
+            p = ready_queue.pop(0)
+            
+            p['start'] = max(time, p['arrival'])
+            p['finish'] = p['start'] + p['burst']
+            p['turnaround'] = p['finish'] - p['arrival']
+            p['waiting'] = p['turnaround'] - p['burst']
+            
+            time = p['finish']
+            selesai.append(p)
+        else:
+            time = proses[0]['arrival']
+    
+    return selesai
+
+
+proses = [
+    {'pid': 'P1', 'arrival': 0, 'burst': 6},
+    {'pid': 'P2', 'arrival': 1, 'burst': 8},
+    {'pid': 'P3', 'arrival': 2, 'burst': 7},
+    {'pid': 'P4', 'arrival': 3, 'burst': 3},
+]
+
+result = sjf_non_preemptive(proses)
+print('PID | Arrival | Burst | Start | Finish | Waiting | Turnaround')
+for p in result:
+    print(f"{p['pid']:3} | {p['arrival']:7} | {p['burst']:5} | {p['start']:5} | {p['finish']:10} | {p['waiting']:7} | {p['turnaround']:10}")
+
+
+```
+
 ---
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/week-9-fcfs.png)
-
+![Screenshot hasil](screenshots/week-9-non-preemtive.png)
 ---
 
 ## Tugas & Analisis
@@ -120,9 +165,18 @@ FCFS Model Program Python
   | P3  |       2 |     7 |    14 |         21 |      12 |         19 |
   | P4  |       3 |     3 |    21 |         24 |      18 |         21 |
 
+SJF non-preemptive Model Program Python
+   | PID | Arrival | Burst | Start | Finish | Waiting | Turnaround |
+   |---|---|---|---|---|---|---|
+   | P1  |       0 |     6 |     0 |          6 |       0 |          6 |
+   | P4  |       3 |     3 |     6 |          9 |       3 |          6 |
+   | P3  |       2 |     7 |     9 |         16 |       7 |         14 |
+   | P2  |       1 |     8 |    16 |         24 |      15 |         23 |
 
 - Penjelasan alur program.
    **Jawaban:**
+
+FCFS:
   - Fungsi fcfs(proses) menerima daftar proses berupa dictionary (pid, arrival, burst).
   - Proses diurutkan berdasarkan waktu kedatangan (arrival) menggunakan sort(key=lambda x: x['arrival']).
   - Variabel time digunakan untuk melacak waktu CPU saat ini.
@@ -134,9 +188,12 @@ FCFS Model Program Python
    - Setelah proses selesai, time diperbarui ke finish.
    - Setelah semua proses dihitung, hasil dikembalikan dalam bentuk list dictionary.
    - Program mencetak tabel berisi: PID, Arrival, Burst, Start, Finish, Waiting, Turnaround.
+
+SJF non-preemptive:
   
 - Perbandingan hasil simulasi dengan perhitungan manual.
    **Jawaban:**
+  
    FCFS Model Program
     | PID | Arrival | Burst | Start | Finish | Waiting | Turnaround |
    |---|---|---|---|---|---|---|
@@ -149,8 +206,21 @@ FCFS Model Program Python
   
   <img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/56a4ede5-9142-461c-9150-73cc57f39840" />
 
-
    Hasilnya **Sama**
+
+  SJF Model Program
+   | PID | Arrival | Burst | Start | Finish | Waiting | Turnaround |
+   |---|---|---|---|---|---|---|
+   | P1  |       0 |     6 |     0 |          6 |       0 |          6 |
+   | P4  |       3 |     3 |     6 |          9 |       3 |          6 |
+   | P3  |       2 |     7 |     9 |         16 |       7 |         14 |
+   | P2  |       1 |     8 |    16 |         24 |      15 |         23 |
+
+  SJF Model Manual Week-5
+
+  <img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/e5897cf9-d0b0-48f8-8c10-a9463e06a4a0" />
+
+    Hasilnya **Sama**
 
 - Penjelasan kelebihan dan keterbatasan simulasi.
    **Jawaban:**
