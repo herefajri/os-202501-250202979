@@ -70,8 +70,8 @@ Topik: Simulasi Algoritma Penjadwalan CPU
 
 - Model FSCS
 
-  [Code FCFS](code/Week_9_FCFS_code.txt)
-  [Code SJF](code/Week_9_SJF_nonpreemtive_code.txt)
+  [Code FCFS](code/(FCFS)_scheduling_simulation.py.txt.txt)
+  [Code SJF](code/(SJF)_scheduling_simulation.py.txt.txt)
   
 ```bash
 def fcfs(proses):
@@ -102,6 +102,8 @@ for p in result:
     print(f'{p['pid']:3} | {p['arrival']:7} | {p['burst']:5} | {p['start']:5} | {p['finish']:10} | {p['waiting']:7} | {p['turnaround']:10}')
 
 ```
+
+- Model SJF
 
 ```bash
 def sjf_non_preemptive(proses):
@@ -151,8 +153,8 @@ for p in result:
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/week-9-fcfs.png)
-![Screenshot hasil](screenshots/week-9-non-preemtive.png)
+![Screenshot hasil](screenshots/hasil_simulasi(FCFS).png)
+![Screenshot hasil](screenshots/hasil_simulasi(SJF).png)
 ---
 
 ## Tugas & Analisis
@@ -176,7 +178,7 @@ SJF non-preemptive Model Program Python
 - Penjelasan alur program.
    **Jawaban:**
 
-FCFS:
+**FCFS:**
   - Fungsi fcfs(proses) menerima daftar proses berupa dictionary (pid, arrival, burst).
   - Proses diurutkan berdasarkan waktu kedatangan (arrival) menggunakan sort(key=lambda x: x['arrival']).
   - Variabel time digunakan untuk melacak waktu CPU saat ini.
@@ -189,7 +191,21 @@ FCFS:
    - Setelah semua proses dihitung, hasil dikembalikan dalam bentuk list dictionary.
    - Program mencetak tabel berisi: PID, Arrival, Burst, Start, Finish, Waiting, Turnaround.
 
-SJF non-preemptive:
+**SJF non-preemptive:**
+   - Fungsi sjf_non_preemptive(proses) menerima daftar proses berupa dictionary (pid, arrival, burst).
+   - Proses diurutkan terlebih dahulu berdasarkan waktu kedatangan (arrival) menggunakan sort(key=lambda x: x['arrival']).
+   - Variabel time digunakan untuk melacak waktu CPU saat ini, ready_queue untuk menampung proses yang sudah datang, dan selesai untuk menyimpan proses yang sudah dieksekusi.
+   - Selama masih ada proses yang belum selesai, program akan:
+      - Memasukkan proses yang sudah datang ke ready_queue.
+      - Jika ready_queue tidak kosong, proses diurutkan berdasarkan burst dan dipilih proses dengan burst terkecil.
+   - Untuk setiap proses p:
+      - start: waktu mulai eksekusi, yaitu maksimum antara time (waktu CPU terakhir) dan arrival (waktu kedatangan proses).
+      - finish: waktu selesai eksekusi, dihitung dari start + burst.
+      - turnaround: total waktu proses berada dalam sistem, yaitu finish - arrival.
+      - waiting: waktu tunggu proses di antrian, yaitu turnaround - burst.
+   - Setelah proses selesai, time diperbarui ke finish.
+   - Setelah semua proses dihitung, hasil dikembalikan dalam bentuk list dictionary.
+   - Program mencetak tabel berisi: PID, Arrival, Burst, Start, Finish, Waiting, Turnaround.
   
 - Perbandingan hasil simulasi dengan perhitungan manual.
    **Jawaban:**
@@ -206,7 +222,7 @@ SJF non-preemptive:
   
   <img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/56a4ede5-9142-461c-9150-73cc57f39840" />
 
-   Hasilnya **Sama**
+   Hasilnya [**Sama**]
 
   SJF Model Program
    | PID | Arrival | Burst | Start | Finish | Waiting | Turnaround |
@@ -220,7 +236,7 @@ SJF non-preemptive:
 
   <img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/e5897cf9-d0b0-48f8-8c10-a9463e06a4a0" />
 
-    Hasilnya **Sama**
+    Hasilnya [**Sama**]
 
 - Penjelasan kelebihan dan keterbatasan simulasi.
    **Jawaban:**
