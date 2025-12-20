@@ -108,21 +108,40 @@ for p in result:
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/week_9-fcfs.png)
+![Screenshot hasil](screenshots/week-9-fcfs.png)
 
 ---
 
 ## Tugas & Analisis
-1. Buat program simulasi FCFS atau SJF.  
-2. Jalankan program dengan dataset uji.  
-3. Sajikan output dalam tabel atau grafik.  
-4. Tulis laporan praktikum pada `laporan.md`.
 
-- Jelaskan alur program.  
-- Bandingkan hasil simulasi dengan perhitungan manual.  
-- Jelaskan kelebihan dan keterbatasan simulasi.
+- Penjelasan alur program.
+   **Jawaban:**
+  - Fungsi fcfs(proses) menerima daftar proses berupa dictionary (pid, arrival, burst).
+  - Proses diurutkan berdasarkan waktu kedatangan (arrival) menggunakan sort(key=lambda x: x['arrival']).
+  - Variabel time digunakan untuk melacak waktu CPU saat ini.
+  - Untuk setiap proses p:
+     - start: waktu mulai eksekusi, yaitu maksimum antara time (waktu CPU terakhir) dan arrival (waktu kedatangan proses).
+     - finish: waktu selesai eksekusi, dihitung dari start + burst.
+     - turnaround: total waktu proses berada dalam sistem, yaitu finish - arrival.
+     - waiting: waktu tunggu proses di antrian, yaitu turnaround - burst.
+   - Setelah proses selesai, time diperbarui ke finish.
+   - Setelah semua proses dihitung, hasil dikembalikan dalam bentuk list dictionary.
+   - Program mencetak tabel berisi: PID, Arrival, Burst, Start, Finish, Waiting, Turnaround.
+  
+- Perbandingan hasil simulasi dengan perhitungan manual.
+   **Jawaban:**
+  FCFS proses Model Week-9
+PID | Arrival | Burst | Start | Finish | Waiting | Turnaround
+P1  |       0 |     6 |     0 |          6 |       0 |          6
+P2  |       1 |     8 |     6 |         14 |       5 |         13
+P3  |       2 |     7 |    14 |         21 |      12 |         19
+P4  |       3 |     3 |    21 |         24 |      18 |         21
 
-....
+   FCFS Model Manual Week-
+   
+- Penjelasan kelebihan dan keterbatasan simulasi.
+   **Jawaban:**
+  
 
 ---
 
