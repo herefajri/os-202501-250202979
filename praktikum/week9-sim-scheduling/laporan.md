@@ -224,7 +224,7 @@ SJF non-preemptive Model Program Python
   
   <img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/56a4ede5-9142-461c-9150-73cc57f39840" />
 
-   Hasilnya [**Sama**]
+   Hasilnya **[Sama]**
 
   SJF Model Program
    | PID | Arrival | Burst | Start | Finish | Waiting | Turnaround |
@@ -238,35 +238,58 @@ SJF non-preemptive Model Program Python
 
   <img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/e5897cf9-d0b0-48f8-8c10-a9463e06a4a0" />
 
-    Hasilnya [**Sama**]
+   Hasilnya **[Sama]**
 
 **3. Penjelasan kelebihan dan keterbatasan simulasi.**
    **Jawaban:**
-  
+  - Kelebihan Simulasi
+     - Lebih cepat: Tidak perlu menghitung satu per satu secara manual.
+     - Lebih akurat: Mengurangi risiko salah hitung.
+     - Bisa dipakai berulang: Dataset berbeda bisa langsung diuji dengan hasil yang konsisten.
+     - Mudah ditampilkan: Hasil bisa langsung dibuat tabel atau grafik.
+  - Keterbatasan Simulasi
+     - Terbatas pada program: Kalau program hanya mendukung FCFS, algoritma lain harus ditulis lagi.
+     - Kurang berguna untuk data kecil: Kalau prosesnya sedikit, manual lebih mudah dipahami.
+     - Tidak menunjukkan langkah demi langkah: Simulasi hanya menampilkan hasil akhir, bukan proses berjalan secara nyata.
 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+- Simulasi mempermudah perhitungan algoritma penjadwalan seperti FCFS dan SJF, terutama untuk dataset besar, sehingga hasil lebih cepat dan akurat dibandingkan perhitungan manual.
+- Hasil simulasi konsisten dengan perhitungan manual pada dataset kecil, sehingga dapat dipercaya sebagai alat bantu analisis.
+- Pemahaman konsep tetap penting meskipun simulasi otomatis akarena menggunakan program, perhitungan manual tetap diperlukan agar mahasiswa memahami alur algoritma dasar dan tidak hanya bergantung pada program.
 
 ---
 
 ## Quiz
 1. Mengapa simulasi diperlukan untuk menguji algoritma scheduling?
    **Jawaban:**
+   - Menghemat waktu dan tenaga jika dataset proses banyak, perhitungan manual akan sangat rumit dan rawan salah.
+   - Memberikan hasil yang konsisten karena program selalu mengikuti aturan algoritma yang sama/yang telah ditentukan, sehingga hasilnya tidak berubah-ubah dan bisa dipercaya.
+   - Mahasiswa dapat menguji berbagai skenario dengan mencoba dataset berbeda (misalnya mengubah jumlah proses, waktu kedatangan, burst time) untuk melihat bagaimana algoritma bekerja dalam kondisi yang beragam.
+
    
 2. Apa perbedaan hasil simulasi dengan perhitungan manual jika dataset besar?
    **Jawaban:**
+   - Perhitungan Manual
+      - jika proses semakin banyak dan semakin panjang pula langkah perhitungan, maka risiko kesalahan meningkat pula, belum lagi efisiensi waktu yang rendah.
+      - Menyusun tabel waiting time dan turnaround time untuk puluhan atau ratusan proses/dataset dapat membingungkan mahasiswa, ini bisa meningkatkan risiko kesalahan perhitungan karena human error.
+      - Dan tentu tidak cocok untuk eksperimen dengan banyak variasi dataset.
+   - Perhitungan dengan Simulasi
+      - Program langsung menghitung semua proses, sangat baik untuk efisiensi waktu.
+      - Hasil selalu sesuai dengan algoritma yang diimplementasikan/ ditentukan pengguna, tidak terpengaruh oleh kelelahan atau kesalahan manusia kecuali dalam bagian input.
+      - Dataset besar bisa diuji dengan berbagai algoritma (FCFS, SJF, RR, dll.) untuk melihat performa masing-masing.
+      - Output bisa langsung ditampilkan dalam bentuk tabel atau Gantt chart.
    
 3. Algoritma mana yang lebih mudah diimplementasikan? Jelaskan.
    **Jawaban:**
-   
+   FCFS, dikarenakan sistemnnya yang sederhana dengan metode FIFO, tidak perlu membandingkan burst time atau melakukan pemilihan ulang, dan urutan proses berdasarkan arrival, lalu jalankan satu per satu. Program hanya perlu menghitung start, finish, waiting, dan turnaround.
 
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
+- Apa bagian yang paling menantang minggu ini?
 - Bagaimana cara Anda mengatasinya?  
 
 ---
