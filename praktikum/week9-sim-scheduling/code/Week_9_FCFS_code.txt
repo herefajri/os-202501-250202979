@@ -1,0 +1,28 @@
+print('FCFS proses Model Week-9')
+
+def fcfs(proses):
+    proses.sort(key=lambda x: x['arrival'])
+
+    time = 0
+    for p in proses:
+        p['start'] = max(time, p['arrival'])
+        p['finish'] = p['start'] + p['burst']
+        p['turnaround'] = p['finish'] - p['arrival']
+        p['waiting'] = p['turnaround'] - p['burst']
+
+        time = p["finish"]
+
+    return proses
+
+
+proses = [
+    {'pid': 'P1', 'arrival': 0, 'burst': 6},
+    {'pid': 'P2', 'arrival': 1, 'burst': 8},
+    {'pid': 'P3', 'arrival': 2, 'burst': 7},
+    {'pid': 'P4', 'arrival': 3, 'burst': 3},
+]
+
+result = fcfs(proses)
+print('PID | Arrival | Burst | Start | Finish | Waiting | Turnaround')
+for p in result:
+    print(f'{p['pid']:3} | {p['arrival']:7} | {p['burst']:5} | {p['start']:5} | {p['finish']:10} | {p['waiting']:7} | {p['turnaround']:10}')
