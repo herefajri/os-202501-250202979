@@ -73,8 +73,6 @@ Topik: Simulasi Algoritma Penjadwalan CPU
   ![Code FCFS](code/Week_9_FCFS_code.txt)
   
 ```bash
-print('FCFS proses Model Week-9')
-
 def fcfs(proses):
     proses.sort(key=lambda x: x['arrival'])
 
@@ -130,15 +128,18 @@ Sertakan screenshot hasil percobaan atau diagram:
   
 - Perbandingan hasil simulasi dengan perhitungan manual.
    **Jawaban:**
-  FCFS proses Model Week-9
-PID | Arrival | Burst | Start | Finish | Waiting | Turnaround
-P1  |       0 |     6 |     0 |          6 |       0 |          6
-P2  |       1 |     8 |     6 |         14 |       5 |         13
-P3  |       2 |     7 |    14 |         21 |      12 |         19
-P4  |       3 |     3 |    21 |         24 |      18 |         21
+   FCFS Model Program
+   PID | Arrival | Burst | Start | Finish | Waiting | Turnaround
+   P1  |       0 |     6 |     0 |          6 |       0 |          6
+   P2  |       1 |     8 |     6 |         14 |       5 |         13
+   P3  |       2 |     7 |    14 |         21 |      12 |         19
+   P4  |       3 |     3 |    21 |         24 |      18 |         21
 
-   FCFS Model Manual Week-
-   
+   FCFS Model Manual Week-5
+  <img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/56a4ede5-9142-461c-9150-73cc57f39840" />
+
+   Hasilnya Sama
+
 - Penjelasan kelebihan dan keterbatasan simulasi.
    **Jawaban:**
   
