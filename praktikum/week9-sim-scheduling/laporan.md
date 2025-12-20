@@ -179,33 +179,33 @@ SJF non-preemptive Model Program Python
    **Jawaban:**
 
 **FCFS:**
-  - Fungsi fcfs(proses) menerima daftar proses berupa dictionary (pid, arrival, burst).
-  - Proses diurutkan berdasarkan waktu kedatangan (arrival) menggunakan sort(key=lambda x: x['arrival']).
-  - Variabel time digunakan untuk melacak waktu CPU saat ini.
-  - Untuk setiap proses p:
-     - start: waktu mulai eksekusi, yaitu maksimum antara time (waktu CPU terakhir) dan arrival (waktu kedatangan proses).
-     - finish: waktu selesai eksekusi, dihitung dari start + burst.
-     - turnaround: total waktu proses berada dalam sistem, yaitu finish - arrival.
-     - waiting: waktu tunggu proses di antrian, yaitu turnaround - burst.
-   - Setelah proses selesai, time diperbarui ke finish.
-   - Setelah semua proses dihitung, hasil dikembalikan dalam bentuk list dictionary.
-   - Program mencetak tabel berisi: PID, Arrival, Burst, Start, Finish, Waiting, Turnaround.
+     - Fungsi fcfs(proses) menerima daftar proses berupa dictionary (pid, arrival, burst).
+     - Proses diurutkan berdasarkan waktu kedatangan (arrival) menggunakan sort(key=lambda x: x['arrival']).
+     - Variabel time digunakan untuk melacak waktu CPU saat ini.
+     - Untuk setiap proses p:
+        - start: waktu mulai eksekusi, yaitu maksimum antara time (waktu CPU terakhir) dan arrival (waktu kedatangan proses).
+        - finish: waktu selesai eksekusi, dihitung dari start + burst.
+        - turnaround: total waktu proses berada dalam sistem, yaitu finish - arrival.
+        - waiting: waktu tunggu proses di antrian, yaitu turnaround - burst.
+      - Setelah proses selesai, time diperbarui ke finish.
+      - Setelah semua proses dihitung, hasil dikembalikan dalam bentuk list dictionary.
+      - Program mencetak tabel berisi: PID, Arrival, Burst, Start, Finish, Waiting, Turnaround.
 
 **SJF non-preemptive:**
-   - Fungsi sjf_non_preemptive(proses) menerima daftar proses berupa dictionary (pid, arrival, burst).
-   - Proses diurutkan terlebih dahulu berdasarkan waktu kedatangan (arrival) menggunakan sort(key=lambda x: x['arrival']).
-   - Variabel time digunakan untuk melacak waktu CPU saat ini, ready_queue untuk menampung proses yang sudah datang, dan selesai untuk menyimpan proses yang sudah dieksekusi.
-   - Selama masih ada proses yang belum selesai, program akan:
-      - Memasukkan proses yang sudah datang ke ready_queue.
-      - Jika ready_queue tidak kosong, proses diurutkan berdasarkan burst dan dipilih proses dengan burst terkecil.
-   - Untuk setiap proses p:
-      - start: waktu mulai eksekusi, yaitu maksimum antara time (waktu CPU terakhir) dan arrival (waktu kedatangan proses).
-      - finish: waktu selesai eksekusi, dihitung dari start + burst.
-      - turnaround: total waktu proses berada dalam sistem, yaitu finish - arrival.
-      - waiting: waktu tunggu proses di antrian, yaitu turnaround - burst.
-   - Setelah proses selesai, time diperbarui ke finish.
-   - Setelah semua proses dihitung, hasil dikembalikan dalam bentuk list dictionary.
-   - Program mencetak tabel berisi: PID, Arrival, Burst, Start, Finish, Waiting, Turnaround.
+      - Fungsi sjf_non_preemptive(proses) menerima daftar proses berupa dictionary (pid, arrival, burst).
+      - Proses diurutkan terlebih dahulu berdasarkan waktu kedatangan (arrival) menggunakan sort(key=lambda x: x['arrival']).
+      - Variabel time digunakan untuk melacak waktu CPU saat ini, ready_queue untuk menampung proses yang sudah datang, dan selesai untuk menyimpan proses yang sudah dieksekusi.
+      - Selama masih ada proses yang belum selesai, program akan:
+         - Memasukkan proses yang sudah datang ke ready_queue.
+         - Jika ready_queue tidak kosong, proses diurutkan berdasarkan burst dan dipilih proses dengan burst terkecil.
+      - Untuk setiap proses p:
+         - start: waktu mulai eksekusi, yaitu maksimum antara time (waktu CPU terakhir) dan arrival (waktu kedatangan proses).
+         - finish: waktu selesai eksekusi, dihitung dari start + burst.
+         - turnaround: total waktu proses berada dalam sistem, yaitu finish - arrival.
+         - waiting: waktu tunggu proses di antrian, yaitu turnaround - burst.
+      - Setelah proses selesai, time diperbarui ke finish.
+      - Setelah semua proses dihitung, hasil dikembalikan dalam bentuk list dictionary.
+      - Program mencetak tabel berisi: PID, Arrival, Burst, Start, Finish, Waiting, Turnaround.
   
 - Perbandingan hasil simulasi dengan perhitungan manual.
    **Jawaban:**
