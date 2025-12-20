@@ -69,6 +69,8 @@ Topik: Simulasi Algoritma Penjadwalan CPU
 ## Kode 
 
 - Model FSCS
+
+  ![Code](code/Week_9_FCFS_code.png)
   
 ```bash
 print('FSCS proses Model Week-9')
