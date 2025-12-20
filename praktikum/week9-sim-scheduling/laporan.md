@@ -70,10 +70,10 @@ Topik: Simulasi Algoritma Penjadwalan CPU
 
 - Model FSCS
 
-  ![Code](code/Week_9_FCFS_code.png)
+  ![Code FCFS](code/Week_9_FCFS_code.txt)
   
 ```bash
-print('FSCS proses Model Week-9')
+print('FCFS proses Model Week-9')
 
 def fcfs(proses):
     proses.sort(key=lambda x: x['arrival'])
@@ -108,7 +108,7 @@ for p in result:
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/Week_9_FCFS.png)
+![Screenshot hasil](screenshots/week_9-fcfs.png)
 
 ---
 
