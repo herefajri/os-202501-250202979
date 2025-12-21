@@ -21,8 +21,11 @@ Topik: Manajemen Memori – Page Replacement (FIFO & LRU)
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
-
+- Memori virtual memungkinkan program berjalan seolah-olah memiliki ruang alamat besar. Ketika halaman (page) yang dibutuhkan tidak ada di memori fisik, terjadi page fault sehingga sistem harus memuat halaman dari disk.
+- Karena jumlah frame terbatas, sistem operasi harus memilih halaman mana yang diganti saat page fault. Tujuan utama algoritma page replacement adalah meminimalkan jumlah page fault untuk meningkatkan efisiensi sistem.
+- Algoritma FIFO (First-In First-Out), halaman yang paling lama berada di memori diganti terlebih dahulu, mudah diimplementasikan dengan struktur queue, namun dapat menimbulkan Belady’s Anomaly (jumlah page fault bisa meningkat meski frame ditambah), sederhana, tetapi tidak selalu efisien.
+- Algoritma LRU (Least Recently Used), halaman yang paling jarang digunakan (paling lama tidak diakses) diganti, lebih mendekati algoritma optimal karena mempertimbangkan riwayat akses namun mmbutuhkan pencatatan waktu atau urutan akses sehingga overhead lebih tinggi dibanding FIFO, lebih kompleks, namun biasanya menghasilkan jumlah page fault lebih sedikit dan performa lebih baik.
+  
 ---
 
 ## Langkah Praktikum
