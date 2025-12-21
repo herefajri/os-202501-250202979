@@ -69,11 +69,10 @@ Topik: Manajemen Memori – Page Replacement (FIFO & LRU)
    - Analisis algoritma mana yang lebih efisien dan alasannya.
 
 6. **Commit & Push**
-
+  commit
    ```bash
-   git add .
-   git commit -m "Minggu 10 - Page Replacement FIFO & LRU"
-   git push origin main
+   Minggu 10 - Page Replacement FIFO & LRU
+   ```
 ---
 
 ## Kode / Perintah
