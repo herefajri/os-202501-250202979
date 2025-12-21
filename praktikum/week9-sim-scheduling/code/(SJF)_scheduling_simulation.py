@@ -1,0 +1,39 @@
+def sjf_non_preemptive(proses):
+    proses.sort(key=lambda x: x['arrival'])
+    
+    time = 0
+    selesai = []
+    ready_queue = []
+    
+    while proses or ready_queue:
+        while proses and proses[0]['arrival'] <= time:
+            ready_queue.append(proses.pop(0))
+        
+        if ready_queue:
+            ready_queue.sort(key=lambda x: x['burst'])
+            p = ready_queue.pop(0)
+            
+            p['start'] = max(time, p['arrival'])
+            p['finish'] = p['start'] + p['burst']
+            p['turnaround'] = p['finish'] - p['arrival']
+            p['waiting'] = p['turnaround'] - p['burst']
+            
+            time = p['finish']
+            selesai.append(p)
+        else:
+            time = proses[0]['arrival']
+    
+    return selesai
+
+
+proses = [
+    {'pid': 'P1', 'arrival': 0, 'burst': 6},
+    {'pid': 'P2', 'arrival': 1, 'burst': 8},
+    {'pid': 'P3', 'arrival': 2, 'burst': 7},
+    {'pid': 'P4', 'arrival': 3, 'burst': 3},
+]
+
+result = sjf_non_preemptive(proses)
+print('PID | Arrival | Burst | Start | Finish | Waiting | Turnaround')
+for p in result:
+    print(f"{p['pid']:3} | {p['arrival']:7} | {p['burst']:5} | {p['start']:5} | {p['finish']:10} | {p['waiting']:7} | {p['turnaround']:10}")
