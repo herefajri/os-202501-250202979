@@ -157,53 +157,99 @@ lru_page_replacement(reference_string, frame_count)
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+![Screenshot hasil](screenshots/hasil_simulasi(FIFO).png)
+![Screenshot hasil](screenshots/hasil_simulasi(LRU).png)
 
 ---
 
-## Analisis
-1. Buat program simulasi page replacement FIFO dan LRU.
-2. Jalankan simulasi dengan dataset uji.
-3. Sajikan hasil simulasi dalam tabel atau grafik.
-4. Tulis laporan praktikum pada `laporan.md`.
+## Tugas & Analisis
 
-- Simulasikan penggantian halaman menggunakan algoritma FIFO.
-   - Catat setiap *page hit* dan *page fault*.
-   - Hitung total *page fault*.
+**- Hasil simulasi dalam tabel atau grafik.**
+  
+  *Reference String: [7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2]*
+  *Jumlah Frame: 3*
+  
+  FIFO (First-In First-Out)
+  | Step | Page | Frame State | Hit/Fault
+  |---|---|---|---|
+  |   1 |    7 | [7] | Fault |
+  |   2 |    0 | [7, 0] | Fault |
+  |   3 |    1 | [7, 0, 1] | Fault  |
+  |   4 |    2 | [2, 0, 1] | Fault   |   
+  |   5 |    0 | [2, 0, 1] | Hit     |   
+  |   6 |    3 | [2, 3, 1] | Fault   |   
+  |   7 |    0 | [2, 3, 0] | Fault   |   
+  |   8 |    4 | [4, 3, 0] | Fault |
+  |   9 |    2 | [4, 2, 0] | Fault |
+  |  10 |    3 | [4, 2, 3] | Fault |
+  |  11 |    0 | [0, 2, 3] | Fault |
+  |  12 |    3 | [0, 2, 3] | Hit |
+  |  13 |    2 | [0, 2, 3] | Hit |
 
-- Jalankan program untuk FIFO dan LRU.
-   - Pastikan hasil simulasi logis dan konsisten.
-   - Simpan screenshot hasil eksekusi.
+  - Total Hits: 3
+  - Total Page Faults: 10
 
-uat tabel perbandingan seperti berikut:
+  LRU (Least Recently Used)
+  | Step | Page | Frame State | Hit/Fault |
+  |---|---|---|---|
+  | 1 |    7 | [7] | Fault |
+  | 2 |    0 | [7, 0] | Fault |
+  | 3 |    1 | [7, 0, 1] | Fault |
+  | 4 |    2 | [2, 0, 1] | Fault |
+  | 5 |    0 | [2, 0, 1] | Hit |
+  | 6 |    3 | [2, 0, 3] | Fault |
+  | 7 |    0 | [2, 0, 3] | Hit |
+  | 8 |    4 | [4, 0, 3] | Fault |
+  | 9 |    2 | [4, 0, 2] | Fault |
+  | 10 |    3 | [4, 3, 2] | Fault |
+ | 11 |    0 | [0, 3, 2] | Fault |
+ | 12 |    3 | [0, 3, 2] | Hit |
+ | 13 |    2 | [0, 3, 2] | Hit |
+
+  - Total Hits: 4
+  - Total Page Faults: 9
+  
+**- Tabel perbandingan :**
 
    | Algoritma | Jumlah Page Fault | Keterangan |
    |:--|:--:|:--|
-   | FIFO | ... | ... |
-   | LRU | ... | ... |
+   | FIFO | 10 | 3 |
+   | LRU | 9 | 4 |
 
-
-   - Jelaskan mengapa jumlah *page fault* bisa berbeda.
-   - Analisis algoritma mana yang lebih efisien dan alasannya.
-
+**- Mengapa jumlah *page fault* bisa berbeda?**
+  Dikarenakan adanya perbedaan mekanisme:
+  - FIFO (First-In, First-Out), Halaman yang paling lama “masuk” ke memori dikeluarkan, tanpa melihat apakah halaman masih sering digunakan atau tidak. Akibatnya, halaman yang masih dibutuhkan bisa saja diganti, sehingga menambah jumlah page fault.
+  - LRU (Least Recently Used), menggantikan halaman yang paling jarang digunakan dalam periode terakhir, lebih selaras dengan kebiasaan akses nyata, halaman yang baru dipakai biasanya dipertahankan dan bisa dikatakan bahwa LRU ebih “adaptif” terhadap pola akses, dan biasanya menghasilkan lebih sedikit page fault dibanding FIFO.
+  - Faktor-faktor yang dapat membuat page fault dapat berbeda:
+    - Urutan akses halaman, kalau program sering mengulang halaman yang baru dipakai, algoritma LRU lebih efisien dan kalau urutan akses mendorong halaman lama keluar, FIFO bisa salah buang halaman yang masih dibutuhkan.
+    - Jumlah frame (slot memori), semakin banyak slot, semakin sedikit page fault karena lebih banyak halaman bisa disimpan, namun pada FIFO bisa terjadi Belady’s Anomaly: slot bertambah, page fault malah ikut bertambah.
+    - Aturan algoritma, dimana FIFO membuang halaman yang paling lama masuk, tanpa peduli apakah masih dipakai sedangkan LRU membuang halaman yang paling lama tidak dipakai, lebih sesuai dengan pola penggunaan nyata.
+      
+**- Analisis algoritma mana yang lebih efisien dan alasannya?**
+  Algoritma LRU lebih efisien dibanding FIFO, karena lebih hemat biaya akses memori, mengalami anomali, menghasilkan lebih sedikit page fault pada data yang sama, dan lebih cocok digunakan pada sistem nyata dibanding FIFO.
+  
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
-
+- Algoritma LRU lebih efisien dibanding FIFO karena menghasilkan jumlah page fault lebih sedikit dan jumlah hit lebih banyak pada data yang sama.
+- Perbedaan jumlah page fault terjadi karena aturan penggantian halaman berbeda, FIFO mengganti halaman yang paling lama masuk, sedangkan LRU mengganti halaman yang paling lama tidak dipakai.
+- Pemilihan algoritma berpengaruh langsung pada performa sistem operasi, sehingga memahami pola akses halaman dan memilih algoritma yang sesuai sangat penting untuk mengurangi page fault dan meningkatkan efisiensi memori.
+  
 ---
 
 ## Quiz
 1. Apa perbedaan utama FIFO dan LRU?
    **Jawaban:**
-
+  - FIFO (First-In, First-Out), menggunakan aturan yang berfokus pada halaman yang paling lama masuk ke memori, halaman itu akan diganti terlebih dahulu dengan tanpa memerdulikan status halaman itu , apakah masih sering dipakai atau tidak, sehingga bisa saja membuang halaman yang masih dibutuhkan.
+  - LRU (Least Recently Used), menggunakan aturan yang berfokus pada halaman yang paling lama tidak dipakai, halaman yang tidak dipakai tersebut itu akan diganti sehingga ebih adaptif terhadap pola akses nyata, karena halaman yang baru dipakai biasanya akan dipakai lagi.
    
 2. Mengapa FIFO dapat menghasilkan *Belady’s Anomaly*?
   **Jawaban:**
-
+  Pada FIFO, halaman yang paling lama masuk akan diganti, tanpa peduli apakah halaman itu masih sering dipakai. Akibatnya dapat terjadi situasi anomali/tak wajar di mana menambah frame (slot memori) malah membuat halaman penting dibuang lebih cepat dan juga page fault bertambah.
      
 3. Mengapa LRU umumnya menghasilkan performa lebih baik dibanding FIFO?
-   **Jawaban:**  
+   **Jawaban:**
+   karena dianggap lebih selaras dengan kebiasaan akses nyata, halaman yang baru dipakai biasanya dipertahankan dan bisa dikatakan bahwa LRU lebih “adaptif” terhadap pola akses, dan biasanya menghasilkan lebih sedikit page fault dibandingkan FIFO.
 
 ---
 
