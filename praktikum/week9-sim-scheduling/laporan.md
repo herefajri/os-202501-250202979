@@ -67,94 +67,59 @@ Topik: Simulasi Algoritma Penjadwalan CPU
 ---
 
 ## Kode 
-
-- Model FSCS
-
-  [Code FCFS](code/(FCFS)_scheduling_simulation.py.txt.txt)
-  [Code SJF](code/(SJF)_scheduling_simulation.py.txt.txt)
-  
 ```bash
-def fcfs(proses):
-    proses.sort(key=lambda x: x['arrival'])
+import os
+import csv
 
+filename = os.path.join(os.path.dirname(__file__), "dataset.csv")
+
+if not os.path.exists(filename):
+    print(f"File '{filename}' tidak ditemukan.")
+    exit()
+
+def read_csv(filename):
+    processes = []
+    with open(filename, newline='') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            processes.append({
+                'pid': row['PID'],
+                'arrival': int(row['Arrival']),
+                'burst': int(row['Burst'])
+            })
+    return processes
+
+def fcfs(processes):
+    processes.sort(key=lambda x: x['arrival'])
     time = 0
-    for p in proses:
+    for p in processes:
         p['start'] = max(time, p['arrival'])
         p['finish'] = p['start'] + p['burst']
+        p['waiting'] = p['start'] - p['arrival']
         p['turnaround'] = p['finish'] - p['arrival']
-        p['waiting'] = p['turnaround'] - p['burst']
+        time = p['finish']
+    return processes
 
-        time = p["finish"]
-
-    return proses
-
-
-proses = [
-    {'pid': 'P1', 'arrival': 0, 'burst': 6},
-    {'pid': 'P2', 'arrival': 1, 'burst': 8},
-    {'pid': 'P3', 'arrival': 2, 'burst': 7},
-    {'pid': 'P4', 'arrival': 3, 'burst': 3},
-]
-
-result = fcfs(proses)
-print('PID | Arrival | Burst | Start | Finish | Waiting | Turnaround')
-for p in result:
-    print(f'{p['pid']:3} | {p['arrival']:7} | {p['burst']:5} | {p['start']:5} | {p['finish']:10} | {p['waiting']:7} | {p['turnaround']:10}')
-
-```
-
-- Model SJF
-
-```bash
-def sjf_non_preemptive(proses):
-    proses.sort(key=lambda x: x['arrival'])
-    
-    time = 0
-    selesai = []
-    ready_queue = []
-    
-    while proses or ready_queue:
-        while proses and proses[0]['arrival'] <= time:
-            ready_queue.append(proses.pop(0))
+def print_result(processes):
+    print("PID\tArrival\tBurst\tStart\tFinish\tWaiting\tTurnaround")
+    for p in processes:
+        print(f"{p['pid']}\t{p['arrival']}\t{p['burst']}\t{p['start']}\t{p['finish']}\t{p['waiting']}\t{p['turnaround']}") 
+              
         
-        if ready_queue:
-            ready_queue.sort(key=lambda x: x['burst'])
-            p = ready_queue.pop(0)
-            
-            p['start'] = max(time, p['arrival'])
-            p['finish'] = p['start'] + p['burst']
-            p['turnaround'] = p['finish'] - p['arrival']
-            p['waiting'] = p['turnaround'] - p['burst']
-            
-            time = p['finish']
-            selesai.append(p)
-        else:
-            time = proses[0]['arrival']
-    
-    return selesai
-
-
-proses = [
-    {'pid': 'P1', 'arrival': 0, 'burst': 6},
-    {'pid': 'P2', 'arrival': 1, 'burst': 8},
-    {'pid': 'P3', 'arrival': 2, 'burst': 7},
-    {'pid': 'P4', 'arrival': 3, 'burst': 3},
-]
-
-result = sjf_non_preemptive(proses)
-print('PID | Arrival | Burst | Start | Finish | Waiting | Turnaround')
-for p in result:
-    print(f"{p['pid']:3} | {p['arrival']:7} | {p['burst']:5} | {p['start']:5} | {p['finish']:10} | {p['waiting']:7} | {p['turnaround']:10}")
-
+if __name__ == "__main__": 
+    processes = read_csv(filename) 
+    result = fcfs(processes) 
+    print_result(result)
 
 ```
+
 
 ---
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/hasil_simulasi(FCFS).png)
-![Screenshot hasil](screenshots/hasil_simulasi(SJF).png)
+![Screenshot hasil](screenshots/hasil_simulasi.png)
+
 ---
 
 ## Tugas & Analisis
@@ -166,14 +131,6 @@ FCFS Model Program Python
   | P2  |       1 |     8 |     6 |         14 |       5 |         13 |
   | P3  |       2 |     7 |    14 |         21 |      12 |         19 |
   | P4  |       3 |     3 |    21 |         24 |      18 |         21 |
-
-SJF non-preemptive Model Program Python
-   | PID | Arrival | Burst | Start | Finish | Waiting | Turnaround |
-   |---|---|---|---|---|---|---|
-   | P1  |       0 |     6 |     0 |          6 |       0 |          6 |
-   | P4  |       3 |     3 |     6 |          9 |       3 |          6 |
-   | P3  |       2 |     7 |     9 |         16 |       7 |         14 |
-   | P2  |       1 |     8 |    16 |         24 |      15 |         23 |
 
 ----- 
 
@@ -193,22 +150,7 @@ SJF non-preemptive Model Program Python
    - Setelah semua proses dihitung, hasil dikembalikan dalam bentuk list dictionary.
    - Program mencetak tabel berisi: PID, Arrival, Burst, Start, Finish, Waiting, Turnaround.
 
-**SJF non-preemptive:**
-   - Fungsi sjf_non_preemptive(proses) menerima daftar proses berupa dictionary (pid, arrival, burst).
-   - Proses diurutkan terlebih dahulu berdasarkan waktu kedatangan (arrival) menggunakan sort(key=lambda x: x['arrival']).
-   - Variabel time digunakan untuk melacak waktu CPU saat ini, ready_queue untuk menampung proses yang sudah datang, dan selesai untuk menyimpan proses yang sudah dieksekusi.
-   - Selama masih ada proses yang belum selesai, program akan:
-      - Memasukkan proses yang sudah datang ke ready_queue.
-      - Jika ready_queue tidak kosong, proses diurutkan berdasarkan burst dan dipilih proses dengan burst terkecil.
-   - Untuk setiap proses p:
-      - start: waktu mulai eksekusi, yaitu maksimum antara time (waktu CPU terakhir) dan arrival (waktu kedatangan proses).
-      - finish: waktu selesai eksekusi, dihitung dari start + burst.
-      - turnaround: total waktu proses berada dalam sistem, yaitu finish - arrival.
-      - waiting: waktu tunggu proses di antrian, yaitu turnaround - burst.
-   - Setelah proses selesai, time diperbarui ke finish.
-   - Setelah semua proses dihitung, hasil dikembalikan dalam bentuk list dictionary.
-   - Program mencetak tabel berisi: PID, Arrival, Burst, Start, Finish, Waiting, Turnaround.
-  
+
 **2. Perbandingan hasil simulasi dengan perhitungan manual.**
    **Jawaban:**
   
@@ -223,20 +165,6 @@ SJF non-preemptive Model Program Python
    FCFS Model Manual Week-5
   
   <img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/56a4ede5-9142-461c-9150-73cc57f39840" />
-
-   Hasilnya **[Sama]**
-
-  SJF Model Program
-   | PID | Arrival | Burst | Start | Finish | Waiting | Turnaround |
-   |---|---|---|---|---|---|---|
-   | P1  |       0 |     6 |     0 |          6 |       0 |          6 |
-   | P4  |       3 |     3 |     6 |          9 |       3 |          6 |
-   | P3  |       2 |     7 |     9 |         16 |       7 |         14 |
-   | P2  |       1 |     8 |    16 |         24 |      15 |         23 |
-
-  SJF Model Manual Week-5
-
-  <img width="593" height="145" alt="image" src="https://github.com/user-attachments/assets/e5897cf9-d0b0-48f8-8c10-a9463e06a4a0" />
 
    Hasilnya **[Sama]**
 
