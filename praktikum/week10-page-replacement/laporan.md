@@ -71,86 +71,137 @@ Topik: Manajemen Memori – Page Replacement (FIFO & LRU)
 6. **Commit & Push**
   commit
    ```bash
-   Minggu 10 - Page Replacement FIFO & LRU
+   git add .
+   git commit -m "Minggu 10 - Page Replacement FIFO & LRU"
+   git push origin main
    ```
 ---
 
 ## Kode / Perintah
 FIFO (First-In First-Out)
 ```bash
-def fifo_page_replacement(reference_string, frame_count):
+import os
+
+def load_reference_string(filename):
+    base_path = os.path.dirname(__file__)
+    full_path = os.path.join(base_path, filename)
+    
+    try:
+        with open(full_path, "r") as f:
+            content = f.read().strip()
+            content = content.replace(',', ' ')
+            return list(map(int, content.split()))
+    except FileNotFoundError:
+        print(f"Error: File '{filename}' tidak ditemukan di {base_path}")
+        return []
+
+def fifo_page_replacement(pages, frame_count):
     frames = []
     page_faults = 0
-    hits = 0
-    pointer = 0  
+    page_hits = 0
+    pointer = 0
+    total_requests = len(pages)
 
-    print("Reference String:", reference_string)
-    print("Jumlah Frame:", frame_count)
-    print("\nStep | Page | Frame State | Hit/Fault")
+    print(f"=== SIMULASI FIFO PAGE REPLACEMENT ===")
+    print(f"Reference String : {pages}")
+    print(f"Jumlah Frame     : {frame_count}\n")
+    print(f"{'Step':<5} | {'Akses':<6} | {'Status':<7} | {'Frames'}")
+    print("-" * 40)
 
-    for step, page in enumerate(reference_string, start=1):
-        if page in frames:
-            hits += 1
-            status = "Hit"
-        else:
+    for i, page in enumerate(pages):
+        status = ""
+        if page not in frames:
             page_faults += 1
+            status = "FAULT"
             if len(frames) < frame_count:
                 frames.append(page)
             else:
                 frames[pointer] = page
                 pointer = (pointer + 1) % frame_count
-            status = "Fault"
+        else:
+            page_hits += 1
+            status = "HIT"
 
-        print(f"{step:>4} | {page:>4} | {frames} | {status}")
+        frame_display = str(frames)
+        print(f"{i+1:<5} | {page:<6} | {status:<7} | {frame_display}")
 
-    print("\nTotal Hits:", hits)
-    print("Total Page Faults:", page_faults)
+    hit_rate = (page_hits / total_requests) * 100
+    fault_rate = (page_faults / total_requests) * 100
 
+    print("-" * 40)
+    print(f"HASIL AKHIR:")
+    print(f"Total Akses      : {total_requests}")
+    print(f"Total Page Hits  : {page_hits}")
+    print(f"Total Page Faults: {page_faults}")
+    print("-" * 40)
 
-reference_string = [7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2]
-frame_count = 3
-
-fifo_page_replacement(reference_string, frame_count)
+if __name__ == "__main__":
+    data = load_reference_string("reference_string.txt")
+    
+    if data:
+        fifo_page_replacement(data, frame_count=3)
 ```
 
 LRU (Least Recently Used)
 ```bash
-ef lru_page_replacement(reference_string, frame_count):
+import os
+
+def load_reference_string(filename):
+    base_path = os.path.dirname(__file__)
+    full_path = os.path.join(base_path, filename)
+    
+    try:
+        with open(full_path, "r") as f:
+            content = f.read().strip()
+            content = content.replace(',', ' ')
+            return list(map(int, content.split()))
+    except FileNotFoundError:
+        print(f"Error: File '{filename}' tidak ditemukan.")
+        return []
+
+def lru_page_replacement(pages, frame_count):
     frames = []
     page_faults = 0
-    hits = 0
-    usage_order = {}  
+    page_hits = 0
+    total_requests = len(pages)
 
-    print("Reference String:", reference_string)
-    print("Jumlah Frame:", frame_count)
-    print("\nStep | Page | Frame State | Hit/Fault")
+    print(f"=== SIMULASI LRU PAGE REPLACEMENT ===")
+    print(f"Reference String : {pages}")
+    print(f"Jumlah Frame     : {frame_count}\n")
+    print(f"{'Step':<5} | {'Akses':<6} | {'Status':<7} | {'Frames (Urutan LRU)'}")
+    print("-" * 55)
 
-    for step, page in enumerate(reference_string, start=1):
-        if page in frames:
-            hits += 1
-            status = "Hit"
-        else:
+    for i, page in enumerate(pages):
+        status = ""
+        if page not in frames:
             page_faults += 1
+            status = "FAULT"
             if len(frames) < frame_count:
                 frames.append(page)
             else:
-                lru_page = min(usage_order, key=usage_order.get)
-                frames[frames.index(lru_page)] = page
-                del usage_order[lru_page]
-            status = "Fault"
+                frames.pop(0)
+                frames.append(page)
+        else:
+            page_hits += 1
+            status = "HIT"
+            frames.remove(page)
+            frames.append(page)
 
-        usage_order[page] = step
+        print(f"{i+1:<5} | {page:<6} | {status:<7} | {str(frames)}")
 
-        print(f"{step:>4} | {page:>4} | {frames} | {status}")
+    hit_rate = (page_hits / total_requests) * 100
+    fault_rate = (page_faults / total_requests) * 100
 
-    print("\nTotal Hits:", hits)
-    print("Total Page Faults:", page_faults)
+    print("-" * 55)
+    print(f"HASIL AKHIR (LRU):")
+    print(f"Total Page Hits  : {page_hits}")
+    print(f"Total Page Faults: {page_faults}")
+    print("-" * 55)
 
-reference_string = [7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2]
-frame_count = 3
-
-lru_page_replacement(reference_string, frame_count)
-
+if __name__ == "__main__":
+    data = load_reference_string("reference_string.txt")
+    if data:
+        lru_page_replacement(data, frame_count=3)
 ```
 
 ---
@@ -170,45 +221,52 @@ Sertakan screenshot hasil percobaan atau diagram:
   *Jumlah Frame: 3*
   
   FIFO (First-In First-Out)
-  | Step | Page | Frame State | Hit/Fault
-  |---|---|---|---|
-  |   1 |    7 | [7] | Fault |
-  |   2 |    0 | [7, 0] | Fault |
-  |   3 |    1 | [7, 0, 1] | Fault  |
-  |   4 |    2 | [2, 0, 1] | Fault   |   
-  |   5 |    0 | [2, 0, 1] | Hit     |   
-  |   6 |    3 | [2, 3, 1] | Fault   |   
-  |   7 |    0 | [2, 3, 0] | Fault   |   
-  |   8 |    4 | [4, 3, 0] | Fault |
-  |   9 |    2 | [4, 2, 0] | Fault |
-  |  10 |    3 | [4, 2, 3] | Fault |
-  |  11 |    0 | [0, 2, 3] | Fault |
-  |  12 |    3 | [0, 2, 3] | Hit |
-  |  13 |    2 | [0, 2, 3] | Hit |
+  
+    | Step  | Akses  | Status  | Frames |
+    |---|---|---|---|
+    | 1     | 7      | FAULT   | [7]
+    | 2     | 0      | FAULT   | [7, 0]
+    | 3     | 1      | FAULT   | [7, 0, 1]
+    | 4     | 2      | FAULT   | [2, 0, 1]
+    | 5     | 0      | HIT     | [2, 0, 1]
+    | 6     | 3      | FAULT   | [2, 3, 1]
+    | 7     | 0      | FAULT   | [2, 3, 0]
+    | 8     | 4      | FAULT   | [4, 3, 0]
+    | 9     | 2      | FAULT   | [4, 2, 0]
+    | 10    | 3      | FAULT   | [4, 2, 3]
+    | 11    | 0      | FAULT   | [0, 2, 3]
+    | 12    | 3      | HIT     | [0, 2, 3]
+    | 13    | 2      | HIT     | [0, 2, 3]
 
-  - Total Hits: 3
-  - Total Page Faults: 10
+----------------------------------------
+HASIL AKHIR:
+Total Akses      : 13
+Total Page Hits  : 3
+Total Page Faults: 10
 
   LRU (Least Recently Used)
-  | Step | Page | Frame State | Hit/Fault |
-  |---|---|---|---|
-  | 1 |    7 | [7] | Fault |
-  | 2 |    0 | [7, 0] | Fault |
-  | 3 |    1 | [7, 0, 1] | Fault |
-  | 4 |    2 | [2, 0, 1] | Fault |
-  | 5 |    0 | [2, 0, 1] | Hit |
-  | 6 |    3 | [2, 0, 3] | Fault |
-  | 7 |    0 | [2, 0, 3] | Hit |
-  | 8 |    4 | [4, 0, 3] | Fault |
-  | 9 |    2 | [4, 0, 2] | Fault |
-  | 10 |    3 | [4, 3, 2] | Fault |
- | 11 |    0 | [0, 3, 2] | Fault |
- | 12 |    3 | [0, 3, 2] | Hit |
- | 13 |    2 | [0, 3, 2] | Hit |
 
-  - Total Hits: 4
-  - Total Page Faults: 9
-  
+    | Step  | Akses  | Status  | Frames (Urutan LRU) |
+    |---|---|---|---|
+    | 1     | 7      | FAULT   | [7] |
+    | 2     | 0      | FAULT   | [7, 0] |
+    | 3     | 1      | FAULT   | [7, 0, 1] |
+    | 4     | 2      | FAULT   | [0, 1, 2] |
+    | 5     | 0      | HIT     | [1, 2, 0] |
+    | 6     | 3      | FAULT   | [2, 0, 3] |
+    | 7     | 0      | HIT     | [2, 3, 0] |
+    | 8     | 4      | FAULT   | [3, 0, 4] |
+    | 9     | 2      | FAULT   | [0, 4, 2] |
+    | 10    | 3      | FAULT   | [4, 2, 3] |
+    | 11    | 0      | FAULT   | [2, 3, 0] |
+    | 12    | 3      | HIT     | [2, 0, 3] |
+    | 13    | 2      | HIT     | [0, 3, 2] |
+
+-------------------------------------------------------
+HASIL AKHIR (LRU):
+Total Page Hits  : 4
+Total Page Faults: 9
+
 **- Tabel perbandingan :**
 
    | Algoritma | Jumlah Page Fault | Keterangan |
