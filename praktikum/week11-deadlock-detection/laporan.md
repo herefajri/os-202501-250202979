@@ -187,7 +187,8 @@ Vector Available : 4 3 1
 | P2              | Selesai (Aman) |
 | P3              | Selesai (Aman) |
 | P4              | Selesai (Aman) |
-=============================================
+
+
 KESIMPULAN: Sistem AMAN (Tidak ada deadlock).
 
 **#Penjelasan versi Trace Log** (bagian ini tidak ada dalam penugasan, hanya diperuntukkan agar pembaca dapat memahami cara kerja program deteksi deadlock dengan lebih mudah)
@@ -226,13 +227,16 @@ Berdasarkan hasil simulasi, fenomena deadlock atau kondisi aman dalam sistem ini
 Vector Available : 0 0 0
 
 | Proses          | Status Akhir |
+|---|---|
 | P0              | DEADLOCK |
 | P1              | DEADLOCK |
 | P2              | DEADLOCK |
 | P3              | DEADLOCK |
 | P4              | DEADLOCK |
-=============================================
+
+
 KESIMPULAN: Sistem dalam kondisi DEADLOCK.
+
 **Penjelasan :**
 - Sistem melakukan pengujian dengan memberikan input Available sebesar 0 0 0. Hasilnya, sistem langsung terdeteksi berada dalam kondisi DEADLOCK dengan narasi sebagai berikut:
    - Kegagalan Inisialisasi: Sistem memulai pemindaian dari P0 hingga P4, namun tidak menemukan satu pun proses yang dapat dieksekusi. Hal ini dikarenakan setiap proses (P0-P4) memiliki Request minimal satu unit pada salah satu jenis sumber daya, sedangkan di gudang (Available) tidak ada sumber daya yang tersisa sama sekali (0 0 0).
