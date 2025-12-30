@@ -1,6 +1,7 @@
 
 # Laporan Praktikum Minggu 12
 Topik: Virtualisasi Menggunakan Virtual Machine 
+
 ---
 
 ## Identitas
@@ -68,9 +69,21 @@ Topik: Virtualisasi Menggunakan Virtual Machine
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/instalasi_vm.png)
-![Screenshot hasil](screenshots/konfigurasi_resourc_ram1_cpu2.png)
-![Screenshot hasil](screenshots/konfigurasi_resourc_ram2_cpu4.png)
+
+Gambar Konfigurasi Resource (RAM 1, CPU 2):
+
+![Screenshot hasil](screenshots/konfigurasi_resource_ram1_cpu2.png)
+
+Gambar Konfigurasi Resource (RAM 2, CPU 4):
+
+![Screenshot hasil](screenshots/konfigurasi_resource_ram2_cpu4.png)
+
+Gambar OS Guest Running (RAM 1, CPU 2):
+
 ![Screenshot hasil](screenshots/os_guest_running_ram1_cpu2.png)
+
+Gambar OS Guest Running (RAM 2, CPU 4)
+
 ![Screenshot hasil](screenshots/os_guest_running_ram2_cpu4.png)
 
 ---
