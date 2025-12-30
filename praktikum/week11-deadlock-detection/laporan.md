@@ -226,6 +226,7 @@ Berdasarkan hasil simulasi, fenomena deadlock atau kondisi aman dalam sistem ini
 
 Vector Available : 0 0 0
 
+
 | Proses          | Status Akhir |
 |---|---|
 | P0              | DEADLOCK |
