@@ -1,5 +1,7 @@
 Nama VM: Tugas_Lubuntu
 Sistem Operasi: Lubuntu 24.04 LTS (64-bit)
-Resource Awal: RAM 1024 MB, CPU 2 Core
-Resource Eksperimen: RAM 2048 MB, CPU 4 Core
+Resource 1: RAM 2048 MB, CPU 1 Core
+Resource 2: RAM 2048 MB, CPU 2 Core
+Resource 1: RAM 4096 MB, CPU 1 Core
+Resource 2: RAM 4096 MB, CPU 2 Core
 Storage: 25 GB VDI (Dynamically Allocated)

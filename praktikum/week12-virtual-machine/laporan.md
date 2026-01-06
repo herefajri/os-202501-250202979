@@ -70,46 +70,111 @@ Topik: Virtualisasi Menggunakan Virtual Machine
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/instalasi_vm.png)
 
-Gambar Konfigurasi Resource (RAM 1, CPU 2):
+Gambar Konfigurasi Resource (RAM 2, CPU 1):
 
-![Screenshot hasil](screenshots/konfigurasi_resource_ram1_cpu2.png)
+![Screenshot hasil](screenshots/konfigurasi_resource_(ram_2_cpu_1).png)
 
-Gambar Konfigurasi Resource (RAM 2, CPU 4):
 
-![Screenshot hasil](screenshots/konfigurasi_resource_ram2_cpu4.png)
+Gambar Konfigurasi Resource (RAM 2, CPU 2):
 
-Gambar OS Guest Running (RAM 1, CPU 2):
+![Screenshot hasil](screenshots/konfigurasi_resource_(ram_2_cpu_2).png)
 
-![Screenshot hasil](screenshots/os_guest_running_ram1_cpu2.png)
+Gambar Konfigurasi Resource (RAM 4, CPU 1):
 
-Gambar OS Guest Running (RAM 2, CPU 4)
+![Screenshot hasil](screenshots/konfigurasi_resource_(ram_4_cpu_1).png)
 
-![Screenshot hasil](screenshots/os_guest_running_ram2_cpu4.png)
+Gambar Konfigurasi Resource (RAM 4, CPU 2):
+
+![Screenshot hasil](screenshots/konfigurasi_resource_(ram_4_cpu_2).png)
+
+Gambar OS Guest Running (RAM 2, CPU 1):
+
+![Screenshot hasil](screenshots/os_guest_running_(ram_2_cpu_1).png)
+
+Gambar OS Guest Running (RAM 2, CPU 1) versi hitung ulang:
+
+![Screenshot hasil](screenshots/os_guest_running_(ram_2_cpu_1_repeat).png)
+
+Gambar OS Guest Running (RAM 2, CPU 2):
+
+![Screenshot hasil](screenshots/os_guest_running_(ram_2_cpu_2).png)
+
+Gambar OS Guest Running (RAM 4, CPU 1):
+
+![Screenshot hasil](screenshots/os_guest_running_(ram_4_cpu_1).png)
+
+
+Gambar OS Guest Running (RAM 4, CPU 2)
+
+![Screenshot hasil](screenshots/os_guest_running_(ram_4_cpu_2).png)
+
+## Hasil Observasi Berdasarkan Skenario Resource
+Pengujian dilakukan dengan menggunakan aplikasi browser Mozilla Firefox sebagai standar beban kerja. Berikut adalah analisis untuk setiap konfigurasi:
+
+A. Skenario RAM 2 GB & CPU 1 Core
+- Performa: Membutuhkan waktu sekitar 16 detik untuk membuka browser pada percobaan awal, dan 6 detik pada percobaan ulang.
+- Kondisi Sistem: Menunjukkan utilisasi CPU yang sangat tinggi hingga menyentuh angka 100%.
+- Kesimpulan: Meskipun browser bisa terbuka cepat pada pengujian ulang, pengalaman pengguna terasa "kaku" dan tidak responsif (lag) karena satu-satunya inti prosesor dipaksa bekerja maksimal untuk menangani sistem dan aplikasi sekaligus.
+
+B. Skenario RAM 2 GB & CPU 2 Core
+Performa: Waktu respon meningkat menjadi 7 detik.
+- Kondisi Sistem: Beban kerja terbagi secara paralel ke dua inti prosesor (masing-masing di kisaran 80-88%).
+- Kesimpulan: Penambahan Core CPU secara signifikan mengurangi kekakuan sistem dibandingkan penggunaan single-core, meskipun kapasitas RAM masih terbatas.
+
+C. Skenario RAM 4 GB & CPU 1 Core
+- Performa: Waktu respon tercatat stabil di angka 6 detik.
+- Kondisi Sistem: CPU bekerja di kisaran 86.5%, tidak lagi menyentuh batas kritis 100%.
+- Kesimpulan: Kapasitas RAM yang lebih besar memberikan ruang bagi sistem untuk melakukan manajemen memori yang lebih baik, mengurangi ketergantungan pada swap disk, sehingga sistem terasa lebih ringan meskipun hanya menggunakan satu inti CPU.
+
+D. Skenario RAM 4 GB & CPU 2 Core
+- Performa: Mencapai waktu respon tercepat, yaitu 5 detik.
+- Kondisi Sistem: Penggunaan CPU dan RAM berada pada level yang sangat ideal dan stabil.
+- Kesimpulan: Ini merupakan konfigurasi paling optimal. Kombinasi RAM yang luas dan distribusi beban multi-core memberikan pengalaman penggunaan yang paling lancar dan responsif.
+
+## Analisis Proteksi dan Keamanan Sistem
+Eksperimen ini sekaligus mendemonstrasikan tiga pilar utama keamanan sistem operasi melalui Virtual Machine:
+- Isolasi (Sandboxing): Seluruh kegagalan sistem (seperti error data korup di awal) terbukti hanya terjadi di dalam lingkungan virtual tanpa mempengaruhi stabilitas Windows sebagai Host.
+- Resource Hardening: Pembatasan alokasi RAM dan CPU berfungsi untuk mengunci sumber daya. Hal ini mencegah Guest OS mengonsumsi seluruh daya komputasi fisik yang dapat menyebabkan Host mengalami freeze.
+- Abstraksi Hardware: VM bertindak sebagai perantara yang mengamankan hardware fisik dari interaksi langsung dengan sistem operasi Guest, meminimalisir risiko eksploitasi pada level firmware.
+
+## Kesimpulan Akhir
+Berdasarkan seluruh rangkaian percobaan, ditemukan bahwa sistem operasi modern seperti Lubuntu tetap membutuhkan keseimbangan antara kapasitas memori dan jumlah inti prosesor. Konfigurasi RAM 4 GB dengan 2 CPU Core direkomendasikan sebagai standar minimum untuk mendapatkan performa yang stabil dan aman dalam lingkungan virtualisasi.
+
 
 ---
 
 ## Analisis 
 - Jelaskan bagaimana VM menyediakan isolasi antara host dan guest.  
    **Jawaban:** 
-   Virtual Machine (VM) menyediakan isolasi melalui lapisan abstraksi yang dikelola oleh Hypervisor (seperti VirtualBox). Isolasi ini bekerja pada beberapa level:
-   - Isolasi Hardware: Hypervisor mengalokasikan sumber daya fisik (CPU, RAM, dan Disk) secara tersegmentasi. Perangkat lunak di dalam Guest OS tidak memiliki akses langsung ke perangkat keras fisik device user; ia hanya berinteraksi dengan "perangkat keras maya" yang disediakan oleh Hypervisor.
-   - Isolasi Memori: Setiap VM berjalan dalam ruang alamat memori yang berbeda. Berdasarkan percobaan, meskipun Guest OS mengalami penurunan performa drastis akibat alokasi RAM yang minim (seperti pada skenario 1 GB), sistem Host tetap stabil karena memori yang digunakan oleh VM telah dikunci dan dipisahkan dari proses utama sistem Host.
+
+   Virtual Machine (VM) menyediakan isolasi melalui lapisan yang disebut Hypervisor (dalam hal ini VirtualBox). Berikut adalah mekanisme isolasinya:
+   - Abstraksi Hardware: Hypervisor menciptakan lapisan hardware virtual (CPU, RAM, Disk) yang terpisah dari hardware fisik. Guest OS (Lubuntu) merasa berjalan di komputer asli, padahal ia hanya mengakses "tiruan" hardware yang dikelola oleh Host (Windows).
+   - Pemisahan Memori: RAM yang Anda alokasikan (misalnya 2 GB atau 4 GB) dikunci oleh Hypervisor hanya untuk digunakan oleh Guest. Guest OS tidak memiliki akses ke alamat memori yang digunakan oleh Host atau aplikasi lain di luar VM tersebut.
+   - Isolasi Kegagalan (Fault Isolation): Jika Guest OS mengalami beban kerja berlebih hingga CPU mencapai 100% atau bahkan mengalami crash (seperti pada percobaan 1 CPU), sistem Host tetap berjalan stabil tanpa terganggu karena kegagalan tersebut terkurung di dalam lingkungan virtual.
+
 
 - Kaitkan dengan konsep *sandboxing* dan *hardening* OS.
    **Jawaban:** 
-   Sandboxing adalah teknik keamanan yang membatasi lingkungan eksekusi sebuah program untuk mencegah kerusakan pada sistem di luar lingkungan tersebut.
-   - Penerapan pada VM: Mesin virtual bertindak sebagai sistem sandbox yang menyeluruh. Segala perubahan data, instalasi aplikasi, hingga potensi serangan malware di dalam Guest OS (Lubuntu) tetap terkurung di dalam file disk virtual (.vdi).
-   - Integritas Data: Melalui sandboxing ini, device user terlindungi karena Guest OS tidak dapat membaca atau menulis data pada penyimpanan fisik Host tanpa izin eksplisit. Hal ini menjaga integritas data sistem utama dari aktivitas apa pun yang terjadi di dalam VM.
-   Hardening adalah proses memperkuat keamanan sistem dengan mengurangi kerentanan melalui pembatasan fungsi dan sumber daya.
-   - Pembatasan Resource sebagai Hardening: Mengonfigurasi batas RAM dan jumlah CPU (seperti perbandingan CPU 2/RAM 1GB vs CPU 4/RAM 2GB) adalah bentuk pengendalian sistem. Dengan membatasi resource, user dapat memastikan bahwa proses yang berjalan di dalam VM tidak akan melakukan serangan Denial of Service (DoS) terhadap Host dengan cara menghabiskan seluruh sumber daya perangkat.
-   - Lingkungan yang Terkendali: Virtualisasi mendukung strategi hardening dengan memungkinkan pengoperasian OS yang hanya berisi layanan-layanan penting (minimal install), sehingga mengurangi "permukaan serangan" (attack surface) pada keseluruhan ekosistem perangkat.
+
+   **Konsep Sandboxing**
+
+   VM bertindak sebagai Sandbox (kotak pasir) yang sempurna. Dalam percobaan Anda, hal ini terlihat dari:
+   - Lingkungan Uji yang Aman: Segala aktivitas yang dilakukan di dalam Lubuntu, seperti membuka browser Mozilla Firefox atau menjalankan perintah terminal, tidak akan memengaruhi integritas file sistem di Windows.
+   - Pembatasan Dampak: Jika terdapat proses berbahaya atau error di dalam Guest OS, dampak negatifnya hanya akan terjadi di dalam "kotak" VM tersebut. Host tetap aman karena tidak ada jalur komunikasi langsung kecuali jika dikonfigurasi secara sengaja (seperti Shared Folder).
+
+   **Konsep Hardening OS**
+   Hardening adalah tindakan untuk memperkuat keamanan sistem dengan meminimalkan permukaan serangan. Penggunaan VM mendukung hal ini melalui:
+   - Pembatasan Sumber Daya (Resource Limit): Dengan menetapkan batas RAM dan CPU, Anda melakukan hardening pada sisi Host. Ini memastikan bahwa Guest OS tidak dapat "memakan" seluruh sumber daya fisik (misalnya mencegah Guest menggunakan 100% RAM fisik), sehingga performa Host tetap terjaga.
+   - Minimalisasi Risiko: Dengan menjalankan aplikasi tertentu (misalnya browser untuk riset) di dalam VM, Anda memperkecil celah keamanan pada OS Host. Jika browser di Guest terkena serangan, OS utama Anda (Host) tidak langsung terpapar karena terproteksi oleh lapisan virtualisasi tersebut.
 
 ---
 
 ## Kesimpulan
-- Pentingnya Alokasi Resource yang Proporsional: Berdasarkan hasil eksperimen, alokasi sumber daya fisik (CPU dan RAM) sangat menentukan performa sistem operasi guest. Perbandingan antara konfigurasi minimal (2 CPU, 1 GB RAM) yang menyebabkan lag dengan konfigurasi maksimal (4 CPU, 2 GB RAM) yang sangat lancar membuktikan bahwa sistem operasi modern seperti Lubuntu membutuhkan ambang batas resource tertentu untuk bekerja secara optimal.
-- Efektivitas Isolasi dan Keamanan Virtualisasi: Praktikum ini membuktikan keberhasilan konsep sandboxing dan isolasi pada Virtual Machine. Penurunan performa atau beban kerja berat di dalam Lubuntu tidak memberikan dampak negatif pada stabilitas sistem Windows (host), yang menunjukkan bahwa pembatasan sumber daya dan pemisahan lingkungan kerja berhasil melindungi sistem utama dari potensi kegagalan di dalam VM.
-- Keberhasilan Instalasi dan Konfigurasi: Proses instalasi Lubuntu 24.04 LTS pada VirtualBox telah berhasil diselesaikan dengan identitas pengguna yang sesuai (muhammadfajriabdullah). Seluruh fitur dasar seperti peramban web dan manajemen file dapat berfungsi dengan baik, menandakan bahwa mesin virtual telah dikonfigurasi dengan benar di atas arsitektur hardware yang mendukung virtualisasi.
+- Efisiensi Resource Berbanding Lurus dengan Responsivitas Sistem Berdasarkan hasil eksperimen, alokasi resource memiliki ambang batas minimum untuk kenyamanan penggunaan. Meskipun sistem dapat berjalan dengan 1 CPU dan RAM 2 GB, kondisi tersebut menyebabkan beban kerja CPU mencapai 100% dan sistem terasa kaku. Peningkatan ke RAM 4 GB dan 2 CPU terbukti paling optimal, mampu memangkas waktu tunggu pembukaan aplikasi dari 16 detik menjadi 5 detik saja.
+
+- Keamanan Melalui Isolasi dan Sandboxing Penggunaan VM berhasil mendemonstrasikan konsep sandboxing, di mana Guest OS (Lubuntu) beroperasi dalam lingkungan yang sepenuhnya terisolasi dari Host (Windows). Segala beban kerja berat atau potensi kegagalan sistem di dalam Guest terbukti hanya berdampak di dalam lingkup virtualisasi tersebut tanpa mengganggu integritas dan stabilitas sistem operasi utama pada komputer fisik.
+
+- Penerapan Hardening OS pada Host Pembatasan sumber daya (RAM dan CPU) yang dilakukan selama percobaan merupakan bentuk nyata dari hardening OS. Dengan mengunci alokasi resource bagi VM, Host secara otomatis terlindungi dari risiko pemborosan sumber daya (resource exhaustion). Hal ini memastikan bahwa sistem Host tetap memiliki cadangan performa yang cukup untuk menjalankan fungsi kritis lainnya meskipun Guest OS sedang bekerja pada kapasitas maksimal.
 
 ---
 
