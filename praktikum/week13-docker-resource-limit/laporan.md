@@ -91,23 +91,27 @@ Topik: Docker – Resource Limit (CPU & Memori)
 Potongan kode atau perintah utama:
 
 ```bash
- sudo docker build -t week13-resource-limit .
+ docker build -t week13-resource-limit .
  ```
 
 ```bash
-sudo docker run --rm week13-resource-limit
+docker run --rm week13-resource-limit
 ```
 
 ```bash
-sudo docker run --rm --cpus="0.5" --memory="256m" week13-resource-limit
+docker run --rm --cpus="0.5" --memory="256m" week13-resource-limit
 ```
 
 ```bash
-sudo docker run --cpus="0.5" --memory="256m" week13-resource-limit
+docker run week13-resource-limit
 ```
 
 ```bash
-sudo docker stats
+docker run --cpus="0.5" --memory="256m" week13-resource-limit
+```
+
+```bash
+docker stats
 ```
 
 
@@ -116,55 +120,99 @@ sudo docker stats
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
 
-![Screenshot hasil](screenshots/hasil_limit_(tanpa_limit).png)
+![Screenshot hasil](screenshots/hasil_limit_(docker_stats_awalan).png)
 
-![Screenshot hasil](screenshots/hasil_limit_(dengan_limit).png)
+![Screenshot hasil](screenshots/hasil_limit_(docker_run_--rm_week13-resource-limit_stats).png)
 
-![Screenshot hasil](screenshots/hasil_limit_(tanpa_rm).png)
+![Screenshot hasil](screenshots/hasil_limit_(docker_run_--rm_week13-resource-limit).png)
+
+![Screenshot hasil](screenshots/hasil_limit_(docker_run_week13-resource-limit_stats).png)
+
+![Screenshot hasil](screenshots/hasil_limit_(docker_run_week13-resource-limit).png)
+
+![Screenshot hasil](screenshots/hasil_limit_(docker_run_--rm_--cpus=0.5_--memory=256m_week13-resource-limit_stats).png)
+
+![Screenshot hasil](screenshots/hasil_limit_(docker_run_--rm%20--cpus=0.5_--memory=256m_week13-resource-limit).png)
+
+![Screenshot hasil](screenshots/hasil_limit_(docker_run_--cpus=0.5_--memory=256m_week13-resource-limit_stats).png)
+
+![Screenshot hasil](screenshots/hasil_limit_(docker_run_--cpus=0.5_--memory=256m_week13-resource-limit).png)
 
 ---
 
 ## Analisis & Tugas
 
 1. Eksperimen Tanpa Limit Resource
-Pada tahap ini, User menjalankan kontainer menggunakan perintah dasar: 
-```bash
-sudo docker run --rm week13-resource-limit
-```
-   - Beban Kerja: Skrip Python melakukan perhitungan intensif secara terus-menerus tanpa batasan.
-   - Respon CPU: Karena tidak ada pembatasan, Docker mengizinkan kontainer menggunakan seluruh kapasitas CPU yang dialokasikan pada VirtualBox.
-   - Dampak Sistem: Sistem Lubuntu mengalami freezing atau kemacetan yang cukup parah. Hal ini terjadi karena sistem operasi host tidak memiliki sisa sumber daya untuk memproses antarmuka grafis atau input dari keyboard User.
-   - Kesimpulan: Berjalan secara maksimal namun tidak stabil bagi lingkungan kerja sekitarnya.
+   
+   Detail Pengujian
+   - Perintah: docker run --rm week13-resource-limit
+   Data Monitoring (docker stats):    
+   - CPU %: Melonjak hingga 70.08%.
+   - MEM USAGE: Terpakai sekitar 100.4 MiB.
+   - MEM LIMIT: Terbuka lebar di angka 7.702 GiB (mengikuti total kapasitas RAM Host).
+   - NET I/O: 1.17kB / 126B.
+   - BLOCK I/O: 0B / 201kB.
+   Hasil Pengamatan & Analisis
+   - Performa CPU: Tanpa adanya batasan (--cpus), kontainer mencoba mengambil sumber daya sebanyak mungkin yang tersedia untuk menyelesaikan proses komputasi. Angka 70.08% menunjukkan beban kerja yang tinggi pada prosesor.
+   - Alokasi Memori: Meskipun aplikasi hanya menggunakan sekitar 100 MiB, sistem tetap menyediakan batas maksimal (Limit) sebesar 7.702 GiB. Hal ini berisiko jika aplikasi mengalami memory leak, karena ia dapat menghabiskan seluruh RAM komputer host.
+   - Efisiensi Sistem: Penggunaan --rm memastikan bahwa meskipun aplikasi berjalan dengan beban tinggi, tidak ada sisa-sisa kontainer yang membebani media penyimpanan setelah proses "Berjalan... Memori: ~100MB" selesai ditampilkan di layar.
 
 2. Eksperimen Dengan Limit Resource (--cpus="0.5")
-User menjalankan kontainer dengan parameter pembatasan:
-```bash
-sudo docker run --rm --cpus="0.5" --memory="256m" week13-resource-limit
-```
-   - Beban Kerja: Skrip yang sama tetap berusaha melakukan perhitungan maksimal.
-   - Respon CPU: Docker melakukan throttling (pengereman) secara otomatis sehingga penggunaan CPU tertahan di angka 49.86%.
-   - Dampak Sistem: Sistem tetap stabil dan responsif. Meskipun User merasakan sedikit keterlambatan (lag ringan) saat mengetik, sistem tidak membeku karena masih tersedia sisa 50% kapasitas CPU untuk proses sistem lainnya.
-   - Kesimpulan: Memberikan keseimbangan antara performa aplikasi dan stabilitas sistem host.
+   
+   Detail Pengujian
+   - Perintah: docker run --rm --cpus="0.5" --memory="256m" week13-resource-limitFile 
+    pasca-eksekusi.
+   Data Monitoring (docker stats)
+   - CPU %: Berada di angka 45.48%.
+   - MEM USAGE: Terpakai sekitar 100.4 MiB.
+   - MEM LIMIT: Terkunci tepat di angka 256 MiB.
+   - MEM %: Penggunaan memori adalah 39.23% dari jatah yang diberikan.
+   - NET I/O: 1.17kB / 126B.
+   - BLOCK I/O: 6.21MB / 201kB.3. 
+   Hasil Pengamatan & Analisis
+   - Kendali CPU: Penggunaan CPU tertahan di angka 45.48%, yang membuktikan bahwa Docker secara efektif melakukan throttling. Meskipun aplikasi membutuhkan daya lebih (seperti terlihat pada skenario tanpa limit yang mencapai 70%), Docker memaksanya tetap di bawah ambang batas 50% ($0.5$ core).
+   - Isolasi Memori: Berbeda dengan sistem tanpa limit yang membuka batas hingga 7.7 GB, di sini sistem hanya menyediakan 256 MiB. Hal ini memastikan bahwa jika terjadi lonjakan penggunaan memori yang tidak wajar, kontainer tidak akan mengganggu stabilitas aplikasi lain di luar Docker.
+   - Kebersihan Sistem: Dengan adanya flag --rm, semua jejak penggunaan resource (seperti filesystem layer sementara) langsung dibersihkan setelah teks "Berjalan... Memori: ~100MB" selesai dieksekusi, menjaga kapasitas penyimpanan host tetap optimal.
 
 3. Eksperimen Tanpa Flag --rm
-User menjalankan kontainer tanpa perintah penghapusan otomatis: 
-```bash
-sudo docker run --cpus="0.5" --memory="256m" week13-resource-limit
-```
-   - Status Kontainer: Setelah User menghentikan proses dengan Ctrl + C, kontainer berubah status menjadi Exited namun datanya tetap tersimpan di penyimpanan Docker.
-   - Konflik Identitas: Saat User mencoba mengulang perintah yang sama, sistem memberikan pesan error "Conflict". Hal ini dikarenakan nama kontainer tes-limit masih terdaftar di sistem sehingga tidak bisa digunakan kembali.
-   - Dampak Penyimpanan: Tanpa flag ini, setiap pengulangan perintah oleh User akan menambah tumpukan file kontainer lama yang tidak terpakai (sampah data).
-   - Kesimpulan: Berguna untuk keperluan audit atau pengecekan log setelah aplikasi mati, namun memerlukan pembersihan manual oleh User.
 
+   1. Detail Pengujian
+   - Perintah: docker run --cpus="0.5" --memory="256m" week13-resource-limit
+   Data Monitoring (docker stats):
+   - CPU %: Berada di angka 49.55% (Hampir menyentuh batas maksimal 50%).
+   - MEM USAGE: Terpakai 100.3 MiB.
+   - MEM LIMIT: Terkunci di 256 MiB.
+   - MEM %: Penggunaan memori sebesar 39.19%.
+   - NET I/O: 1.17kB / 126B.
+   - BLOCK I/O: 0B / 201kB.
+   Hasil Pengamatan & Analisis
+   - Stabilitas Limitasi: Meskipun angka CPU sedikit lebih tinggi (49.55%) dibandingkan pengujian sebelumnya, Docker tetap berhasil menjaga agar penggunaan tidak melewati angka 50%. Hal ini menunjukkan konsistensi fitur resource control pada Docker Engine.
+   - Perilaku Pasca-Eksekusi (Tanpa --rm): Karena flag --rm tidak digunakan, setelah teks "Berjalan... Memori: ~100MB" selesai muncul, kontainer tidak akan hilang dari sistem.
+   - Kontainer tersebut akan tetap ada di memori penyimpanan dengan status Exited.
+   - Untuk membersihkannya, pengguna harus menjalankan perintah docker rm secara manual.
+   - Penggunaan dalam Produksi: Eksperimen ini menunjukkan bahwa meskipun pembatasan resource tetap bekerja tanpa --rm, penggunaan flag tersebut sangat disarankan untuk pengujian berulang agar tidak terjadi penumpukan kontainer yang sudah tidak terpakai (sampah sistem).
 
+   2. Detail Pengujian
+   - Perintah: docker run week13-resource-limit
+   Data Monitoring (docker stats) Berdasarkan screenshot tersebut, data yang dihasilkan adalah:
+   - CPU %: Mencapai 60.01%.
+   - MEM USAGE: Terpakai 100.3 MiB.
+   - MEM LIMIT: Berada di kapasitas maksimal host, yaitu 7.702 GiB.
+   - MEM %: Hanya menggunakan 1.27% dari total limit yang tersedia.
+   - NET I/O: 1.17kB / 126B.
+   - BLOCK I/O: 0B / 201kB.
+   Hasil Pengamatan & Analisis
+   - Konsumsi CPU: Dibandingkan dengan pengujian menggunakan limit (yang tertahan di bawah 50%), pada skenario ini CPU melonjak hingga 60.01%. Ini menunjukkan bahwa tanpa batasan, kontainer akan mengambil sumber daya sebanyak yang dibutuhkan atau yang diizinkan oleh sistem saat itu.
+   - Resiko Sumber Daya: Dengan MEM LIMIT 7.702 GiB, kontainer memiliki keleluasaan penuh atas RAM. Jika aplikasi mengalami galat (bug) yang menyebabkan konsumsi RAM terus meningkat, hal ini dapat menyebabkan sistem utama (host) mengalami kelambatan atau bahkan freeze.
+   - Manajemen Kontainer: Karena dijalankan tanpa --rm, setelah proses selesai, kontainer ini akan menempati ruang penyimpanan sebagai kontainer mati. Jika perintah ini dijalankan berulang kali tanpa pembersihan manual, daftar kontainer di Docker Desktop akan menumpuk dan memakan kuota disk.
 
 
 ---
 
 ## Kesimpulan
-- Stabilitas Sistem: Penggunaan limitasi resource terbukti menjaga stabilitas sistem host karena penggunaan CPU dapat tertahan di angka 49.86% sehingga sistem tidak mengalami freeze.
-- Manajemen Resource: Tanpa pembatasan yang jelas, kontainer akan mengonsumsi seluruh daya CPU secara agresif yang menyebabkan gangguan fungsi pada sistem operasi utama.
-- Siklus Hidup Kontainer: Penggunaan flag --rm sangat penting untuk mencegah terjadinya conflict nama saat User menjalankan perintah yang sama secara berulang.
+1. Efektivitas Isolasi Sumber Daya: Docker berhasil membatasi penggunaan CPU dan Memori secara akurat; terbukti pada skenario limit, CPU tertahan di bawah 50% (44-49%) dan Memori terkunci pada 100MB/256MB, sedangkan tanpa limit CPU melonjak hingga 70% dengan akses RAM penuh (7.7GB).
+2. Dampak Terhadap Stabilitas Sistem: Penggunaan Resource Limit sangat krusial untuk mencegah sebuah kontainer mendominasi sumber daya komputer host, sehingga mencegah risiko sistem melambat atau crash akibat penggunaan CPU dan Memori yang tidak terkendali oleh satu aplikasi.
+3. Efisiensi Manajemen Kontainer: Penggunaan parameter --rm terbukti sangat penting dalam menjaga kebersihan lingkungan kerja karena otomatis menghapus kontainer setelah eksekusi selesai, mencegah penumpukan kontainer berstatus exited yang dapat membebani kapasitas penyimpanan.
 
 ---
 
